@@ -6,9 +6,10 @@
     position: absolute;
     margin: auto;
     z-index: 10;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%) scale(0.9);
+    transform: translate(-50%, -60%) scale(0.75);
+    transform-origin: center;
 }
 
 .Home .carousel-indicators {
@@ -33,7 +34,7 @@
     background-color: white;
 }
 
-.Home .carousel-control-prev, 
+.Home .carousel-control-prev,
 .Home .carousel-control-next
 {
     width: 51px !important;

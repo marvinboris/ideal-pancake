@@ -62,6 +62,10 @@ import {
     faGraduationCap,
     faBook,
     faArrowAltCircleRight,
+    faDesktop,
+    faBusinessTime,
+    faCode,
+    faPencilRuler,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faInstagram,
@@ -140,7 +144,11 @@ library.add(
     faExpand,
     faUserFriends,
     faComments,
-    faSmileWink
+    faSmileWink,
+    faDesktop,
+    faBusinessTime,
+    faCode,
+    faPencilRuler
 );
 
 // Common routes

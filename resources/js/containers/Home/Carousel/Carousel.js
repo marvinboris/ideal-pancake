@@ -7,8 +7,8 @@ import {
 } from 'reactstrap';
 
 import FirstImage from '../../../../../public/images/482f2140-4473-42e8-85d2-0953eaf84d88.png';
-import ThirdImage from '../../../../../public/images/onlinestudents@2x.png';
-import FourthImage from '../../../../../public/images/business-bg-3@2x.png';
+import ThirdImage from '../../../../../public/images/onlinestudents.png';
+import FourthImage from '../../../../../public/images/business-bg-3.png';
 import BlurImage from '../../../../../public/images/SRTP-abstract-background-19.png';
 
 const items = [
