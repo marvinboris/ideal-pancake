@@ -114,7 +114,7 @@ class Home extends Component {
                 </div>
                 <Container
                     className="position-relative"
-                    style={{ transform: "translateY(-40%)", zIndex: 11 }}
+                    style={{ transform: "translateY(-40%) scale(.85)", transformOrigin: 'center', zIndex: 11 }}
                 >
                     <div className="d-flex">
                         <div className="bg-darkblue text-center text-white flex-grow-1">
@@ -175,10 +175,17 @@ class Home extends Component {
                     </div>
                 </Container>
                 <PresentationalContainer user>
-                    <Row className="align-items-center">
-                        <Col lg={5}>
+                    <Row className="align-items-center position-relative">
+                        <div className="position-absolute" style={{ top: '50%', left: 0, transform: 'translate(-50%, -50%) scale(.8)' }}>
+                            <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-green d-flex justify-content-center align-items-center" style={{ width: 300 }}>
+                                <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-yellow shadow d-flex justify-content-center align-items-center" style={{ width: 182, height: 182 }}>
+                                    <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-light shadow" style={{ width: 114, height: 114 }}></div>
+                                </div>
+                            </div>
+                        </div>
+                        <Col lg={4} className="offset-lg-1">
                             <div className="text-large">Services</div>
-                            <h1 className="text-scarlet text-700">
+                            <h1 className="text-scarlet text-montserrat-alt text-700">
                                 Our features &
                             </h1>
                             <h3>Services.</h3>
@@ -190,6 +197,7 @@ class Home extends Component {
                                     color="pink"
                                     icon="arrow-alt-circle-right"
                                     pill
+                                    className="text-montserrat-alt"
                                 >
                                     All Services
                                 </BetweenButton>

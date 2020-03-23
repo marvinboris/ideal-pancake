@@ -66,13 +66,17 @@ import {
     faBusinessTime,
     faCode,
     faPencilRuler,
+    faPhoneSquare,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faInstagram,
     faProductHunt,
     faTwitterSquare,
     faFacebookSquare,
-    faWhatsapp
+    faWhatsapp,
+    faLinkedin,
+    faSkype,
+    faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 
 import Home from './containers/Home/Home';
@@ -148,7 +152,11 @@ library.add(
     faDesktop,
     faBusinessTime,
     faCode,
-    faPencilRuler
+    faPencilRuler,
+    faPhoneSquare,
+    faLinkedin,
+    faSkype,
+    faYoutube
 );
 
 // Common routes

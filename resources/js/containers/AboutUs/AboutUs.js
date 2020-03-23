@@ -38,35 +38,6 @@ class AboutUs extends Component {
                         </Col>
                     </Row>
                 </PresentationalContainer>
-                <SeparatorLine />
-                <PresentationalContainer innerClassName="text-center" bg="light">
-                    <Title>L'équipe</Title>
-                    <Row>
-                        <TeamMemberCard lg={4} name="Ulrich Emabou" title="PCA">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta.
-                        </TeamMemberCard>
-                        <TeamMemberCard lg={4} name="Eric Junior Njanda" title="Directeur Marketing">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta.
-                        </TeamMemberCard>
-                        <TeamMemberCard lg={4} name="Boris Marvin Ndouma" title="Spectateur">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio recusandae doloribus ut fugit officia voluptate soluta.
-                        </TeamMemberCard>
-                    </Row>
-                </PresentationalContainer>
-                <SeparatorLine />
-                <PresentationalContainer>
-                    <Row>
-                        <MediaBlock lg={4} icon="tshirt" heading="Vêtements africains">
-                            Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.
-                        </MediaBlock>
-                        <MediaBlock lg={4} icon="store-alt" heading="Boutique en ligne">
-                            Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.
-                        </MediaBlock>
-                        <MediaBlock lg={4} icon="handshake" heading="Partenaire sûr">
-                            Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.
-                        </MediaBlock>
-                    </Row>
-                </PresentationalContainer>
             </Col>
         );
     }
