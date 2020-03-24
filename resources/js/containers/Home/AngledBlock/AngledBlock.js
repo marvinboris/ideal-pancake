@@ -19,7 +19,7 @@ const angledBlock = ({ children, iconColor, stackColor, color, bgColor, classNam
                         <h4 className="text-700">
                             {title}
                         </h4>
-                        <div className="text-small text-300">
+                        <div className="text-300">
                             {children}
                         </div>
                     </div>

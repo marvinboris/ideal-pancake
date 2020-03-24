@@ -12961,7 +12961,7 @@ a.text-dark:focus {
 }
 
 .text-green {
-  color: #17A5AA !important;
+  color: #17a5aa !important;
 }
 
 .text-green-10 {
@@ -12973,7 +12973,7 @@ a.text-dark:focus {
 }
 
 .bg-green {
-  background-color: #17A5AA !important;
+  background-color: #17a5aa !important;
 }
 
 .bg-green-10 {
@@ -12997,7 +12997,7 @@ a.text-dark:focus {
 }
 
 .btn-green {
-  background-color: #17A5AA;
+  background-color: #17a5aa;
   color: #ffffff !important;
 }
 
@@ -13020,7 +13020,7 @@ a.text-dark:focus {
 }
 
 .border-green {
-  border-color: #17A5AA !important;
+  border-color: #17a5aa !important;
 }
 
 .text-lemongreen {
@@ -13087,70 +13087,70 @@ a.text-dark:focus {
 }
 
 .text-darkblue {
-  color: #031F36 !important;
+  color: #04393b !important;
 }
 
 .text-darkblue-10 {
-  color: rgba(3, 31, 54, 0.1);
+  color: rgba(4, 57, 59, 0.1);
 }
 
 .text-darkblue-20 {
-  color: rgba(3, 31, 54, 0.2);
+  color: rgba(4, 57, 59, 0.2);
 }
 
 .bg-darkblue {
-  background-color: #031F36 !important;
+  background-color: #04393b !important;
 }
 
 .bg-darkblue-10 {
-  background-color: rgba(3, 31, 54, 0.1) !important;
+  background-color: rgba(4, 57, 59, 0.1) !important;
 }
 
 .bg-darkblue-20 {
-  background-color: rgba(3, 31, 54, 0.2) !important;
+  background-color: rgba(4, 57, 59, 0.2) !important;
 }
 
 .bg-darkblue-33 {
-  background-color: rgba(3, 31, 54, 0.33) !important;
+  background-color: rgba(4, 57, 59, 0.33) !important;
 }
 
 .bg-darkblue-50 {
-  background-color: rgba(3, 31, 54, 0.5) !important;
+  background-color: rgba(4, 57, 59, 0.5) !important;
 }
 
 .bg-darkblue-80 {
-  background-color: rgba(3, 31, 54, 0.8) !important;
+  background-color: rgba(4, 57, 59, 0.8) !important;
 }
 
 .btn-darkblue {
-  background-color: #031F36;
+  background-color: #04393b;
   color: #ffffff !important;
 }
 
 .btn-darkblue:hover,
 .btn-darkblue:focus,
 .btn-darkblue.active {
-  background-color: #02111e;
+  background-color: #022223;
 }
 
 .btn-darkblue.disabled {
-  background-color: rgba(3, 31, 54, 0.5);
+  background-color: rgba(4, 57, 59, 0.5);
 }
 
 .border-darkblue-20 {
-  border-color: rgba(3, 31, 54, 0.2) !important;
+  border-color: rgba(4, 57, 59, 0.2) !important;
 }
 
 .border-darkblue-50 {
-  border-color: rgba(3, 31, 54, 0.5) !important;
+  border-color: rgba(4, 57, 59, 0.5) !important;
 }
 
 .border-darkblue {
-  border-color: #031F36 !important;
+  border-color: #04393b !important;
 }
 
 .text-yellow {
-  color: #FFCD28 !important;
+  color: #ffcd28 !important;
 }
 
 .text-yellow-10 {
@@ -13162,7 +13162,7 @@ a.text-dark:focus {
 }
 
 .bg-yellow {
-  background-color: #FFCD28 !important;
+  background-color: #ffcd28 !important;
 }
 
 .bg-yellow-10 {
@@ -13186,7 +13186,7 @@ a.text-dark:focus {
 }
 
 .btn-yellow {
-  background-color: #FFCD28;
+  background-color: #ffcd28;
   color: #000000 !important;
 }
 
@@ -13209,7 +13209,7 @@ a.text-dark:focus {
 }
 
 .border-yellow {
-  border-color: #FFCD28 !important;
+  border-color: #ffcd28 !important;
 }
 
 .text-darkyellow {
@@ -13276,7 +13276,7 @@ a.text-dark:focus {
 }
 
 .text-red {
-  color: #FF0B33 !important;
+  color: #ff0b33 !important;
 }
 
 .text-red-10 {
@@ -13288,7 +13288,7 @@ a.text-dark:focus {
 }
 
 .bg-red {
-  background-color: #FF0B33 !important;
+  background-color: #ff0b33 !important;
 }
 
 .bg-red-10 {
@@ -13312,7 +13312,7 @@ a.text-dark:focus {
 }
 
 .btn-red {
-  background-color: #FF0B33;
+  background-color: #ff0b33;
   color: #ffffff !important;
 }
 
@@ -13335,7 +13335,7 @@ a.text-dark:focus {
 }
 
 .border-red {
-  border-color: #FF0B33 !important;
+  border-color: #ff0b33 !important;
 }
 
 .text-purered {
@@ -13402,7 +13402,7 @@ a.text-dark:focus {
 }
 
 .text-orange {
-  color: #F7941D !important;
+  color: #f7941d !important;
 }
 
 .text-orange-10 {
@@ -13414,7 +13414,7 @@ a.text-dark:focus {
 }
 
 .bg-orange {
-  background-color: #F7941D !important;
+  background-color: #f7941d !important;
 }
 
 .bg-orange-10 {
@@ -13438,7 +13438,7 @@ a.text-dark:focus {
 }
 
 .btn-orange {
-  background-color: #F7941D;
+  background-color: #f7941d;
   color: #ffffff !important;
 }
 
@@ -13461,7 +13461,7 @@ a.text-dark:focus {
 }
 
 .border-orange {
-  border-color: #F7941D !important;
+  border-color: #f7941d !important;
 }
 
 .text-oranger {
@@ -13528,7 +13528,7 @@ a.text-dark:focus {
 }
 
 .text-scarlet {
-  color: #8D004B !important;
+  color: #8d004b !important;
 }
 
 .text-scarlet-10 {
@@ -13540,7 +13540,7 @@ a.text-dark:focus {
 }
 
 .bg-scarlet {
-  background-color: #8D004B !important;
+  background-color: #8d004b !important;
 }
 
 .bg-scarlet-10 {
@@ -13564,7 +13564,7 @@ a.text-dark:focus {
 }
 
 .btn-scarlet {
-  background-color: #8D004B;
+  background-color: #8d004b;
   color: #ffffff !important;
 }
 
@@ -13587,7 +13587,7 @@ a.text-dark:focus {
 }
 
 .border-scarlet {
-  border-color: #8D004B !important;
+  border-color: #8d004b !important;
 }
 
 .text-blue {
@@ -13717,7 +13717,7 @@ a.text-dark:focus {
 }
 
 .text-pink {
-  color: #CD105C !important;
+  color: #cd105c !important;
 }
 
 .text-pink-10 {
@@ -13729,7 +13729,7 @@ a.text-dark:focus {
 }
 
 .bg-pink {
-  background-color: #CD105C !important;
+  background-color: #cd105c !important;
 }
 
 .bg-pink-10 {
@@ -13753,7 +13753,7 @@ a.text-dark:focus {
 }
 
 .btn-pink {
-  background-color: #CD105C;
+  background-color: #cd105c;
   color: #ffffff !important;
 }
 
@@ -13776,7 +13776,7 @@ a.text-dark:focus {
 }
 
 .border-pink {
-  border-color: #CD105C !important;
+  border-color: #cd105c !important;
 }
 
 .text-mydarkblue {
@@ -14032,7 +14032,7 @@ a.text-dark:focus {
 }
 
 .bg-scarlet-gradient {
-  background-image: linear-gradient(259deg, #8D004B 0%, #FF0B33 100%) !important;
+  background-image: linear-gradient(259deg, #8d004b 0%, #ff0b33 100%) !important;
 }
 
 .bg-orange-gradient {
@@ -14041,6 +14041,14 @@ a.text-dark:focus {
 
 .bg-blue-gradient {
   background-image: linear-gradient(210deg, #005eb1 0%, #002f59 100%) !important;
+}
+
+.bg-green-radial-gradient {
+  background: transparent radial-gradient(closest-side at 50% 50%, #17a5aa 0%, #04393b 100%) 0% 0% no-repeat padding-box;
+}
+
+.bg-scarlet-radial-gradient {
+  background: transparent radial-gradient(closest-side at 50% 50%, #8d004b 0%, #ff0b33 100%) 0% 0% no-repeat padding-box;
 }
 
 @font-face {
@@ -14140,6 +14148,10 @@ a.text-dark:focus {
 
 .text-900 {
   font-weight: 900 !important;
+}
+
+.text-shadow {
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.29);
 }
 
 .border-1 {
@@ -16300,6 +16312,10 @@ a.text-dark:focus {
 
 .w-90 {
   width: 90% !important;
+}
+
+body {
+  font-weight: 400;
 }
 
 .badge-block {

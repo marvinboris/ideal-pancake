@@ -7,6 +7,8 @@ import FooterBlock from './FooterBlock/FooterBlock';
 import Logo from '../UI/Logo/Logo';
 
 import Facebook from '../../../../public/images/change-Facebook-page-name1@2x.png';
+import Briluce from '../../../../public/images/briluce-fav2@2x.png';
+import BdTask from '../../../../public/images/bdtask-logo-white@2x.png';
 
 const footer = () => (
     <>
@@ -15,46 +17,51 @@ const footer = () => (
                 <Col lg={2}>
                     <Logo big />
                     <FooterBlock title="Address" className="mt-4">
-                        <p>
+                        <p className="text-300">
                             Douala - Cameroun<br />Akwa, Mobile Bonakouamoung <br />Sis en face Beneficial Life
-                            </p>
+                        </p>
                     </FooterBlock>
                 </Col>
                 <Col lg={4}>
                     <FooterBlock title="Phone & Email">
-                        <dl className="row">
-                            <dl className="col-5 d-flex justify-content-between">
-                                <div>
+                        <dl className="d-flex flex-wrap">
+                            <div className="flex-fill w-100 d-flex">
+                                <dl>
                                     <FontAwesomeIcon icon="phone-square" className="text-yellow mr-2" />
-                                    <strong>Online</strong>
-                                </div>
-                                :
-                            </dl>
-                            <dl className="col-7 pl-sm-4">
-                                <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
-                                <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
-                            </dl>
+                                    <strong>Online</strong>:
+                                </dl>
+                                <div />
+                                <dl className="flex-grow-1 pl-sm-4 text-300">
+                                    <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
+                                    <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
+                                </dl>
+                            </div>
 
-                            <dl className="col-5 d-flex justify-content-between">
-                                <div>
+                            <div className="flex-fill w-100 d-flex">
+                                <dl>
                                     <FontAwesomeIcon icon="envelope" className="text-yellow mr-2" />
-                                    <strong>Email</strong>
-                                </div>
-                                :
-                            </dl>
-                            <dl className="col-7 pl-sm-4">
-                                <div><a href="mailto:contact@briluce.org" className="text-white text-decoration-none">contact@briluce.org</a></div>
-                                <div><a href="mailto:briluceservices@gmail.com" className="text-white text-decoration-none">briluceservices@gmail.com</a></div>
-                            </dl>
+                                    <strong>Email</strong>:
+                                </dl>
+                                <div />
+                                <dl className="flex-grow-1 pl-sm-4 text-300">
+                                    <div><a href="mailto:contact@briluce.org" className="text-white text-decoration-none">contact@briluce.org</a></div>
+                                    <div><a href="mailto:briluceservices@gmail.com" className="text-white text-decoration-none">briluceservices@gmail.com</a></div>
+                                </dl>
+                            </div>
                         </dl>
                     </FooterBlock>
                 </Col>
                 <Col lg={3}>
                     <FooterBlock title="Our partners">
-
+                        <div className="d-flex align-items-center">
+                            <div className="pr-2"><Logo /></div>
+                            <div className="pr-2"><img src={Briluce} style={{ height: 40 }} /></div>
+                            <div><img src={BdTask} style={{ height: 42 }} /></div>
+                        </div>
                     </FooterBlock>
+
                     <FooterBlock title="Facebook Likes" className="mt-4">
-                        <img src={Facebook} className="img-fluid" />
+                        <div className="w-75"><img src={Facebook} className="img-fluid" /></div>
                     </FooterBlock>
                 </Col>
                 <Col lg={3}>

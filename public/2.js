@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/containers/Auth/Signup/Signup.css":
-/*!****************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/containers/Auth/Signup/Signup.css ***!
-  \****************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/containers/Auth/Login/Login.css":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/containers/Auth/Login/Login.css ***!
+  \**************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,7 +12,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Signup,\r\n.Signup > .container,\r\n.Signup > .container > .row {\r\n    min-height: 100vh;\r\n}", ""]);
+exports.push([module.i, ".Login,\r\n.Login > .container,\r\n.Login > .container > .row {\r\n    min-height: 100vh;\r\n}", ""]);
 
 // exports
 
@@ -146,15 +146,15 @@ var input = function input(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/containers/Auth/Signup/Signup.css":
-/*!********************************************************!*\
-  !*** ./resources/js/containers/Auth/Signup/Signup.css ***!
-  \********************************************************/
+/***/ "./resources/js/containers/Auth/Login/Login.css":
+/*!******************************************************!*\
+  !*** ./resources/js/containers/Auth/Login/Login.css ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Signup.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/containers/Auth/Signup/Signup.css");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Login.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/containers/Auth/Login/Login.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -176,10 +176,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/containers/Auth/Signup/Signup.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/containers/Auth/Signup/Signup.js ***!
-  \*******************************************************/
+/***/ "./resources/js/containers/Auth/Login/Login.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/containers/Auth/Login/Login.js ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -191,8 +191,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-/* harmony import */ var _Signup_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Signup.css */ "./resources/js/containers/Auth/Signup/Signup.css");
-/* harmony import */ var _Signup_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Signup_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Login_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Login.css */ "./resources/js/containers/Auth/Login/Login.css");
+/* harmony import */ var _Login_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Login_css__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_UI_Logo_Logo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/UI/Logo/Logo */ "./resources/js/components/UI/Logo/Logo.js");
 /* harmony import */ var _components_UI_Input_Input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../components/UI/Input/Input */ "./resources/js/components/UI/Input/Input.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../store/actions */ "./resources/js/store/actions/index.js");
@@ -236,15 +236,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Signup = /*#__PURE__*/function (_Component) {
-  _inherits(Signup, _Component);
+var Login = /*#__PURE__*/function (_Component) {
+  _inherits(Login, _Component);
 
-  var _super = _createSuper(Signup);
+  var _super = _createSuper(Login);
 
-  function Signup() {
+  function Login() {
     var _this;
 
-    _classCallCheck(this, Signup);
+    _classCallCheck(this, Login);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
@@ -256,25 +256,11 @@ var Signup = /*#__PURE__*/function (_Component) {
       formError: false,
       formLoading: false,
       controls: {
-        name: {
-          elementConfig: {
-            type: 'text',
-            label: 'Nom(s) & prénom(s)',
-            autoFocus: true
-          },
-          icon: 'signature',
-          value: '',
-          validation: {
-            required: true,
-            minLength: 5
-          },
-          valid: false,
-          touched: false
-        },
         email: {
           elementConfig: {
             type: 'email',
-            label: 'Adresse mail'
+            label: 'Adresse mail',
+            autoFocus: true
           },
           icon: 'envelope',
           value: '',
@@ -299,64 +285,15 @@ var Signup = /*#__PURE__*/function (_Component) {
           valid: false,
           touched: false
         },
-        password_confirmation: {
+        remember: {
           elementConfig: {
-            type: 'password',
-            label: 'Confirmation du mot de passe'
+            type: 'checkbox',
+            label: 'Se souvenir de moi',
+            className: 'mb-3'
           },
-          icon: 'key',
           value: '',
-          validation: {
-            required: true,
-            minLength: 8
-          },
-          valid: false,
-          touched: false
-        },
-        roleId: {
-          elementConfig: {
-            type: 'select',
-            label: 'Rôle',
-            options: {
-              array: [],
-              value: '_id',
-              name: 'name'
-            }
-          },
-          icon: 'user-tag',
-          value: '',
-          validation: {
-            required: true
-          },
           valid: true,
-          touched: false
-        },
-        phone: {
-          elementConfig: {
-            type: 'tel',
-            label: 'Numéro de téléphone'
-          },
-          icon: 'phone',
-          value: '',
-          validation: {
-            required: true,
-            minLength: 8
-          },
-          valid: false,
-          touched: false
-        },
-        image: {
-          elementConfig: {
-            type: 'file',
-            label: 'Photo'
-          },
-          icon: 'image',
-          value: '',
-          validation: {
-            required: true
-          },
-          valid: false,
-          touched: false
+          validation: {}
         }
       }
     });
@@ -398,7 +335,7 @@ var Signup = /*#__PURE__*/function (_Component) {
       if (valid) {
         _this.props.onAuthErrorReset();
 
-        _this.props.onAuthSignup(data);
+        _this.props.onAuthLogin(data);
 
         _this.setState({
           formError: false
@@ -411,40 +348,12 @@ var Signup = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Signup, [{
+  _createClass(Login, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-
       if (!this.props.auth.authPage) this.props.onAuthPageOn();
       if (this.props.auth.userPage) this.props.onUserPageOff();
-      this.props.onSetAuthRedirectPath();
-      fetch('http://localhost:8080/auth/signup', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(function (res) {
-        if (res.status !== 200 && res.status !== 201) {
-          throw new Error('Erreur lors de la récupération des rôles.');
-        }
-
-        return res.json();
-      }).then(function (resData) {
-        _this2.setState({
-          controls: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_9__["updateObject"])(_this2.state.controls, {
-            roleId: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_9__["updateObject"])(_this2.state.controls.roleId, {
-              elementConfig: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_9__["updateObject"])(_this2.state.controls.roleId.elementConfig, {
-                options: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_9__["updateObject"])(_this2.state.controls.roleId.elementConfig.options, {
-                  array: resData.roles
-                })
-              })
-            })
-          })
-        });
-      })["catch"](function (err) {
-        console.log(err);
-      });
+      this.props.onSetAuthRedirectPath(); // this.props.onCsrfToken();
     }
   }, {
     key: "componentWillUnmount",
@@ -454,23 +363,25 @@ var Signup = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
       var _this$state = this.state,
           controls = _this$state.controls,
+          formValid = _this$state.formValid,
           formError = _this$state.formError,
           formLoading = _this$state.formLoading;
       var _this$props$auth = this.props.auth,
-          token = _this$props$auth.token,
+          authToken = _this$props$auth.token,
           authRedirectPath = _this$props$auth.authRedirectPath,
-          error = _this$props$auth.error,
-          loading = _this$props$auth.loading;
+          authError = _this$props$auth.error,
+          authLoading = _this$props$auth.loading; // const { loading: csrfLoading, error: csrfError, token: csrfToken } = this.props.csrf;
+
       var redirect = null;
-      if (token !== null) redirect = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      if (authToken !== null) redirect = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
         to: authRedirectPath
       });
       var globalError = null;
-      if (formError) globalError = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      if (!formValid && formError) globalError = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "text-center text-danger"
       }, "Veuillez v\xE9rifier vos informations.");
       var formContent = Object.keys(controls).map(function (control) {
@@ -478,15 +389,12 @@ var Signup = /*#__PURE__*/function (_Component) {
           key: control,
           value: controls[control].value,
           onChange: function onChange(event) {
-            return _this3.inputChangedHandler(event);
+            return _this2.inputChangedHandler(event);
           },
           name: control,
           icon: controls[control].icon,
           className: controls[control].elementConfig.className,
           check: ['radio', 'checkbox'].includes(controls[control].elementConfig.type),
-          select: controls[control].elementConfig.type === 'select',
-          file: controls[control].elementConfig.type === 'file',
-          options: controls[control].elementConfig.options,
           required: controls[control].validation.required,
           type: controls[control].elementConfig.type,
           invalid: !controls[control].valid,
@@ -495,24 +403,27 @@ var Signup = /*#__PURE__*/function (_Component) {
           autoFocus: controls[control].elementConfig.autoFocus
         }, controls[control].elementConfig.label);
       });
-      var form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, globalError, error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, globalError, authError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "alert alert-danger"
-      }, error.message) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Form"], {
+      }, authError.message) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Form"], {
         onSubmit: function onSubmit(event) {
-          return _this3.submitHandler(event);
+          return _this2.submitHandler(event);
         }
       }, formContent, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["FormGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
         color: "danger",
         block: true
-      }, "S'inscrire", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
-        icon: "user-plus",
+      }, "Se connecter", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+        icon: "sign-in-alt",
         size: "lg",
         className: "ml-1"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
-        to: "/login",
+        to: "/",
         className: "text-info"
-      }, "J'ai d\xE9j\xE0 un compte.")));
-      if (formLoading || loading) form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Mot de passe oubli\xE9 ?"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["NavLink"], {
+        to: "/signup",
+        className: "text-danger"
+      }, "Je n'ai pas de compte.")));
+      if (formLoading || authLoading) form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
         type: "grow",
@@ -521,13 +432,12 @@ var Signup = /*#__PURE__*/function (_Component) {
           height: '5rem'
         },
         color: "danger"
-      }));
+      })); // if (formLoading || authLoading || csrfLoading) form = <div className="text-center"><Spinner type="grow" style={{ width: '5rem', height: '5rem' }} color="danger" /></div>;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12,
-        className: "Signup p-0 bg-info-danger"
-      }, redirect, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Container"], {
-        className: "py-5"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
+        className: "Login p-0 bg-info-danger"
+      }, redirect, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Container"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
         className: "justify-content-center align-items-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         lg: 7
@@ -540,11 +450,11 @@ var Signup = /*#__PURE__*/function (_Component) {
         className: "text-decoration-none"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Logo_Logo__WEBPACK_IMPORTED_MODULE_6__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: "text-uppercase font-weight-light text-center mb-3"
-      }, "Inscription"), form)))));
+      }, "Connexion"), form)))));
     }
   }]);
 
-  return Signup;
+  return Login;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -562,8 +472,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     onAuthErrorReset: function onAuthErrorReset() {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_8__["authErrorReset"]());
     },
-    onAuthSignup: function onAuthSignup(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_8__["authSignup"](data));
+    onAuthLogin: function onAuthLogin(data) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_8__["authLogin"](data));
     },
     onSetAuthRedirectPath: function onSetAuthRedirectPath() {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_8__["setAuthRedirectPath"]('/'));
@@ -571,7 +481,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Signup)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Login));
 
 /***/ })
 
