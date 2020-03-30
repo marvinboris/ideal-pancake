@@ -75,8 +75,8 @@ const homeCarousel = (props) => {
         >
             <CarouselIndicators items={items} activeIndex={activeIndex} className="d-flex flex-column align-items-center" onClickHandler={goToIndex} />
             {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} className="btn btn-scarlet text-yellow" />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} className="btn btn-darkblue" />
+            {/* <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} className="btn btn-scarlet text-yellow" />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={next} className="btn btn-darkblue" /> */}
             {props.children}
         </Carousel>
     );

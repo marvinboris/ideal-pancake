@@ -3,9 +3,9 @@ import { Container, Navbar, Collapse, Nav } from 'reactstrap';
 
 import NavigationItem from './NavigationItem/NavigationItem';
 
-const navigationItems = ({ isAuth, name, logoutHandler, role, cartItemsNumber, notifications }) => {
+const navigationItems = ({ isAuth, name, logoutHandler, role, cartItemsNumber, notifications, light = false }) => {
     return (
-        <Navbar className="pb-4" dark expand>
+        <Navbar className="pb-4" dark={!light} light={light} expand>
             <Container>
                 <Collapse navbar>
                     <Nav className="d-flex align-items-center" navbar>

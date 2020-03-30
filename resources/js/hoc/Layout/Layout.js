@@ -48,7 +48,7 @@ class Layout extends Component {
             <>
                 <div className="w-100 h-100 d-flex justify-content-center bg-white align-items-center" id="guard" style={{ position: 'fixed', top: 0, left: 0, zIndex: 10000 }}>
                     <Spinner style={{ width: '15rem', height: '15rem' }} color="danger" />
-                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}><Logo big /></div>
+                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}><Logo dark big /></div>
                 </div>
                 {authPage ? children : (
                     userPage ? (

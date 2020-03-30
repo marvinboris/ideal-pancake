@@ -28,6 +28,14 @@ $(function () {
             starSize: 20,
         });
     });
+
+    const staticToolbar = $(".Toolbar .position-static");
+    const fixedToolbar = $(".Toolbar .fixed-top");
+    if ($(document).scrollTop() > staticToolbar.height()) fixedToolbar.css('opacity', 1);
+    $(document).scroll(function () {
+        if ($(this).scrollTop() > staticToolbar.height()) fixedToolbar.css('opacity', 1);
+        else fixedToolbar.css('opacity', 0);
+    });
 });
 
 /**

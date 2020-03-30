@@ -70,14 +70,14 @@ class Home extends Component {
                                     </div>
 
                                     <div>
-                                        <div className="display-3 title">
+                                        <div className="display-2 title">
                                             <span className="text-300">We</span>
                                             <br />
                                             <span className="text-700">
                                                 Develop
                                             </span>
                                         </div>
-                                        <div className="display-4 subtitle text-300">
+                                        <div className="display-3 subtitle text-300">
                                             Web application and
                                             <br />
                                             Softwares at{" "}
@@ -88,8 +88,8 @@ class Home extends Component {
                                         <div className="mt-5">
                                             <BetweenButton
                                                 size="lg"
-                                                className="mr-3 bg-scarlet-gradient"
-                                                color="black"
+                                                className="mr-3 bg-scarlet-gradient border-0 text-montserrat-alt text-500 py-3 px-4 text-x-large"
+                                                color="dark"
                                                 icon="arrow-alt-circle-right"
                                                 iconColor="yellow"
                                             >
@@ -99,6 +99,7 @@ class Home extends Component {
                                                 size="lg"
                                                 color="orange"
                                                 icon="arrow-alt-circle-right"
+                                                className="text-montserrat-alt text-500 py-3 px-4 text-x-large"
                                             >
                                                 View portfolio
                                             </BetweenButton>
@@ -106,10 +107,11 @@ class Home extends Component {
                                     </div>
                                 </div>
 
-                                <div className="w-50">
+                                <div className="w-40 overflow-hidden">
                                     <img
                                         src={SoftImage}
                                         className="img-fluid"
+                                        style={{ transform: 'scale(1.2)', transformOrigin: 'center' }}
                                     />
                                 </div>
                             </div>
@@ -119,7 +121,7 @@ class Home extends Component {
                 </div>
 
                 <PresentationalContainer user>
-                    <Container className="position-relative" style={{ transform: "translateY(-40%) scale(.85)", transformOrigin: 'center', zIndex: 11 }}>
+                    <Container className="position-relative" style={{ transform: "translateY(-40%) scale(1)", transformOrigin: 'center', zIndex: 11 }}>
                         <div className="d-flex">
                             <div className="bg-darkblue text-center text-white flex-grow-1">
                                 <div className="pb-2 pt-3 text-700 border-bottom border-thin border-white-20 position-relative">
@@ -193,7 +195,7 @@ class Home extends Component {
                                 Our features &
                             </h1>
                             <h3>Services.</h3>
-                            <p className="text-300">
+                            <p className="text-300 mt-4">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
                             <div className="mt-5">
@@ -201,7 +203,7 @@ class Home extends Component {
                                     color="pink"
                                     icon="arrow-alt-circle-right"
                                     pill
-                                    className="text-montserrat-alt"
+                                    className="text-montserrat-alt text-500"
                                 >
                                     All Services
                                 </BetweenButton>
@@ -239,14 +241,14 @@ class Home extends Component {
                                 Our Works &
                             </h1>
                             <h3>Portfolio.</h3>
-                            <p className="text-300">
+                            <p className="text-300 mt-4">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
                             <div className="mt-5">
-                                <BetweenButton color="pink" icon="arrow-alt-circle-right" pill className="text-montserrat-alt mr-4">
+                                <BetweenButton color="pink" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-500 mr-4">
                                     All Services
                                 </BetweenButton>
-                                <BetweenButton color="orange" icon="arrow-alt-circle-right" pill className="text-montserrat-alt">
+                                <BetweenButton color="orange" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-500">
                                     Get a quote
                                 </BetweenButton>
                             </div>
@@ -259,7 +261,7 @@ class Home extends Component {
                         Our Apps &
                     </h1>
                     <h3>Softwares.</h3>
-                    <p className="text-300">
+                    <p className="text-300 mt-4">
                         Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                     </p>
                     <Row className="py-5 mb-5">
