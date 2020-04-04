@@ -9,7 +9,7 @@ const footerBlock = ({ children, title, className }) => (
                 <FontAwesomeIcon icon="circle" className="text-yellow text-xx-small position-absolute" style={{ top: 0, left: '50%', transform: 'translate(-50%, -50%)' }} />
             </div>
         </h4>
-        <div>
+        <div className="d-flex flex-column">
             {children}
         </div>
     </div>

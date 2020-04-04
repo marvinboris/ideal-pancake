@@ -7,8 +7,8 @@ import { Col } from 'reactstrap';
 import Stars from '../../../components/UI/Stars/Stars';
 import BetweenButton from '../../../components/UI/Button/BetweenButton/BetweenButton';
 
-const customerBlock = ({ children, title, src, name, mark, link = '/', flag = 'cm', active }) =>
-    <Col lg={4}>
+const customerBlock = ({ children, animation = "fade-up", title, src, name, mark, link = '/', flag = 'cm', active }) =>
+    <Col data-aos={animation} lg={4}>
         <div className="rounded-4 shadow-sm bg-white px-5 pb-4 text-left position-relative" style={{ paddingTop: 82 }}>
             <div className="position-absolute w-100" style={{ top: -82, left: 0 }}>
                 <div className="border border-5 border-orange rounded-circle position-relative mx-auto embed-responsive embed-responsive-1by1 bg-light" style={{ width: 164 }}>
@@ -41,7 +41,7 @@ const customerBlock = ({ children, title, src, name, mark, link = '/', flag = 'c
 
             <div className="text-center">
                 <NavLink to={link}>
-                    <BetweenButton icon="globe" iconColor={active ? "reset" : "orange"} color={active ? "pink" : "white"} className={!active ? "border-orange border" : ""}>
+                    <BetweenButton icon="globe" iconColor="reset" color={active ? "pink" : "outline-orange"} className="text-400">
                         Check my site
                     </BetweenButton>
                 </NavLink>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col } from 'reactstrap';
 
-const clientBlock = ({ src, height }) =>
-    <Col className="text-center">
+const clientBlock = ({ src, animation = "fade-up", height }) =>
+    <Col data-aos={animation} className="text-center">
         <img src={src} style={{ height }} />
     </Col>;
 

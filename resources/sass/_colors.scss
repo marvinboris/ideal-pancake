@@ -29,6 +29,15 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
     color: $color !important;
   }
 
+  .nav-link.text-#{$name}:not(.active) {
+    color: rgba($color, 0.5) !important;
+    transition: all 0.25s;
+  }
+
+  .nav-link.text-#{$name}:not(.active):hover {
+    color: $color !important;
+  }
+
   .text-#{$name}-10 {
     color: rgba($color, 0.1);
   }
@@ -63,7 +72,19 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
 
   .btn-#{$name} {
     background-color: $color;
+    border-color: $color;
     color: $font !important;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      border-color: darken($color, 10%);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
+    }
 
     &:hover,
     &:focus,
@@ -71,8 +92,30 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
       background-color: darken($color, 5%);
     }
 
-    &.disabled {
+    &.disabled,
+    &:disabled {
       background-color: rgba($color, 0.5);
+    }
+  }
+
+  .btn-outline-#{$name} {
+    border-color: $color;
+    color: $color;
+
+    &:hover {
+      background-color: $color;
+      color: $font;
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
+    }
+
+    &.disabled,
+    &:disabled {
+      background-color: transparent;
+      color: $color;
     }
   }
 
@@ -100,7 +143,7 @@ $radial-gradients: "green" $mygreen $darkgreen, "scarlet" $scarlet $myred;
 @each $name, $primary, $secondary in $radial-gradients {
   .bg-#{$name}-radial-gradient {
     background: transparent
-      radial-gradient(closest-side at 50% 50%, $primary 0%, $secondary 100%)
+      radial-gradient(circle at 50% 50%, $primary 0%, $secondary 100%)
       0%
       0%
       no-repeat

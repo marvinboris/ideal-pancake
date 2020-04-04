@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import {
     Carousel,
     CarouselItem,
@@ -30,56 +30,67 @@ const items = [
     }
 ];
 
-const homeCarousel = (props) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
-
-    const next = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
+class HomeCarousel extends Component {
+    state = {
+        activeIndex: 0,
+        animating: false
     }
 
-    const previous = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
+    componentDidMount() {
+        $(function () {
+            const carousel = $('.HomeCarousel');
+            alert(JSON.stringify(carousel));
+
+            carousel.on('slide.bs.carousel', function () {
+                setTimeout(() => {
+                    const activeCarouselIndicator = $('.HomeCarousel .carousel-indicator.active');
+                    const index = activeCarouselIndicator.attr('data-slide-to');
+
+                    const top = -66 + index * 42;
+
+                    $('.circle-carousel-indicator').animate({ translateY: top }, 'fast');
+                }, 1);
+            });
+        });
     }
 
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
+    next = () => {
+        if (this.state.animating) return;
+        const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+        this.setState({ activeIndex: nextIndex });
     }
 
-    const slides = items.map((item) => {
-        return (
-            <CarouselItem
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-                key={item.src}
-                className="h-100"
-            >
+    previous = () => {
+        if (this.state.animating) return;
+        const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+        this.setState({ activeIndex: nextIndex });
+    }
+
+    goToIndex = newIndex => {
+        if (this.state.animating) return;
+        this.setState({ activeIndex: newIndex });
+    }
+
+    render() {
+        const slides = items.map(item => (
+            <CarouselItem onExiting={() => this.setState({ animating: true })} onExited={() => this.setState({ animating: false })} key={item.src} className="h-100">
                 <div className="h-100" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(' + item.src + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="h-100" style={{ backgroundImage: 'url(' + BlurImage + ')', backgroundSize: 'cover', backgroundPosition: 'center', opacity: .63 }}></div>
                 </div>
             </CarouselItem>
-        );
-    });
+        ));
 
-    return (
-        <Carousel
-            activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-            className="h-100 carousel-fade"
-        >
-            <CarouselIndicators items={items} activeIndex={activeIndex} className="d-flex flex-column align-items-center" onClickHandler={goToIndex} />
-            {slides}
-            {/* <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} className="btn btn-scarlet text-yellow" />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} className="btn btn-darkblue" /> */}
-            {props.children}
-        </Carousel>
-    );
+        return (
+            <Carousel id="carousel" activeIndex={this.state.activeIndex} next={this.next} previous={this.previous} className="h-100 carousel-fade HomeCarousel">
+                <CarouselIndicators items={items} activeIndex={this.state.activeIndex} className="d-flex flex-column align-items-center" onClickHandler={this.goToIndex} />
+
+                {slides}
+
+                {this.props.children}
+            </Carousel>
+        );
+    }
+
 }
 
-export default homeCarousel;
+export default HomeCarousel;

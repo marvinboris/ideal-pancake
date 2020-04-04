@@ -1,17 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Container, Col, Row } from 'reactstrap';
+import { Container, Col, Row, Form, FormGroup, InputGroup, Input, InputGroupAddon, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import FooterBlock from './FooterBlock/FooterBlock';
 import Logo from '../UI/Logo/Logo';
+
+import './Footer.css';
 
 import Facebook from '../../../../public/images/change-Facebook-page-name1@2x.png';
 import Briluce from '../../../../public/images/briluce-fav2@2x.png';
 import BdTask from '../../../../public/images/bdtask-logo-white@2x.png';
 
 const footer = () => (
-    <>
+    <div className="Footer">
         <footer className="container-fluid px-5 bg-scarlet text-light py-5">
             <Row>
                 <Col lg={2}>
@@ -49,6 +51,17 @@ const footer = () => (
                                 </dl>
                             </div>
                         </dl>
+
+                        <Form className="row">
+                            <FormGroup className="col-xl-7 col-lg-8 col-md-9 col-sm-10 col-11">
+                                <InputGroup>
+                                    <Input type="search" placeholder="Your Email" className="bg-black-10 text-white text-300 border-0 rounded-0" />
+                                    <InputGroupAddon>
+                                        <Button color="orange" className="rounded-0">Send</Button>
+                                    </InputGroupAddon>
+                                </InputGroup>
+                            </FormGroup>
+                        </Form>
                     </FooterBlock>
                 </Col>
                 <Col lg={3}>
@@ -66,8 +79,8 @@ const footer = () => (
                 </Col>
                 <Col lg={3}>
                     <FooterBlock title="Find us on Maps">
-                        <div className="rounded overflow-hidden">
-                            <iframe width="100%" height="150" src="https://maps.google.com/maps?width=700&amp;height=150&amp;hl=en&amp;q=La%20maison%20du%20bitcoin+(Auto-%C3%A9cole%20Universit%C3%A9)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <div className="rounded flex-fill overflow-hidden embed-responsive embed-responsive-16by9">
+                            <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=150&amp;hl=en&amp;q=La%20maison%20du%20bitcoin+(Auto-%C3%A9cole%20Universit%C3%A9)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                         </div>
                     </FooterBlock>
                 </Col>
@@ -80,16 +93,16 @@ const footer = () => (
                 </div>
 
                 <div className="d-flex">
-                    <FontAwesomeIcon size="2x" icon={["fab", "facebook-square"]} className="mr-3" />
-                    <FontAwesomeIcon size="2x" icon={["fab", "twitter-square"]} className="mr-3" />
-                    <FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} className="mr-3" />
-                    <FontAwesomeIcon size="2x" icon={["fab", "instagram"]} className="mr-3" />
-                    <FontAwesomeIcon size="2x" icon={["fab", "skype"]} className="mr-3" />
-                    <FontAwesomeIcon size="2x" icon={["fab", "youtube"]} />
+                    <FontAwesomeIcon size="2x" icon={["fab", "facebook-square"]} className="fa-icon mr-3" />
+                    <FontAwesomeIcon size="2x" icon={["fab", "twitter-square"]} className="fa-icon mr-3" />
+                    <FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} className="fa-icon mr-3" />
+                    <FontAwesomeIcon size="2x" icon={["fab", "instagram"]} className="fa-icon mr-3" />
+                    <FontAwesomeIcon size="2x" icon={["fab", "skype"]} className="fa-icon mr-3" />
+                    <FontAwesomeIcon size="2x" icon={["fab", "youtube"]} className="fa-icon " />
                 </div>
             </div>
         </footer>
-    </>
+    </div>
 );
 
 export default footer;

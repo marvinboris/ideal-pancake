@@ -10,7 +10,7 @@ import Man from '../../../../../public/images/22654-6-man@2x.png';
 const aboutUsBanner = ({ children, className }) =>
     <PresentationalContainer user bg="green-radial-gradient" innerClassName="position-relative">
         <Breadcrumb main="About Us" />
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center py-5">
             <Col xs={10} sm={9} md={6} lg={6} xl={5} className="text-white py-5">
                 <WithPoint color="orange">
                     <h2>
@@ -22,10 +22,10 @@ const aboutUsBanner = ({ children, className }) =>
                 </div>
             </Col>
         </div>
-        <div className="position-absolute d-flex align-items-end" style={{ width: '16%', bottom: -16, right: '5%', opacity: .3 }}>
+        <div className="position-absolute d-flex flex-column align-items-end" style={{ height: 'calc(90% + 16px)', bottom: -16, right: '5%', opacity: .3 }}>
             <img src={Man} className="flex-fill" />
         </div>
-        <div className="position-absolute d-flex align-items-end" style={{ width: '8%', bottom: -16, right: '17%' }}>
+        <div className="position-absolute d-flex flex-column align-items-end" style={{ height: 'calc(45% + 16px)', bottom: -16, right: 'calc(15% + 16px)' }}>
             <img src={Man} className="flex-fill" />
         </div>
     </PresentationalContainer>;

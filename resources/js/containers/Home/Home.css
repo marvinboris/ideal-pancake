@@ -8,8 +8,20 @@
     z-index: 10;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%) scale(0.75);
+    transform: translate(-50%, -60%) scale(1);
     transform-origin: center;
+    padding: 0 12.5%;
+}
+
+.Home .circle-carousel-indicator {
+    --width: 32px;
+    --initialTop: -66px;
+    width: var(--width);
+    height: var(--width);
+    z-index: 12;
+    transform: translateY(var(--initialTop));
+    left: calc(6.25% - 28px - calc(var(--width) / 2));
+    top: calc(50% - calc(var(--width) / 2));
 }
 
 .Home .carousel-indicators {
@@ -34,9 +46,7 @@
     background-color: white;
 }
 
-.Home .carousel-control-prev,
-.Home .carousel-control-next
-{
+.Home .carousel-control-prev, .Home .carousel-control-next {
     width: 51px !important;
     opacity: 1;
     bottom: 40px;

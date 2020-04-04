@@ -38,19 +38,17 @@ class AboutUs extends Component {
                         <Col lg={9} className="border-right">
                             <Row>
                                 <Col lg={4} className="border-right px-5">
-                                    <WithPoint color="green" className="mb-3 text-green">
-                                        <h1>About Us</h1>
-                                    </WithPoint>
+                                    <h1 className="text-pink text-montserrat-alt text-700">About Us</h1>
 
 
                                 </Col>
 
                                 <Col lg={8} className="px-5">
                                     <Subtitle>What we do</Subtitle>
-                                    <p className="text-300 text-small mb-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
+                                    <p className="text-400 mb-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
 
                                     <Subtitle>You meant a lot to us !</Subtitle>
-                                    <p className="text-300 text-small mb-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
+                                    <p className="text-400 mb-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed</p>
 
                                     <BetweenButton icon="arrow-alt-circle-right" color="pink" className="rounded-0">
                                         Get a quote
@@ -66,10 +64,8 @@ class AboutUs extends Component {
                                 </Col>
 
                                 <Col lg={8} className="px-5">
-                                    <WithPoint color="green" className="mb-3 text-green">
-                                        <h1>Our Services</h1>
-                                    </WithPoint>
-                                    <p className="text-300 text-small mb-4">It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asopposedcontent of a page when looking at its layout. The point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, contentThe point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content</p>
+                                    <h1 className="text-pink text-montserrat-alt text-700">Our Services</h1>
+                                    <p className="text-400 mb-4">It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asopposedcontent of a page when looking at its layout. The point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, contentThe point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content</p>
 
                                     <BetweenButton icon="arrow-alt-circle-right" color="pink" className="mr-4 rounded-0">
                                         Read More
@@ -89,10 +85,8 @@ class AboutUs extends Component {
                     </Row>
                 </PresentationalContainer>
                 <PresentationalContainer user innerClassName="pb-5" style={{ paddingRight: '5%', paddingLeft: '5%' }}>
-                    <WithPoint color="green" className="mb-3 text-green">
-                        <h1>Our experienced team</h1>
-                    </WithPoint>
-                    <p className="text-300 text-small">It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a read</p>
+                    <h1 className="text-pink text-montserrat-alt text-700">Our experienced team</h1>
+                    <p className="text-400">It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a read</p>
                     <Row>
                         <TeamMemberCard name="John Alverosa" title="Managing Director" src={JohnAlverosa} />
                         <TeamMemberCard name="Palo Altonio" title="Senior Accountant" src={PaloAltonio} />
@@ -100,10 +94,8 @@ class AboutUs extends Component {
                     </Row>
                 </PresentationalContainer>
                 <PresentationalContainer user innerClassName="pb-5" style={{ paddingRight: '5%', paddingLeft: '5%' }}>
-                    <div className="d-flex justify-content-end pr-5">
-                        <WithPoint color="green" className="mb-3 text-green">
-                            <h1>Our Clients</h1>
-                        </WithPoint>
+                    <div className="d-flex justify-content-center">
+                        <h1 className="text-pink text-montserrat-alt text-700">Our Clients</h1>
                     </div>
                     <Row className="align-items-center">
                         <ClientBlock src={Limo} height={130} />

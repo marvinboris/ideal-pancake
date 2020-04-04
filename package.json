@@ -32,6 +32,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.12.1",
         "@fortawesome/free-solid-svg-icons": "^5.12.1",
         "@fortawesome/react-fontawesome": "^0.1.9",
+        "aos": "^2.3.4",
         "flag-icon-css": "^3.4.6",
         "react-owl": "^1.0.0",
         "react-redux": "^7.2.0",

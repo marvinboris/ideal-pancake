@@ -84,11 +84,14 @@ import {
     faSkype,
     faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import { init } from 'aos';
 
 import Home from './containers/Home/Home';
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
 import Layout from './hoc/Layout/Layout';
 import * as actions from './store/actions';
+
+import 'aos/dist/aos.css';
 
 library.add(
     faInstagram,
@@ -181,6 +184,7 @@ class App extends Component {
     componentDidMount() {
         const { onTryAuthSignup } = this.props;
         onTryAuthSignup();
+        init();
     }
 
     render() {

@@ -117,7 +117,7 @@ const toolbar = ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartI
                     </div>
 
                     <div className="">
-                        <NavigationItems light isAuth={isAuth} name={name} logoutHandler={logoutHandler} notifications={notifications} cartItemsNumber={cartItemsNumber} role={role} />
+                        <NavigationItems light font="scarlet" isAuth={isAuth} name={name} logoutHandler={logoutHandler} notifications={notifications} cartItemsNumber={cartItemsNumber} role={role} />
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@ const toolbar = ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartI
                             </div>
                         </div>
 
-                        <div className="py-1 px-3 d-flex align-items-center bg-black-33">
+                        <div className="py-1 px-3 d-flex align-items-center bg-green">
                             <FontAwesomeIcon size="lg" className="text-yellow border-right border-dark-20 mr-2 pr-2" icon="door-open" />
                             <div className="d-flex small text-light py-2">
                                 <div className="text-bold border-right border-dark-20 mr-2 pr-2">Monday - Friday</div>

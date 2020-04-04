@@ -4,12 +4,14 @@ import { NavLink } from "react-router-dom";
 import { Col, Container, Row, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Owl from "react-owl";
+import $ from 'jquery';
 
 import "./Home.css";
 import PresentationalContainer from "../../components/UI/PresentationalContainer/PresentationalContainer";
 import * as actions from "../../store/actions";
 import HomeCarousel from "./Carousel/Carousel";
 import BetweenButton from "../../components/UI/Button/BetweenButton/BetweenButton";
+import AbsoluteButton from "../../components/UI/Button/AbsoluteButton/AbsoluteButton";
 
 import UnderCarouselBlock from "./UnderCarouselBlock/UnderCarouselBlock";
 import AngledBlock from "./AngledBlock/AngledBlock";
@@ -88,7 +90,7 @@ class Home extends Component {
                                         <div className="mt-5">
                                             <BetweenButton
                                                 size="lg"
-                                                className="mr-3 bg-scarlet-gradient border-0 text-montserrat-alt text-500 py-3 px-4 text-x-large"
+                                                className="mr-3 bg-scarlet-gradient border-0 text-montserrat-alt text-400 py-3 px-4 text-x-large"
                                                 color="dark"
                                                 icon="arrow-alt-circle-right"
                                                 iconColor="yellow"
@@ -99,7 +101,7 @@ class Home extends Component {
                                                 size="lg"
                                                 color="orange"
                                                 icon="arrow-alt-circle-right"
-                                                className="text-montserrat-alt text-500 py-3 px-4 text-x-large"
+                                                className="text-montserrat-alt text-400 py-3 px-4 text-x-large"
                                             >
                                                 View portfolio
                                             </BetweenButton>
@@ -116,7 +118,9 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <HomeCarousel />
+                        <HomeCarousel>
+                            <div className="bg-transparent circle-carousel-indicator rounded-circle border border-3 border-yellow position-absolute" />
+                        </HomeCarousel>
                     </div>
                 </div>
 
@@ -190,32 +194,31 @@ class Home extends Component {
                             </div>
                         </div>
                         <Col lg={4} className="offset-lg-1">
-                            <div className="text-large">Services</div>
+                            <div className="h3 m-0">Services</div>
                             <h1 className="text-scarlet text-montserrat-alt text-700">
                                 Our features &
                             </h1>
-                            <h3>Services.</h3>
-                            <p className="text-300 mt-4">
+                            <h2>Services.</h2>
+                            <p className="text-300 text-large mt-4">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
                             <div className="mt-5">
-                                <BetweenButton
+                                <AbsoluteButton
                                     color="pink"
                                     icon="arrow-alt-circle-right"
                                     pill
-                                    className="text-montserrat-alt text-500"
                                 >
                                     All Services
-                                </BetweenButton>
+                                </AbsoluteButton>
                             </div>
                         </Col>
 
                         <Col lg={7}>
                             <Row>
-                                <AngledBlock iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="UI/UX Design">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
-                                <AngledBlock iconColor="white" inverse stackColor="darkblue" bgColor="pink" color="white" title="Consultancy">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
-                                <AngledBlock iconColor="white" stackColor="orange" bgColor="green" color="white" title="Web & mobile Apps Dev">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
-                                <AngledBlock iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="Training Courses">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="01" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="UI/UX Design">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="03" iconColor="white" inverse stackColor="darkblue" bgColor="pink" color="white" title="Consultancy">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="02" iconColor="white" stackColor="orange" bgColor="green" color="white" title="Web & mobile Apps Dev">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="04" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="Training Courses">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
                             </Row>
                         </Col>
                     </Row>
@@ -240,17 +243,17 @@ class Home extends Component {
                             <h1 className="text-scarlet text-montserrat-alt text-700">
                                 Our Works &
                             </h1>
-                            <h3>Portfolio.</h3>
-                            <p className="text-300 mt-4">
+                            <h2>Portfolio.</h2>
+                            <p className="text-400 mt-4 text-large">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
                             <div className="mt-5">
-                                <BetweenButton color="pink" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-500 mr-4">
+                                <AbsoluteButton color="pink" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-400 mr-4">
                                     All Services
-                                </BetweenButton>
-                                <BetweenButton color="orange" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-500">
+                                </AbsoluteButton>
+                                <AbsoluteButton color="orange" icon="arrow-alt-circle-right" pill className="text-montserrat-alt text-400">
                                     Get a quote
-                                </BetweenButton>
+                                </AbsoluteButton>
                             </div>
                         </Col>
                     </Row>
@@ -261,9 +264,13 @@ class Home extends Component {
                         Our Apps &
                     </h1>
                     <h3>Softwares.</h3>
-                    <p className="text-300 mt-4">
-                        Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
-                    </p>
+                    <Row>
+                        <Col xl={5} lg={7} md={9} sm={11}>
+                            <p className="text-400 text-large mt-4">
+                                Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
+                            </p>
+                        </Col>
+                    </Row>
                     <Row className="py-5 mb-5">
                         <AppBlock icon="hospital" title="Pharmacy Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
                         <AppBlock icon="shopping-basket" title="Sales ERP Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
@@ -271,9 +278,9 @@ class Home extends Component {
                         <AppBlock icon="hospital-symbol" title="Hospital Management System + Website">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
                     </Row>
                     <div className="text-center">
-                        <BetweenButton pill color="pink" icon="arrow-alt-circle-right" className="text-montserrat-alt">
+                        <AbsoluteButton pill size="lg" color="pink" icon="arrow-alt-circle-right" className="text-montserrat-alt">
                             View List
-                        </BetweenButton>
+                        </AbsoluteButton>
                     </div>
                 </PresentationalContainer>
 
@@ -288,7 +295,7 @@ class Home extends Component {
                     </div>
                     <Row className="justify-content-center text-center">
                         <Col sm={10} md={8} lg={6}>
-                            <p>
+                            <p className="text-large">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers . We always want our customers to give nice
                             </p>
                         </Col>

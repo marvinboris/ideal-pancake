@@ -12,7 +12,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".TeamMemberCard img {\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    -o-object-position: center;\r\n       object-position: center;\r\n}\r\n\r\n.TeamMemberCard .img-wrapper {\r\n    width: 100px;\r\n    height: 100px;\r\n}", ""]);
+exports.push([module.i, ".TeamMemberCard .position-absolute.w-100.h-100 {\r\n    transform: scale(1);\r\n    transform-origin: center;\r\n    transition: all .25s;\r\n}\r\n\r\n.TeamMemberCard > .card:hover .position-absolute.w-100.h-100 {\r\n    transform: scale(1.1);\r\n}", ""]);
 
 // exports
 
@@ -37,7 +37,7 @@ module.exports = "/images/22654-6-man@2x.png?3034bb8311b38d7182805e7a80c8316d";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/2@2x.png?e7ef520dee69c958f34bc5d9454d402b";
+module.exports = "/images/2@2x.png?3de276feafb6056d3059a2f863eb373c";
 
 /***/ }),
 
@@ -48,7 +48,7 @@ module.exports = "/images/2@2x.png?e7ef520dee69c958f34bc5d9454d402b";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/3@2x.png?e409e067b70a0e96d80493f1eecaeeb4";
+module.exports = "/images/3@2x.png?2b048cbfc114623bb3e4b6ae73615997";
 
 /***/ }),
 
@@ -239,10 +239,15 @@ __webpack_require__.r(__webpack_exports__);
 var teamMemberCard = function teamMemberCard(_ref) {
   var name = _ref.name,
       title = _ref.title,
+      _ref$animation = _ref.animation,
+      animation = _ref$animation === void 0 ? "fade-up" : _ref$animation,
       children = _ref.children,
       src = _ref.src,
       lg = _ref.lg;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    "data-aos": animation,
+    className: "TeamMemberCard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Card"], {
     className: "border-0 rounded-0 bg-transparent overflow-hidden position-relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "position-absolute w-100 h-100",
@@ -267,7 +272,7 @@ var teamMemberCard = function teamMemberCard(_ref) {
       transform: 'translateY(-50%)'
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "ml-4"
+    className: "ml-5"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "font-weight-normal text-montserrat-alt h4 position-relative d-flex align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -276,8 +281,8 @@ var teamMemberCard = function teamMemberCard(_ref) {
     className: "position-absolute border-bottom border-white-20",
     style: {
       top: 13,
-      left: -50,
-      width: 45
+      left: -66,
+      width: 61
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
     icon: "circle",
@@ -483,16 +488,15 @@ var AboutUs = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
         lg: 4,
         className: "border-right px-5"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_WithPoint_WithPoint__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        color: "green",
-        className: "mb-3 text-green"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "About Us"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "text-pink text-montserrat-alt text-700"
+      }, "About Us")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
         lg: 8,
         className: "px-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], null, "What we do"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-300 text-small mb-5"
+        className: "text-400 mb-5"
       }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], null, "You meant a lot to us !"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-300 text-small mb-5"
+        className: "text-400 mb-5"
       }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
         icon: "arrow-alt-circle-right",
         color: "pink",
@@ -505,11 +509,10 @@ var AboutUs = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
         lg: 8,
         className: "px-5"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_WithPoint_WithPoint__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        color: "green",
-        className: "mb-3 text-green"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Our Services")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-300 text-small mb-4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "text-pink text-montserrat-alt text-700"
+      }, "Our Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "text-400 mb-4"
       }, "It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asopposedcontent of a page when looking at its layout. The point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, contentThe point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
         icon: "arrow-alt-circle-right",
         color: "pink",
@@ -531,11 +534,10 @@ var AboutUs = /*#__PURE__*/function (_Component) {
           paddingRight: '5%',
           paddingLeft: '5%'
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_WithPoint_WithPoint__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        color: "green",
-        className: "mb-3 text-green"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Our experienced team")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "text-300 text-small"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "text-pink text-montserrat-alt text-700"
+      }, "Our experienced team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "text-400"
       }, "It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a read"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_TeamMemberCard_TeamMemberCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
         name: "John Alverosa",
         title: "Managing Director",
@@ -556,11 +558,10 @@ var AboutUs = /*#__PURE__*/function (_Component) {
           paddingLeft: '5%'
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "d-flex justify-content-end pr-5"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_WithPoint_WithPoint__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        color: "green",
-        className: "mb-3 text-green"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Our Clients"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        className: "d-flex justify-content-center"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "text-pink text-montserrat-alt text-700"
+      }, "Our Clients")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
         className: "align-items-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
         src: _public_images_Liom_logo_New_2x_png__WEBPACK_IMPORTED_MODULE_15___default.a,
@@ -637,7 +638,7 @@ var aboutUsBanner = function aboutUsBanner(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_3__["default"], {
     main: "About Us"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "d-flex justify-content-center"
+    className: "d-flex justify-content-center py-5"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     xs: 10,
     sm: 9,
@@ -650,9 +651,9 @@ var aboutUsBanner = function aboutUsBanner(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Who we are ?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mt-5 text-300 text-small"
   }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "position-absolute d-flex align-items-end",
+    className: "position-absolute d-flex flex-column align-items-end",
     style: {
-      width: '16%',
+      height: 'calc(90% + 16px)',
       bottom: -16,
       right: '5%',
       opacity: .3
@@ -661,11 +662,11 @@ var aboutUsBanner = function aboutUsBanner(_ref) {
     src: _public_images_22654_6_man_2x_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     className: "flex-fill"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "position-absolute d-flex align-items-end",
+    className: "position-absolute d-flex flex-column align-items-end",
     style: {
-      width: '8%',
+      height: 'calc(45% + 16px)',
       bottom: -16,
-      right: '17%'
+      right: 'calc(15% + 16px)'
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _public_images_22654_6_man_2x_png__WEBPACK_IMPORTED_MODULE_5___default.a,
@@ -694,8 +695,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var clientBlock = function clientBlock(_ref) {
   var src = _ref.src,
+      _ref$animation = _ref.animation,
+      animation = _ref$animation === void 0 ? "fade-up" : _ref$animation,
       height = _ref.height;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    "data-aos": animation,
     className: "text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: src,
@@ -728,7 +732,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var subtitle = function subtitle(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "text-700 text-montserrat-alt pb-2 mb-0 position-relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "d-flex align-items-center",
@@ -743,7 +747,10 @@ var subtitle = function subtitle(_ref) {
     className: "p-0 text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
     icon: "circle",
-    className: "text-orange text-xx-small"
+    className: "text-orange text-xx-small position-relative",
+    style: {
+      top: '-50%'
+    }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     xs: 5,
     className: "p-0 border-bottom border-orange"

@@ -1,9 +1,9 @@
-.TeamMemberCard img {
-    object-fit: cover;
-    object-position: center;
+.TeamMemberCard .position-absolute.w-100.h-100 {
+    transform: scale(1);
+    transform-origin: center;
+    transition: all .25s;
 }
 
-.TeamMemberCard .img-wrapper {
-    width: 100px;
-    height: 100px;
+.TeamMemberCard > .card:hover .position-absolute.w-100.h-100 {
+    transform: scale(1.1);
 }
