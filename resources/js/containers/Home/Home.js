@@ -25,23 +25,15 @@ import JaffGodwill from "../../../../public/images/images@2x.png";
 import SamuelRolande from "../../../../public/images/33a762719ceb41b28820b45364c02eec@2x.png";
 
 class Home extends Component {
-    componentDidMount() {
-        if (this.props.auth.authPage) this.props.onAuthPageOff();
-        if (this.props.auth.userPage) this.props.onUserPageOff();
-    }
-
     render() {
         return (
             <Col xs={12} className="Home p-0">
                 <div className="position-relative full-height-app">
                     <div className="position-absolute h-100 w-100">
-                        <div
-                            id="banner"
-                            className="text-white w-100 mx-auto text-center text-sm-left"
-                        >
-                            <div className="d-flex justify-content-between align-items-center">
-                                <div className="d-flex">
-                                    <div className="pr-4">
+                        <div id="banner" className="text-white w-100 mx-auto text-center text-sm-left">
+                            <div className="d-lg-flex justify-content-between align-items-center">
+                                <div className="d-lg-flex">
+                                    <div className="pr-4 d-none d-lg-flex">
                                         <div
                                             className="position-relative bg-orange"
                                             style={{
@@ -72,14 +64,21 @@ class Home extends Component {
                                     </div>
 
                                     <div>
-                                        <div className="display-2 title">
+                                        <div className="display-2 d-none d-lg-block title">
                                             <span className="text-300">We</span>
                                             <br />
                                             <span className="text-700">
                                                 Develop
                                             </span>
                                         </div>
-                                        <div className="display-3 subtitle text-300">
+                                        <div className="display-4 d-lg-none text-center title">
+                                            <span className="text-300">We</span>
+                                            <br />
+                                            <span className="text-700">
+                                                Develop
+                                            </span>
+                                        </div>
+                                        <div className="display-3 d-none d-lg-block subtitle text-300">
                                             Web application and
                                             <br />
                                             Softwares at{" "}
@@ -87,45 +86,52 @@ class Home extends Component {
                                                 low cost
                                             </span>
                                         </div>
-                                        <div className="mt-5">
-                                            <BetweenButton
-                                                size="lg"
+                                        <div className="text-xx-large text-center d-lg-none subtitle text-300">
+                                            Web application and
+                                            <br />
+                                            Softwares at{" "}
+                                            <span className="text-700">
+                                                low cost
+                                            </span>
+                                        </div>
+                                        <div className="mt-5 d-none d-lg-block">
+                                            <BetweenButton size="lg"
                                                 className="mr-3 bg-scarlet-gradient border-0 text-montserrat-alt text-400 py-3 px-4 text-x-large"
-                                                color="dark"
-                                                icon="arrow-alt-circle-right"
-                                                iconColor="yellow"
-                                            >
+                                                color="dark" icon="arrow-alt-circle-right" iconColor="yellow" >
                                                 Get a quote
                                             </BetweenButton>
+                                            <BetweenButton size="lg" color="orange" icon="arrow-alt-circle-right"
+                                                className="text-montserrat-alt text-400 py-3 px-4 text-x-large">
+                                                View portfolio
+                                            </BetweenButton>
+                                        </div>
+                                        <div className="mt-5 text-center d-lg-none">
                                             <BetweenButton
-                                                size="lg"
-                                                color="orange"
-                                                icon="arrow-alt-circle-right"
-                                                className="text-montserrat-alt text-400 py-3 px-4 text-x-large"
-                                            >
+                                                className="mb-3 mb-sm-0 bg-scarlet-gradient border-0 text-montserrat-alt text-400 py-2 px-3 text-large"
+                                                color="dark" icon="arrow-alt-circle-right" iconColor="yellow" >
+                                                Get a quote
+                                            </BetweenButton>{' '}
+                                            <BetweenButton color="orange" icon="arrow-alt-circle-right"
+                                                className="text-montserrat-alt text-400 py-2 px-3 text-large">
                                                 View portfolio
                                             </BetweenButton>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="w-40 overflow-hidden">
-                                    <img
-                                        src={SoftImage}
-                                        className="img-fluid"
-                                        style={{ transform: 'scale(1.2)', transformOrigin: 'center' }}
-                                    />
+                                <div className="w-40 d-none d-lg-block overflow-hidden">
+                                    <img src={SoftImage} className="img-fluid" style={{ transform: 'scale(1.2)', transformOrigin: 'center' }} />
                                 </div>
                             </div>
                         </div>
                         <HomeCarousel>
-                            <div className="bg-transparent circle-carousel-indicator rounded-circle border border-3 border-yellow position-absolute" />
+                            <div className="bg-transparent d-none d-lg-inline circle-carousel-indicator rounded-circle border border-3 border-yellow position-absolute" />
                         </HomeCarousel>
                     </div>
                 </div>
 
                 <PresentationalContainer user>
-                    <Container className="position-relative" style={{ transform: "translateY(-40%) scale(1)", transformOrigin: 'center', zIndex: 11 }}>
+                    <Container className="position-relative d-none d-lg-block" style={{ transform: "translateY(-40%) scale(1)", transformOrigin: 'center', zIndex: 11 }}>
                         <div className="d-flex">
                             <div className="bg-darkblue text-center text-white flex-grow-1">
                                 <div className="pb-2 pt-3 text-700 border-bottom border-thin border-white-20 position-relative">
@@ -186,7 +192,7 @@ class Home extends Component {
 
                 <PresentationalContainer user>
                     <Row className="align-items-center position-relative">
-                        <div className="position-absolute" style={{ top: '50%', left: 0, transform: 'translate(-50%, -50%) scale(.8)' }}>
+                        <div className="d-none d-lg-block position-absolute" style={{ top: '50%', left: 0, transform: 'translate(-50%, -50%) scale(.8)' }}>
                             <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-green d-flex justify-content-center align-items-center" style={{ width: 300 }}>
                                 <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-yellow shadow d-flex justify-content-center align-items-center" style={{ width: 182, height: 182 }}>
                                     <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-light shadow" style={{ width: 114, height: 114 }}></div>
@@ -203,11 +209,7 @@ class Home extends Component {
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
                             <div className="mt-5">
-                                <AbsoluteButton
-                                    color="pink"
-                                    icon="arrow-alt-circle-right"
-                                    pill
-                                >
+                                <AbsoluteButton color="pink" icon="arrow-alt-circle-right" pill>
                                     All Services
                                 </AbsoluteButton>
                             </div>
@@ -228,7 +230,7 @@ class Home extends Component {
                     <Row className="align-items-center">
                         <Col lg={7} className="p-5">
                             <Row>
-                                <Col xs={10}>
+                                <Col lg={10}>
                                     <Row className="justify-content-center align-items-center">
                                         <WorkBlock src={SoftImage} top="20%" bgColor="pink" title="Graphic Design" color="white">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
                                         <WorkBlock src={SoftImage} top="-20%" left="-10%" title="Mobile Apps">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
@@ -311,11 +313,4 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = state => ({ ...state });
-
-const mapDispatchToProps = dispatch => ({
-    onAuthPageOff: () => dispatch(actions.authPageOff()),
-    onUserPageOff: () => dispatch(actions.userPageOff())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;

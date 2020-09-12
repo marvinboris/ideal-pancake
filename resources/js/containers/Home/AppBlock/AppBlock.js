@@ -6,7 +6,7 @@ import { Col } from 'reactstrap';
 import './AppBlock.css';
 
 const appBlock = ({ children, animation = "fade-up", icon, title = '', link = '/' }) =>
-    <Col data-aos={animation} md={6} lg={3} className="AppBlock">
+    <Col data-aos={animation} md={6} lg={3} className="AppBlock pb-4 pb-lg-0">
         <div className="shadow-sm bg-white rounded-4 p-4">
             <div className="d-flex justify-content-center align-items-center embed-responsive embed-responsive-1by1 mx-auto rounded-circle border border-orange border-3 position-relative p-3" style={{ width: 130 }}>
                 <div className="position-absolute w-80 embed-responsive embed-responsive-1by1 rounded-circle shadow d-flex justify-content-center align-items-center" style={{ top: '50%', transform: 'translateY(-50%)' }}>

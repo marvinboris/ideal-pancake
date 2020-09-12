@@ -8,18 +8,18 @@ import Stars from '../../../components/UI/Stars/Stars';
 import BetweenButton from '../../../components/UI/Button/BetweenButton/BetweenButton';
 
 const customerBlock = ({ children, animation = "fade-up", title, src, name, mark, link = '/', flag = 'cm', active }) =>
-    <Col data-aos={animation} lg={4}>
-        <div className="rounded-4 shadow-sm bg-white px-5 pb-4 text-left position-relative" style={{ paddingTop: 82 }}>
+    <Col data-aos={animation} lg={4} className="pb-5 pb-lg-0">
+        <div className="rounded-4 shadow-sm bg-white px-5 pb-5 pb-lg-4 mb-5 mb-lg-0 text-left position-relative" style={{ paddingTop: 82 }}>
             <div className="position-absolute w-100" style={{ top: -82, left: 0 }}>
                 <div className="border border-5 border-orange rounded-circle position-relative mx-auto embed-responsive embed-responsive-1by1 bg-light" style={{ width: 164 }}>
-                    <div className="w-100 h-100 rounded-circle shadow-sm position-absolute" style={{ background: "url('" + src + "') no-repeat center", backgroundSize: 'cover', top: 0 }} />
+                    <div className="w-100 h-100 rounded-circle shadow-sm position-absolute" style={{ background: `url('${src}') no-repeat center`, backgroundSize: 'cover', top: 0 }} />
                 </div>
             </div>
 
             <div className="mb-3 d-flex w-80 mx-auto mt-3">
                 <div className="border-right border-black-20 pr-3 mr-3 position-relative">
                     <span className="language-flag shadow-sm overflow-hidden d-inline-flex justify-content-center align-items-center p-0 border-0 position-relative">
-                        <span className={"flag-icon position-absolute text-x-large flag-icon-" + flag}></span>
+                        <span className={`flag-icon position-absolute text-x-large flag-icon-${flag}`}></span>
                     </span>
 
                     <FontAwesomeIcon icon="circle" className="text-orange position-absolute text-xx-small" style={{ top: '50%', right: 0, transform: 'translate(50%, -50%)' }} />

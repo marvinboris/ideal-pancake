@@ -2187,22 +2187,12 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
-.form-control::-webkit-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-
 .form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-
-.form-control::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
@@ -17065,6 +17055,12 @@ body {
 
 .full-height-app {
   min-height: calc(100vh - 132px);
+}
+
+@media screen and (max-width: 992px) {
+  .full-height-app {
+    min-height: calc(100vh - 92px);
+  }
 }
 
 .language-flag {

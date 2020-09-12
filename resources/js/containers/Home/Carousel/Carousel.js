@@ -82,7 +82,7 @@ class HomeCarousel extends Component {
 
         return (
             <Carousel id="carousel" activeIndex={this.state.activeIndex} next={this.next} previous={this.previous} className="h-100 carousel-fade HomeCarousel">
-                <CarouselIndicators items={items} activeIndex={this.state.activeIndex} className="d-flex flex-column align-items-center" onClickHandler={this.goToIndex} />
+                <CarouselIndicators items={items} activeIndex={this.state.activeIndex} className="d-lg-flex flex-column align-items-center" onClickHandler={this.goToIndex} />
 
                 {slides}
 

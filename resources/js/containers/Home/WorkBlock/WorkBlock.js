@@ -4,8 +4,8 @@ import { Col } from 'reactstrap';
 import './Workblock.css';
 
 const workBlock = ({ children, animation = "fade-up", color = 'dark', bgColor = 'white', src, title, className = '', top = 0, left = 0 }) =>
-    <Col md={6} data-aos={animation} className={"Workblock embed-responsive embed-responsive-1by1 position-relative"} style={{ overflow: 'visible' }}>
-        <div className={"hover embed-responsive embed-responsive-1by1 w-100 position-absolute shadow rounded-16 text-" + color + " bg-" + bgColor + " " + className} style={{ top, left }}>
+    <Col md={6} data-aos={animation} className="Workblock embed-responsive embed-responsive-1by1 position-relative pb-3 pb-lg-0" style={{ overflow: 'visible' }}>
+        <div className={`hover embed-responsive embed-responsive-1by1 w-100 position-absolute shadow rounded-16 text-${color} bg-${bgColor} ${className}`} style={{ top, left }}>
             <div className="position-absolute p-5 w-100" style={{ top: 0, left: 0 }}>
                 <div className="text-center">
                     <div className="mb-3">

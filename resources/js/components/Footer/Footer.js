@@ -87,12 +87,12 @@ const footer = () => (
             </Row>
         </footer>
         <footer className="container-fluid px-5 bg-scarlet text-light pb-4">
-            <div className="border-top border-white-20 d-flex justify-content-between align-items-center pt-4">
-                <div>
+            <div className="border-top border-white-20 d-lg-flex justify-content-between align-items-center pt-4">
+                <div className="text-center">
                     © Copyrights 2020 <span className="text-yellow text-700">Briluce Services</span>. All rights reserved.
                 </div>
 
-                <div className="d-flex">
+                <div className="d-flex justify-content-center">
                     <FontAwesomeIcon size="2x" icon={["fab", "facebook-square"]} className="fa-icon mr-3" />
                     <FontAwesomeIcon size="2x" icon={["fab", "twitter-square"]} className="fa-icon mr-3" />
                     <FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} className="fa-icon mr-3" />

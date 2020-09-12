@@ -8,7 +8,7 @@ const navigationItems = ({ isAuth, name, logoutHandler, role, cartItemsNumber, n
         <Navbar className="pb-4" dark={!light} light={light} expand>
             <Container>
                 <Collapse navbar>
-                    <Nav className="d-flex align-items-center" navbar>
+                    <Nav className="d-block d-lg-flex align-items-center" navbar>
                         <NavigationItem font={font} icon="home" href="/">Home</NavigationItem>
                         <NavigationItem font={font} icon={"far", "user"} href="/about-us">About Us</NavigationItem>
                         <NavigationItem font={font} icon="graduation-cap" href="/scholar">Scholar</NavigationItem>
