@@ -15,7 +15,7 @@
 
 .Home .circle-carousel-indicator {
     --width: 32px;
-    --initialTop: -66px;
+    --initialTop: -67px;
     width: var(--width);
     height: var(--width);
     z-index: 12;
