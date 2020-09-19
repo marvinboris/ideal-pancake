@@ -36,39 +36,29 @@ class HomeCarousel extends Component {
         animating: false
     }
 
-    componentDidMount() {
-        $(function () {
-            const carousel = $('.HomeCarousel');
-            alert(JSON.stringify(carousel));
+    moveCircle = index => {
+        setTimeout(() => {
+            const top = index * 44;
 
-            carousel.on('slide.bs.carousel', function () {
-                setTimeout(() => {
-                    const activeCarouselIndicator = $('.HomeCarousel .carousel-indicator.active');
-                    const index = activeCarouselIndicator.attr('data-slide-to');
-
-                    const top = -66 + index * 42;
-
-                    $('.circle-carousel-indicator').animate({ translateY: top }, 'fast');
-                }, 1);
-            });
-        });
+            $('.circle-carousel-indicator').first().animate({ marginTop: top }, 'fast');
+        }, 1);
     }
 
     next = () => {
         if (this.state.animating) return;
         const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
-        this.setState({ activeIndex: nextIndex });
+        this.setState({ activeIndex: nextIndex }, () => this.moveCircle(nextIndex));
     }
 
     previous = () => {
         if (this.state.animating) return;
         const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
-        this.setState({ activeIndex: nextIndex });
+        this.setState({ activeIndex: nextIndex }, () => this.moveCircle(nextIndex));
     }
 
     goToIndex = newIndex => {
         if (this.state.animating) return;
-        this.setState({ activeIndex: newIndex });
+        this.setState({ activeIndex: newIndex }, () => this.moveCircle(newIndex));
     }
 
     render() {
