@@ -28,6 +28,8 @@
 
     gtag('config', 'G-PY4W5G89JF');
     </script>
+
+    {!! Request::url() === url('/') ? '<meta name="google-site-verification" content="vVWQhQetd05Hu2ij1VGLMANLr6WsxLFFSRmi2fV4gZU" />' : '' !!}
 </head>
 <body>
     <div id="app">
