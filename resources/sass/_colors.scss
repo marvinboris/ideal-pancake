@@ -17,13 +17,20 @@ $darkgreen: #04393b;
 $white: #ffffff;
 $gray: #aaa;
 $black: #000000;
+$light: #f8f9fa;
+$soft: #f6f6f6;
+$darklight: #1b223f;
+$border: #606060;
+$input: #28324c;
+$transparent: transparent;
 
 // Colors
 $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $darkgreen $white,
   "yellow" $myyellow $black, "darkyellow" $darkyellow $white, "red" $myred $white, "purered" $purered $white,
   "orange" $myorange $white, "oranger" $myoranger $white, "scarlet" $scarlet $white, "blue" $myblue $white,
   "lightblue" $mylightblue $white, "pink" $mypink $white, "mydarkblue" $mydarkblue $white, "white" $white $black,
-  "black" $black $white, "gray" $gray $white;
+  "black" $black $white, "gray" $gray $white, "darklight" $darklight $white, "border" $border $white,
+  "light" $light $black, "input" $input $white, "transparent" $transparent $black, "soft" $soft $black;
 @each $name, $color, $font in $colors {
   .text-#{$name} {
     color: $color !important;
@@ -46,6 +53,15 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
     color: rgba($color, 0.2);
   }
 
+  .text-#{$name}-50 {
+    color: rgba($color, 0.5);
+  }
+
+  .badge-#{$name} {
+    background-color: $color !important;
+    color: $font !important;
+  }
+
   .bg-#{$name} {
     background-color: $color !important;
   }
@@ -58,6 +74,14 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
     background-color: rgba($color, 0.2) !important;
   }
 
+  .bg-#{$name}-25 {
+    background-color: rgba($color, 0.25) !important;
+  }
+
+  .bg-#{$name}-30 {
+    background-color: rgba($color, 0.3) !important;
+  }
+
   .bg-#{$name}-33 {
     background-color: rgba($color, 0.33) !important;
   }
@@ -68,6 +92,18 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
 
   .bg-#{$name}-80 {
     background-color: rgba($color, 0.8) !important;
+  }
+
+  .shadow-#{$name} {
+    box-shadow: 0 0.5rem 1rem rgba($color, 0.15) !important;
+  }
+
+  .shadow-#{$name}-lg {
+    box-shadow: 0 1rem 3rem rgba($color, 0.175) !important;
+  }
+
+  .shadow-#{$name}-circle {
+    box-shadow: 0 0 0 0.75rem rgba($color, 0.1) !important;
   }
 
   .btn-#{$name} {

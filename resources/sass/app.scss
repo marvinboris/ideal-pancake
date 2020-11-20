@@ -22,3 +22,12 @@
 
 @import "body";
 @import "header";
+
+.SideDrawerItem {
+    &.active {
+        span {
+            @extend .text-orange;
+            @extend .text-700;
+        }
+    }
+}

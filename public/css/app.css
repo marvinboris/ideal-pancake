@@ -12971,6 +12971,15 @@ a.text-dark:focus {
   color: rgba(23, 165, 170, 0.2);
 }
 
+.text-green-50 {
+  color: rgba(23, 165, 170, 0.5);
+}
+
+.badge-green {
+  background-color: #17a5aa !important;
+  color: #ffffff !important;
+}
+
 .bg-green {
   background-color: #17a5aa !important;
 }
@@ -12983,6 +12992,14 @@ a.text-dark:focus {
   background-color: rgba(23, 165, 170, 0.2) !important;
 }
 
+.bg-green-25 {
+  background-color: rgba(23, 165, 170, 0.25) !important;
+}
+
+.bg-green-30 {
+  background-color: rgba(23, 165, 170, 0.3) !important;
+}
+
 .bg-green-33 {
   background-color: rgba(23, 165, 170, 0.33) !important;
 }
@@ -12993,6 +13010,18 @@ a.text-dark:focus {
 
 .bg-green-80 {
   background-color: rgba(23, 165, 170, 0.8) !important;
+}
+
+.shadow-green {
+  box-shadow: 0 0.5rem 1rem rgba(23, 165, 170, 0.15) !important;
+}
+
+.shadow-green-lg {
+  box-shadow: 0 1rem 3rem rgba(23, 165, 170, 0.175) !important;
+}
+
+.shadow-green-circle {
+  box-shadow: 0 0 0 0.75rem rgba(23, 165, 170, 0.1) !important;
 }
 
 .btn-green {
@@ -13077,6 +13106,15 @@ a.text-dark:focus {
   color: rgba(246, 255, 1, 0.2);
 }
 
+.text-lemongreen-50 {
+  color: rgba(246, 255, 1, 0.5);
+}
+
+.badge-lemongreen {
+  background-color: #f6ff01 !important;
+  color: #343a40 !important;
+}
+
 .bg-lemongreen {
   background-color: #f6ff01 !important;
 }
@@ -13089,6 +13127,14 @@ a.text-dark:focus {
   background-color: rgba(246, 255, 1, 0.2) !important;
 }
 
+.bg-lemongreen-25 {
+  background-color: rgba(246, 255, 1, 0.25) !important;
+}
+
+.bg-lemongreen-30 {
+  background-color: rgba(246, 255, 1, 0.3) !important;
+}
+
 .bg-lemongreen-33 {
   background-color: rgba(246, 255, 1, 0.33) !important;
 }
@@ -13099,6 +13145,18 @@ a.text-dark:focus {
 
 .bg-lemongreen-80 {
   background-color: rgba(246, 255, 1, 0.8) !important;
+}
+
+.shadow-lemongreen {
+  box-shadow: 0 0.5rem 1rem rgba(246, 255, 1, 0.15) !important;
+}
+
+.shadow-lemongreen-lg {
+  box-shadow: 0 1rem 3rem rgba(246, 255, 1, 0.175) !important;
+}
+
+.shadow-lemongreen-circle {
+  box-shadow: 0 0 0 0.75rem rgba(246, 255, 1, 0.1) !important;
 }
 
 .btn-lemongreen {
@@ -13183,6 +13241,15 @@ a.text-dark:focus {
   color: rgba(4, 57, 59, 0.2);
 }
 
+.text-darkblue-50 {
+  color: rgba(4, 57, 59, 0.5);
+}
+
+.badge-darkblue {
+  background-color: #04393b !important;
+  color: #ffffff !important;
+}
+
 .bg-darkblue {
   background-color: #04393b !important;
 }
@@ -13195,6 +13262,14 @@ a.text-dark:focus {
   background-color: rgba(4, 57, 59, 0.2) !important;
 }
 
+.bg-darkblue-25 {
+  background-color: rgba(4, 57, 59, 0.25) !important;
+}
+
+.bg-darkblue-30 {
+  background-color: rgba(4, 57, 59, 0.3) !important;
+}
+
 .bg-darkblue-33 {
   background-color: rgba(4, 57, 59, 0.33) !important;
 }
@@ -13205,6 +13280,18 @@ a.text-dark:focus {
 
 .bg-darkblue-80 {
   background-color: rgba(4, 57, 59, 0.8) !important;
+}
+
+.shadow-darkblue {
+  box-shadow: 0 0.5rem 1rem rgba(4, 57, 59, 0.15) !important;
+}
+
+.shadow-darkblue-lg {
+  box-shadow: 0 1rem 3rem rgba(4, 57, 59, 0.175) !important;
+}
+
+.shadow-darkblue-circle {
+  box-shadow: 0 0 0 0.75rem rgba(4, 57, 59, 0.1) !important;
 }
 
 .btn-darkblue {
@@ -13289,6 +13376,15 @@ a.text-dark:focus {
   color: rgba(255, 205, 40, 0.2);
 }
 
+.text-yellow-50 {
+  color: rgba(255, 205, 40, 0.5);
+}
+
+.badge-yellow {
+  background-color: #ffcd28 !important;
+  color: #000000 !important;
+}
+
 .bg-yellow {
   background-color: #ffcd28 !important;
 }
@@ -13301,6 +13397,14 @@ a.text-dark:focus {
   background-color: rgba(255, 205, 40, 0.2) !important;
 }
 
+.bg-yellow-25 {
+  background-color: rgba(255, 205, 40, 0.25) !important;
+}
+
+.bg-yellow-30 {
+  background-color: rgba(255, 205, 40, 0.3) !important;
+}
+
 .bg-yellow-33 {
   background-color: rgba(255, 205, 40, 0.33) !important;
 }
@@ -13311,6 +13415,18 @@ a.text-dark:focus {
 
 .bg-yellow-80 {
   background-color: rgba(255, 205, 40, 0.8) !important;
+}
+
+.shadow-yellow {
+  box-shadow: 0 0.5rem 1rem rgba(255, 205, 40, 0.15) !important;
+}
+
+.shadow-yellow-lg {
+  box-shadow: 0 1rem 3rem rgba(255, 205, 40, 0.175) !important;
+}
+
+.shadow-yellow-circle {
+  box-shadow: 0 0 0 0.75rem rgba(255, 205, 40, 0.1) !important;
 }
 
 .btn-yellow {
@@ -13395,6 +13511,15 @@ a.text-dark:focus {
   color: rgba(244, 187, 0, 0.2);
 }
 
+.text-darkyellow-50 {
+  color: rgba(244, 187, 0, 0.5);
+}
+
+.badge-darkyellow {
+  background-color: #f4bb00 !important;
+  color: #ffffff !important;
+}
+
 .bg-darkyellow {
   background-color: #f4bb00 !important;
 }
@@ -13407,6 +13532,14 @@ a.text-dark:focus {
   background-color: rgba(244, 187, 0, 0.2) !important;
 }
 
+.bg-darkyellow-25 {
+  background-color: rgba(244, 187, 0, 0.25) !important;
+}
+
+.bg-darkyellow-30 {
+  background-color: rgba(244, 187, 0, 0.3) !important;
+}
+
 .bg-darkyellow-33 {
   background-color: rgba(244, 187, 0, 0.33) !important;
 }
@@ -13417,6 +13550,18 @@ a.text-dark:focus {
 
 .bg-darkyellow-80 {
   background-color: rgba(244, 187, 0, 0.8) !important;
+}
+
+.shadow-darkyellow {
+  box-shadow: 0 0.5rem 1rem rgba(244, 187, 0, 0.15) !important;
+}
+
+.shadow-darkyellow-lg {
+  box-shadow: 0 1rem 3rem rgba(244, 187, 0, 0.175) !important;
+}
+
+.shadow-darkyellow-circle {
+  box-shadow: 0 0 0 0.75rem rgba(244, 187, 0, 0.1) !important;
 }
 
 .btn-darkyellow {
@@ -13501,6 +13646,15 @@ a.text-dark:focus {
   color: rgba(255, 11, 51, 0.2);
 }
 
+.text-red-50 {
+  color: rgba(255, 11, 51, 0.5);
+}
+
+.badge-red {
+  background-color: #ff0b33 !important;
+  color: #ffffff !important;
+}
+
 .bg-red {
   background-color: #ff0b33 !important;
 }
@@ -13513,6 +13667,14 @@ a.text-dark:focus {
   background-color: rgba(255, 11, 51, 0.2) !important;
 }
 
+.bg-red-25 {
+  background-color: rgba(255, 11, 51, 0.25) !important;
+}
+
+.bg-red-30 {
+  background-color: rgba(255, 11, 51, 0.3) !important;
+}
+
 .bg-red-33 {
   background-color: rgba(255, 11, 51, 0.33) !important;
 }
@@ -13523,6 +13685,18 @@ a.text-dark:focus {
 
 .bg-red-80 {
   background-color: rgba(255, 11, 51, 0.8) !important;
+}
+
+.shadow-red {
+  box-shadow: 0 0.5rem 1rem rgba(255, 11, 51, 0.15) !important;
+}
+
+.shadow-red-lg {
+  box-shadow: 0 1rem 3rem rgba(255, 11, 51, 0.175) !important;
+}
+
+.shadow-red-circle {
+  box-shadow: 0 0 0 0.75rem rgba(255, 11, 51, 0.1) !important;
 }
 
 .btn-red {
@@ -13607,6 +13781,15 @@ a.text-dark:focus {
   color: rgba(246, 9, 41, 0.2);
 }
 
+.text-purered-50 {
+  color: rgba(246, 9, 41, 0.5);
+}
+
+.badge-purered {
+  background-color: #f60929 !important;
+  color: #ffffff !important;
+}
+
 .bg-purered {
   background-color: #f60929 !important;
 }
@@ -13619,6 +13802,14 @@ a.text-dark:focus {
   background-color: rgba(246, 9, 41, 0.2) !important;
 }
 
+.bg-purered-25 {
+  background-color: rgba(246, 9, 41, 0.25) !important;
+}
+
+.bg-purered-30 {
+  background-color: rgba(246, 9, 41, 0.3) !important;
+}
+
 .bg-purered-33 {
   background-color: rgba(246, 9, 41, 0.33) !important;
 }
@@ -13629,6 +13820,18 @@ a.text-dark:focus {
 
 .bg-purered-80 {
   background-color: rgba(246, 9, 41, 0.8) !important;
+}
+
+.shadow-purered {
+  box-shadow: 0 0.5rem 1rem rgba(246, 9, 41, 0.15) !important;
+}
+
+.shadow-purered-lg {
+  box-shadow: 0 1rem 3rem rgba(246, 9, 41, 0.175) !important;
+}
+
+.shadow-purered-circle {
+  box-shadow: 0 0 0 0.75rem rgba(246, 9, 41, 0.1) !important;
 }
 
 .btn-purered {
@@ -13692,16 +13895,19 @@ a.text-dark:focus {
   border-color: #f60929 !important;
 }
 
-.text-orange {
+.text-orange,
+.SideDrawerItem.active span {
   color: #f7941d !important;
 }
 
-.nav-link.text-orange:not(.active) {
+.nav-link.text-orange:not(.active),
+.SideDrawerItem.active span.nav-link:not(.active) {
   color: rgba(247, 148, 29, 0.5) !important;
   transition: all 0.25s;
 }
 
-.nav-link.text-orange:not(.active):hover {
+.nav-link.text-orange:not(.active):hover,
+.SideDrawerItem.active span.nav-link:not(.active):hover {
   color: #f7941d !important;
 }
 
@@ -13711,6 +13917,15 @@ a.text-dark:focus {
 
 .text-orange-20 {
   color: rgba(247, 148, 29, 0.2);
+}
+
+.text-orange-50 {
+  color: rgba(247, 148, 29, 0.5);
+}
+
+.badge-orange {
+  background-color: #f7941d !important;
+  color: #ffffff !important;
 }
 
 .bg-orange {
@@ -13725,6 +13940,14 @@ a.text-dark:focus {
   background-color: rgba(247, 148, 29, 0.2) !important;
 }
 
+.bg-orange-25 {
+  background-color: rgba(247, 148, 29, 0.25) !important;
+}
+
+.bg-orange-30 {
+  background-color: rgba(247, 148, 29, 0.3) !important;
+}
+
 .bg-orange-33 {
   background-color: rgba(247, 148, 29, 0.33) !important;
 }
@@ -13735,6 +13958,18 @@ a.text-dark:focus {
 
 .bg-orange-80 {
   background-color: rgba(247, 148, 29, 0.8) !important;
+}
+
+.shadow-orange {
+  box-shadow: 0 0.5rem 1rem rgba(247, 148, 29, 0.15) !important;
+}
+
+.shadow-orange-lg {
+  box-shadow: 0 1rem 3rem rgba(247, 148, 29, 0.175) !important;
+}
+
+.shadow-orange-circle {
+  box-shadow: 0 0 0 0.75rem rgba(247, 148, 29, 0.1) !important;
 }
 
 .btn-orange {
@@ -13819,6 +14054,15 @@ a.text-dark:focus {
   color: rgba(246, 126, 9, 0.2);
 }
 
+.text-oranger-50 {
+  color: rgba(246, 126, 9, 0.5);
+}
+
+.badge-oranger {
+  background-color: #f67e09 !important;
+  color: #ffffff !important;
+}
+
 .bg-oranger {
   background-color: #f67e09 !important;
 }
@@ -13831,6 +14075,14 @@ a.text-dark:focus {
   background-color: rgba(246, 126, 9, 0.2) !important;
 }
 
+.bg-oranger-25 {
+  background-color: rgba(246, 126, 9, 0.25) !important;
+}
+
+.bg-oranger-30 {
+  background-color: rgba(246, 126, 9, 0.3) !important;
+}
+
 .bg-oranger-33 {
   background-color: rgba(246, 126, 9, 0.33) !important;
 }
@@ -13841,6 +14093,18 @@ a.text-dark:focus {
 
 .bg-oranger-80 {
   background-color: rgba(246, 126, 9, 0.8) !important;
+}
+
+.shadow-oranger {
+  box-shadow: 0 0.5rem 1rem rgba(246, 126, 9, 0.15) !important;
+}
+
+.shadow-oranger-lg {
+  box-shadow: 0 1rem 3rem rgba(246, 126, 9, 0.175) !important;
+}
+
+.shadow-oranger-circle {
+  box-shadow: 0 0 0 0.75rem rgba(246, 126, 9, 0.1) !important;
 }
 
 .btn-oranger {
@@ -13925,6 +14189,15 @@ a.text-dark:focus {
   color: rgba(141, 0, 75, 0.2);
 }
 
+.text-scarlet-50 {
+  color: rgba(141, 0, 75, 0.5);
+}
+
+.badge-scarlet {
+  background-color: #8d004b !important;
+  color: #ffffff !important;
+}
+
 .bg-scarlet {
   background-color: #8d004b !important;
 }
@@ -13937,6 +14210,14 @@ a.text-dark:focus {
   background-color: rgba(141, 0, 75, 0.2) !important;
 }
 
+.bg-scarlet-25 {
+  background-color: rgba(141, 0, 75, 0.25) !important;
+}
+
+.bg-scarlet-30 {
+  background-color: rgba(141, 0, 75, 0.3) !important;
+}
+
 .bg-scarlet-33 {
   background-color: rgba(141, 0, 75, 0.33) !important;
 }
@@ -13947,6 +14228,18 @@ a.text-dark:focus {
 
 .bg-scarlet-80 {
   background-color: rgba(141, 0, 75, 0.8) !important;
+}
+
+.shadow-scarlet {
+  box-shadow: 0 0.5rem 1rem rgba(141, 0, 75, 0.15) !important;
+}
+
+.shadow-scarlet-lg {
+  box-shadow: 0 1rem 3rem rgba(141, 0, 75, 0.175) !important;
+}
+
+.shadow-scarlet-circle {
+  box-shadow: 0 0 0 0.75rem rgba(141, 0, 75, 0.1) !important;
 }
 
 .btn-scarlet {
@@ -14031,6 +14324,15 @@ a.text-dark:focus {
   color: rgba(0, 94, 177, 0.2);
 }
 
+.text-blue-50 {
+  color: rgba(0, 94, 177, 0.5);
+}
+
+.badge-blue {
+  background-color: #005eb1 !important;
+  color: #ffffff !important;
+}
+
 .bg-blue {
   background-color: #005eb1 !important;
 }
@@ -14043,6 +14345,14 @@ a.text-dark:focus {
   background-color: rgba(0, 94, 177, 0.2) !important;
 }
 
+.bg-blue-25 {
+  background-color: rgba(0, 94, 177, 0.25) !important;
+}
+
+.bg-blue-30 {
+  background-color: rgba(0, 94, 177, 0.3) !important;
+}
+
 .bg-blue-33 {
   background-color: rgba(0, 94, 177, 0.33) !important;
 }
@@ -14053,6 +14363,18 @@ a.text-dark:focus {
 
 .bg-blue-80 {
   background-color: rgba(0, 94, 177, 0.8) !important;
+}
+
+.shadow-blue {
+  box-shadow: 0 0.5rem 1rem rgba(0, 94, 177, 0.15) !important;
+}
+
+.shadow-blue-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 94, 177, 0.175) !important;
+}
+
+.shadow-blue-circle {
+  box-shadow: 0 0 0 0.75rem rgba(0, 94, 177, 0.1) !important;
 }
 
 .btn-blue {
@@ -14137,6 +14459,15 @@ a.text-dark:focus {
   color: rgba(98, 186, 254, 0.2);
 }
 
+.text-lightblue-50 {
+  color: rgba(98, 186, 254, 0.5);
+}
+
+.badge-lightblue {
+  background-color: #62bafe !important;
+  color: #ffffff !important;
+}
+
 .bg-lightblue {
   background-color: #62bafe !important;
 }
@@ -14149,6 +14480,14 @@ a.text-dark:focus {
   background-color: rgba(98, 186, 254, 0.2) !important;
 }
 
+.bg-lightblue-25 {
+  background-color: rgba(98, 186, 254, 0.25) !important;
+}
+
+.bg-lightblue-30 {
+  background-color: rgba(98, 186, 254, 0.3) !important;
+}
+
 .bg-lightblue-33 {
   background-color: rgba(98, 186, 254, 0.33) !important;
 }
@@ -14159,6 +14498,18 @@ a.text-dark:focus {
 
 .bg-lightblue-80 {
   background-color: rgba(98, 186, 254, 0.8) !important;
+}
+
+.shadow-lightblue {
+  box-shadow: 0 0.5rem 1rem rgba(98, 186, 254, 0.15) !important;
+}
+
+.shadow-lightblue-lg {
+  box-shadow: 0 1rem 3rem rgba(98, 186, 254, 0.175) !important;
+}
+
+.shadow-lightblue-circle {
+  box-shadow: 0 0 0 0.75rem rgba(98, 186, 254, 0.1) !important;
 }
 
 .btn-lightblue {
@@ -14243,6 +14594,15 @@ a.text-dark:focus {
   color: rgba(205, 16, 92, 0.2);
 }
 
+.text-pink-50 {
+  color: rgba(205, 16, 92, 0.5);
+}
+
+.badge-pink {
+  background-color: #cd105c !important;
+  color: #ffffff !important;
+}
+
 .bg-pink {
   background-color: #cd105c !important;
 }
@@ -14255,6 +14615,14 @@ a.text-dark:focus {
   background-color: rgba(205, 16, 92, 0.2) !important;
 }
 
+.bg-pink-25 {
+  background-color: rgba(205, 16, 92, 0.25) !important;
+}
+
+.bg-pink-30 {
+  background-color: rgba(205, 16, 92, 0.3) !important;
+}
+
 .bg-pink-33 {
   background-color: rgba(205, 16, 92, 0.33) !important;
 }
@@ -14265,6 +14633,18 @@ a.text-dark:focus {
 
 .bg-pink-80 {
   background-color: rgba(205, 16, 92, 0.8) !important;
+}
+
+.shadow-pink {
+  box-shadow: 0 0.5rem 1rem rgba(205, 16, 92, 0.15) !important;
+}
+
+.shadow-pink-lg {
+  box-shadow: 0 1rem 3rem rgba(205, 16, 92, 0.175) !important;
+}
+
+.shadow-pink-circle {
+  box-shadow: 0 0 0 0.75rem rgba(205, 16, 92, 0.1) !important;
 }
 
 .btn-pink {
@@ -14349,6 +14729,15 @@ a.text-dark:focus {
   color: rgba(0, 47, 89, 0.2);
 }
 
+.text-mydarkblue-50 {
+  color: rgba(0, 47, 89, 0.5);
+}
+
+.badge-mydarkblue {
+  background-color: #002f59 !important;
+  color: #ffffff !important;
+}
+
 .bg-mydarkblue {
   background-color: #002f59 !important;
 }
@@ -14361,6 +14750,14 @@ a.text-dark:focus {
   background-color: rgba(0, 47, 89, 0.2) !important;
 }
 
+.bg-mydarkblue-25 {
+  background-color: rgba(0, 47, 89, 0.25) !important;
+}
+
+.bg-mydarkblue-30 {
+  background-color: rgba(0, 47, 89, 0.3) !important;
+}
+
 .bg-mydarkblue-33 {
   background-color: rgba(0, 47, 89, 0.33) !important;
 }
@@ -14371,6 +14768,18 @@ a.text-dark:focus {
 
 .bg-mydarkblue-80 {
   background-color: rgba(0, 47, 89, 0.8) !important;
+}
+
+.shadow-mydarkblue {
+  box-shadow: 0 0.5rem 1rem rgba(0, 47, 89, 0.15) !important;
+}
+
+.shadow-mydarkblue-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 47, 89, 0.175) !important;
+}
+
+.shadow-mydarkblue-circle {
+  box-shadow: 0 0 0 0.75rem rgba(0, 47, 89, 0.1) !important;
 }
 
 .btn-mydarkblue {
@@ -14455,6 +14864,15 @@ a.text-dark:focus {
   color: rgba(255, 255, 255, 0.2);
 }
 
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.badge-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
 .bg-white {
   background-color: #ffffff !important;
 }
@@ -14467,6 +14885,14 @@ a.text-dark:focus {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
+.bg-white-25 {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.bg-white-30 {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
 .bg-white-33 {
   background-color: rgba(255, 255, 255, 0.33) !important;
 }
@@ -14477,6 +14903,18 @@ a.text-dark:focus {
 
 .bg-white-80 {
   background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.shadow-white {
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15) !important;
+}
+
+.shadow-white-lg {
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.175) !important;
+}
+
+.shadow-white-circle {
+  box-shadow: 0 0 0 0.75rem rgba(255, 255, 255, 0.1) !important;
 }
 
 .btn-white {
@@ -14561,6 +14999,15 @@ a.text-dark:focus {
   color: rgba(0, 0, 0, 0.2);
 }
 
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.badge-black {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
 .bg-black {
   background-color: #000000 !important;
 }
@@ -14573,6 +15020,14 @@ a.text-dark:focus {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.bg-black-25 {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.bg-black-30 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
 .bg-black-33 {
   background-color: rgba(0, 0, 0, 0.33) !important;
 }
@@ -14583,6 +15038,18 @@ a.text-dark:focus {
 
 .bg-black-80 {
   background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.shadow-black {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-black-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-black-circle {
+  box-shadow: 0 0 0 0.75rem rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn-black {
@@ -14667,6 +15134,15 @@ a.text-dark:focus {
   color: rgba(170, 170, 170, 0.2);
 }
 
+.text-gray-50 {
+  color: rgba(170, 170, 170, 0.5);
+}
+
+.badge-gray {
+  background-color: #aaa !important;
+  color: #ffffff !important;
+}
+
 .bg-gray {
   background-color: #aaa !important;
 }
@@ -14679,6 +15155,14 @@ a.text-dark:focus {
   background-color: rgba(170, 170, 170, 0.2) !important;
 }
 
+.bg-gray-25 {
+  background-color: rgba(170, 170, 170, 0.25) !important;
+}
+
+.bg-gray-30 {
+  background-color: rgba(170, 170, 170, 0.3) !important;
+}
+
 .bg-gray-33 {
   background-color: rgba(170, 170, 170, 0.33) !important;
 }
@@ -14689,6 +15173,18 @@ a.text-dark:focus {
 
 .bg-gray-80 {
   background-color: rgba(170, 170, 170, 0.8) !important;
+}
+
+.shadow-gray {
+  box-shadow: 0 0.5rem 1rem rgba(170, 170, 170, 0.15) !important;
+}
+
+.shadow-gray-lg {
+  box-shadow: 0 1rem 3rem rgba(170, 170, 170, 0.175) !important;
+}
+
+.shadow-gray-circle {
+  box-shadow: 0 0 0 0.75rem rgba(170, 170, 170, 0.1) !important;
 }
 
 .btn-gray {
@@ -14752,6 +15248,816 @@ a.text-dark:focus {
   border-color: #aaa !important;
 }
 
+.text-darklight {
+  color: #1b223f !important;
+}
+
+.nav-link.text-darklight:not(.active) {
+  color: rgba(27, 34, 63, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-darklight:not(.active):hover {
+  color: #1b223f !important;
+}
+
+.text-darklight-10 {
+  color: rgba(27, 34, 63, 0.1);
+}
+
+.text-darklight-20 {
+  color: rgba(27, 34, 63, 0.2);
+}
+
+.text-darklight-50 {
+  color: rgba(27, 34, 63, 0.5);
+}
+
+.badge-darklight {
+  background-color: #1b223f !important;
+  color: #ffffff !important;
+}
+
+.bg-darklight {
+  background-color: #1b223f !important;
+}
+
+.bg-darklight-10 {
+  background-color: rgba(27, 34, 63, 0.1) !important;
+}
+
+.bg-darklight-20 {
+  background-color: rgba(27, 34, 63, 0.2) !important;
+}
+
+.bg-darklight-25 {
+  background-color: rgba(27, 34, 63, 0.25) !important;
+}
+
+.bg-darklight-30 {
+  background-color: rgba(27, 34, 63, 0.3) !important;
+}
+
+.bg-darklight-33 {
+  background-color: rgba(27, 34, 63, 0.33) !important;
+}
+
+.bg-darklight-50 {
+  background-color: rgba(27, 34, 63, 0.5) !important;
+}
+
+.bg-darklight-80 {
+  background-color: rgba(27, 34, 63, 0.8) !important;
+}
+
+.shadow-darklight {
+  box-shadow: 0 0.5rem 1rem rgba(27, 34, 63, 0.15) !important;
+}
+
+.shadow-darklight-lg {
+  box-shadow: 0 1rem 3rem rgba(27, 34, 63, 0.175) !important;
+}
+
+.shadow-darklight-circle {
+  box-shadow: 0 0 0 0.75rem rgba(27, 34, 63, 0.1) !important;
+}
+
+.btn-darklight {
+  background-color: #1b223f;
+  border-color: #1b223f;
+  color: #ffffff !important;
+}
+
+.btn-darklight:hover,
+.btn-darklight:focus,
+.btn-darklight.focus {
+  border-color: #0c0f1b;
+}
+
+.btn-darklight:focus,
+.btn-darklight.focus {
+  box-shadow: 0 0 0 0.2rem rgba(27, 34, 63, 0.5);
+}
+
+.btn-darklight:hover,
+.btn-darklight:focus,
+.btn-darklight.active {
+  background-color: #13182d;
+}
+
+.btn-darklight.disabled,
+.btn-darklight:disabled {
+  background-color: rgba(27, 34, 63, 0.5);
+}
+
+.btn-outline-darklight {
+  border-color: #1b223f;
+  color: #1b223f;
+}
+
+.btn-outline-darklight:hover {
+  background-color: #1b223f;
+  color: #ffffff;
+}
+
+.btn-outline-darklight:focus,
+.btn-outline-darklight.focus {
+  box-shadow: 0 0 0 0.2rem rgba(27, 34, 63, 0.5);
+}
+
+.btn-outline-darklight.disabled,
+.btn-outline-darklight:disabled {
+  background-color: transparent;
+  color: #1b223f;
+}
+
+.border-darklight-20 {
+  border-color: rgba(27, 34, 63, 0.2) !important;
+}
+
+.border-darklight-50 {
+  border-color: rgba(27, 34, 63, 0.5) !important;
+}
+
+.border-darklight {
+  border-color: #1b223f !important;
+}
+
+.text-border {
+  color: #606060 !important;
+}
+
+.nav-link.text-border:not(.active) {
+  color: rgba(96, 96, 96, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-border:not(.active):hover {
+  color: #606060 !important;
+}
+
+.text-border-10 {
+  color: rgba(96, 96, 96, 0.1);
+}
+
+.text-border-20 {
+  color: rgba(96, 96, 96, 0.2);
+}
+
+.text-border-50 {
+  color: rgba(96, 96, 96, 0.5);
+}
+
+.badge-border {
+  background-color: #606060 !important;
+  color: #ffffff !important;
+}
+
+.bg-border {
+  background-color: #606060 !important;
+}
+
+.bg-border-10 {
+  background-color: rgba(96, 96, 96, 0.1) !important;
+}
+
+.bg-border-20 {
+  background-color: rgba(96, 96, 96, 0.2) !important;
+}
+
+.bg-border-25 {
+  background-color: rgba(96, 96, 96, 0.25) !important;
+}
+
+.bg-border-30 {
+  background-color: rgba(96, 96, 96, 0.3) !important;
+}
+
+.bg-border-33 {
+  background-color: rgba(96, 96, 96, 0.33) !important;
+}
+
+.bg-border-50 {
+  background-color: rgba(96, 96, 96, 0.5) !important;
+}
+
+.bg-border-80 {
+  background-color: rgba(96, 96, 96, 0.8) !important;
+}
+
+.shadow-border {
+  box-shadow: 0 0.5rem 1rem rgba(96, 96, 96, 0.15) !important;
+}
+
+.shadow-border-lg {
+  box-shadow: 0 1rem 3rem rgba(96, 96, 96, 0.175) !important;
+}
+
+.shadow-border-circle {
+  box-shadow: 0 0 0 0.75rem rgba(96, 96, 96, 0.1) !important;
+}
+
+.btn-border {
+  background-color: #606060;
+  border-color: #606060;
+  color: #ffffff !important;
+}
+
+.btn-border:hover,
+.btn-border:focus,
+.btn-border.focus {
+  border-color: #474747;
+}
+
+.btn-border:focus,
+.btn-border.focus {
+  box-shadow: 0 0 0 0.2rem rgba(96, 96, 96, 0.5);
+}
+
+.btn-border:hover,
+.btn-border:focus,
+.btn-border.active {
+  background-color: #535353;
+}
+
+.btn-border.disabled,
+.btn-border:disabled {
+  background-color: rgba(96, 96, 96, 0.5);
+}
+
+.btn-outline-border {
+  border-color: #606060;
+  color: #606060;
+}
+
+.btn-outline-border:hover {
+  background-color: #606060;
+  color: #ffffff;
+}
+
+.btn-outline-border:focus,
+.btn-outline-border.focus {
+  box-shadow: 0 0 0 0.2rem rgba(96, 96, 96, 0.5);
+}
+
+.btn-outline-border.disabled,
+.btn-outline-border:disabled {
+  background-color: transparent;
+  color: #606060;
+}
+
+.border-border-20 {
+  border-color: rgba(96, 96, 96, 0.2) !important;
+}
+
+.border-border-50 {
+  border-color: rgba(96, 96, 96, 0.5) !important;
+}
+
+.border-border {
+  border-color: #606060 !important;
+}
+
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.nav-link.text-light:not(.active) {
+  color: rgba(248, 249, 250, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-light:not(.active):hover {
+  color: #f8f9fa !important;
+}
+
+.text-light-10 {
+  color: rgba(248, 249, 250, 0.1);
+}
+
+.text-light-20 {
+  color: rgba(248, 249, 250, 0.2);
+}
+
+.text-light-50 {
+  color: rgba(248, 249, 250, 0.5);
+}
+
+.badge-light {
+  background-color: #f8f9fa !important;
+  color: #000000 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-light-10 {
+  background-color: rgba(248, 249, 250, 0.1) !important;
+}
+
+.bg-light-20 {
+  background-color: rgba(248, 249, 250, 0.2) !important;
+}
+
+.bg-light-25 {
+  background-color: rgba(248, 249, 250, 0.25) !important;
+}
+
+.bg-light-30 {
+  background-color: rgba(248, 249, 250, 0.3) !important;
+}
+
+.bg-light-33 {
+  background-color: rgba(248, 249, 250, 0.33) !important;
+}
+
+.bg-light-50 {
+  background-color: rgba(248, 249, 250, 0.5) !important;
+}
+
+.bg-light-80 {
+  background-color: rgba(248, 249, 250, 0.8) !important;
+}
+
+.shadow-light {
+  box-shadow: 0 0.5rem 1rem rgba(248, 249, 250, 0.15) !important;
+}
+
+.shadow-light-lg {
+  box-shadow: 0 1rem 3rem rgba(248, 249, 250, 0.175) !important;
+}
+
+.shadow-light-circle {
+  box-shadow: 0 0 0 0.75rem rgba(248, 249, 250, 0.1) !important;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #000000 !important;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light.focus {
+  border-color: #dae0e5;
+}
+
+.btn-light:focus,
+.btn-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light.active {
+  background-color: #e9ecef;
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  background-color: rgba(248, 249, 250, 0.5);
+}
+
+.btn-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+.btn-outline-light:focus,
+.btn-outline-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-outline-light.disabled,
+.btn-outline-light:disabled {
+  background-color: transparent;
+  color: #f8f9fa;
+}
+
+.border-light-20 {
+  border-color: rgba(248, 249, 250, 0.2) !important;
+}
+
+.border-light-50 {
+  border-color: rgba(248, 249, 250, 0.5) !important;
+}
+
+.border-light {
+  border-color: #f8f9fa !important;
+}
+
+.text-input {
+  color: #28324c !important;
+}
+
+.nav-link.text-input:not(.active) {
+  color: rgba(40, 50, 76, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-input:not(.active):hover {
+  color: #28324c !important;
+}
+
+.text-input-10 {
+  color: rgba(40, 50, 76, 0.1);
+}
+
+.text-input-20 {
+  color: rgba(40, 50, 76, 0.2);
+}
+
+.text-input-50 {
+  color: rgba(40, 50, 76, 0.5);
+}
+
+.badge-input {
+  background-color: #28324c !important;
+  color: #ffffff !important;
+}
+
+.bg-input {
+  background-color: #28324c !important;
+}
+
+.bg-input-10 {
+  background-color: rgba(40, 50, 76, 0.1) !important;
+}
+
+.bg-input-20 {
+  background-color: rgba(40, 50, 76, 0.2) !important;
+}
+
+.bg-input-25 {
+  background-color: rgba(40, 50, 76, 0.25) !important;
+}
+
+.bg-input-30 {
+  background-color: rgba(40, 50, 76, 0.3) !important;
+}
+
+.bg-input-33 {
+  background-color: rgba(40, 50, 76, 0.33) !important;
+}
+
+.bg-input-50 {
+  background-color: rgba(40, 50, 76, 0.5) !important;
+}
+
+.bg-input-80 {
+  background-color: rgba(40, 50, 76, 0.8) !important;
+}
+
+.shadow-input {
+  box-shadow: 0 0.5rem 1rem rgba(40, 50, 76, 0.15) !important;
+}
+
+.shadow-input-lg {
+  box-shadow: 0 1rem 3rem rgba(40, 50, 76, 0.175) !important;
+}
+
+.shadow-input-circle {
+  box-shadow: 0 0 0 0.75rem rgba(40, 50, 76, 0.1) !important;
+}
+
+.btn-input {
+  background-color: #28324c;
+  border-color: #28324c;
+  color: #ffffff !important;
+}
+
+.btn-input:hover,
+.btn-input:focus,
+.btn-input.focus {
+  border-color: #161c2b;
+}
+
+.btn-input:focus,
+.btn-input.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 50, 76, 0.5);
+}
+
+.btn-input:hover,
+.btn-input:focus,
+.btn-input.active {
+  background-color: #1f273b;
+}
+
+.btn-input.disabled,
+.btn-input:disabled {
+  background-color: rgba(40, 50, 76, 0.5);
+}
+
+.btn-outline-input {
+  border-color: #28324c;
+  color: #28324c;
+}
+
+.btn-outline-input:hover {
+  background-color: #28324c;
+  color: #ffffff;
+}
+
+.btn-outline-input:focus,
+.btn-outline-input.focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 50, 76, 0.5);
+}
+
+.btn-outline-input.disabled,
+.btn-outline-input:disabled {
+  background-color: transparent;
+  color: #28324c;
+}
+
+.border-input-20 {
+  border-color: rgba(40, 50, 76, 0.2) !important;
+}
+
+.border-input-50 {
+  border-color: rgba(40, 50, 76, 0.5) !important;
+}
+
+.border-input {
+  border-color: #28324c !important;
+}
+
+.text-transparent {
+  color: transparent !important;
+}
+
+.nav-link.text-transparent:not(.active) {
+  color: rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-transparent:not(.active):hover {
+  color: transparent !important;
+}
+
+.text-transparent-10 {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.text-transparent-20 {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.text-transparent-50 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.badge-transparent {
+  background-color: transparent !important;
+  color: #000000 !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-transparent-10 {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-transparent-20 {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.bg-transparent-25 {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.bg-transparent-30 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.bg-transparent-33 {
+  background-color: rgba(0, 0, 0, 0.33) !important;
+}
+
+.bg-transparent-50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.bg-transparent-80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.shadow-transparent {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-transparent-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-transparent-circle {
+  box-shadow: 0 0 0 0.75rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  color: #000000 !important;
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent.focus {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.btn-transparent:focus,
+.btn-transparent.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-transparent:hover,
+.btn-transparent:focus,
+.btn-transparent.active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-transparent.disabled,
+.btn-transparent:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-transparent {
+  border-color: transparent;
+  color: transparent;
+}
+
+.btn-outline-transparent:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+.btn-outline-transparent:focus,
+.btn-outline-transparent.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-outline-transparent.disabled,
+.btn-outline-transparent:disabled {
+  background-color: transparent;
+  color: transparent;
+}
+
+.border-transparent-20 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.border-transparent-50 {
+  border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.border-transparent {
+  border-color: transparent !important;
+}
+
+.text-soft {
+  color: #f6f6f6 !important;
+}
+
+.nav-link.text-soft:not(.active) {
+  color: rgba(246, 246, 246, 0.5) !important;
+  transition: all 0.25s;
+}
+
+.nav-link.text-soft:not(.active):hover {
+  color: #f6f6f6 !important;
+}
+
+.text-soft-10 {
+  color: rgba(246, 246, 246, 0.1);
+}
+
+.text-soft-20 {
+  color: rgba(246, 246, 246, 0.2);
+}
+
+.text-soft-50 {
+  color: rgba(246, 246, 246, 0.5);
+}
+
+.badge-soft {
+  background-color: #f6f6f6 !important;
+  color: #000000 !important;
+}
+
+.bg-soft {
+  background-color: #f6f6f6 !important;
+}
+
+.bg-soft-10 {
+  background-color: rgba(246, 246, 246, 0.1) !important;
+}
+
+.bg-soft-20 {
+  background-color: rgba(246, 246, 246, 0.2) !important;
+}
+
+.bg-soft-25 {
+  background-color: rgba(246, 246, 246, 0.25) !important;
+}
+
+.bg-soft-30 {
+  background-color: rgba(246, 246, 246, 0.3) !important;
+}
+
+.bg-soft-33 {
+  background-color: rgba(246, 246, 246, 0.33) !important;
+}
+
+.bg-soft-50 {
+  background-color: rgba(246, 246, 246, 0.5) !important;
+}
+
+.bg-soft-80 {
+  background-color: rgba(246, 246, 246, 0.8) !important;
+}
+
+.shadow-soft {
+  box-shadow: 0 0.5rem 1rem rgba(246, 246, 246, 0.15) !important;
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 1rem 3rem rgba(246, 246, 246, 0.175) !important;
+}
+
+.shadow-soft-circle {
+  box-shadow: 0 0 0 0.75rem rgba(246, 246, 246, 0.1) !important;
+}
+
+.btn-soft {
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+  color: #000000 !important;
+}
+
+.btn-soft:hover,
+.btn-soft:focus,
+.btn-soft.focus {
+  border-color: #dddddd;
+}
+
+.btn-soft:focus,
+.btn-soft.focus {
+  box-shadow: 0 0 0 0.2rem rgba(246, 246, 246, 0.5);
+}
+
+.btn-soft:hover,
+.btn-soft:focus,
+.btn-soft.active {
+  background-color: #e9e9e9;
+}
+
+.btn-soft.disabled,
+.btn-soft:disabled {
+  background-color: rgba(246, 246, 246, 0.5);
+}
+
+.btn-outline-soft {
+  border-color: #f6f6f6;
+  color: #f6f6f6;
+}
+
+.btn-outline-soft:hover {
+  background-color: #f6f6f6;
+  color: #000000;
+}
+
+.btn-outline-soft:focus,
+.btn-outline-soft.focus {
+  box-shadow: 0 0 0 0.2rem rgba(246, 246, 246, 0.5);
+}
+
+.btn-outline-soft.disabled,
+.btn-outline-soft:disabled {
+  background-color: transparent;
+  color: #f6f6f6;
+}
+
+.border-soft-20 {
+  border-color: rgba(246, 246, 246, 0.2) !important;
+}
+
+.border-soft-50 {
+  border-color: rgba(246, 246, 246, 0.5) !important;
+}
+
+.border-soft {
+  border-color: #f6f6f6 !important;
+}
+
 .bg-scarlet-gradient {
   background-image: linear-gradient(259deg, #8d004b 0%, #ff0b33 100%) !important;
 }
@@ -14779,28 +16085,20 @@ a.text-dark:focus {
   src: url("/fonts/FontsFree-Net-Allexist.ttf");
 }
 
-.text-baloo {
-  font-family: "Baloo Bhaina", cursive, sans-serif;
-}
-
-.text-comfortaa {
-  font-family: Comfortaa, sans-serif;
-}
-
 .text-montserrat {
   font-family: Montserrat, sans-serif;
 }
 
-.text-montserrat-alt {
-  font-family: "Montserrat Alternates", sans-serif;
+.text-poppins {
+  font-family: Poppins, sans-serif;
 }
 
-.text-allexist {
-  font-family: Allexist, sans-serif;
+.text-bahnschrift {
+  font-family: Bahnschrift, sans-serif;
 }
 
 .text-fa {
-  font-family: "Font Awesome 5 Free", Comfortaa, sans-serif;
+  font-family: "Font Awesome 5 Free", Poppins, sans-serif;
 }
 
 .text-xx-small {
@@ -14859,7 +16157,8 @@ a.text-dark:focus {
   font-weight: 600 !important;
 }
 
-.text-700 {
+.text-700,
+.SideDrawerItem.active span {
   font-weight: 700 !important;
 }
 
@@ -14873,6 +16172,49 @@ a.text-dark:focus {
 
 .text-shadow {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.29);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 700;
+}
+
+.border-0 {
+  border-width: 0px !important;
+}
+
+.rounded-0 {
+  border-radius: 0px !important;
+}
+
+.rounded-bottom-0 {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.rounded-top-0 {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.rounded-left-0 {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.rounded-right-0 {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
 .border-1 {
@@ -16975,8 +18317,12 @@ a.text-dark:focus {
   border-bottom-right-radius: 75px !important;
 }
 
-.border-thin {
-  border-width: 0.25px !important;
+.border,
+.border-left,
+.border-right,
+.border-top,
+.border-bottom {
+  border-width: 0.25px;
 }
 
 .pd-x-0 {
@@ -17050,7 +18396,7 @@ body {
 }
 
 .full-height-user {
-  min-height: calc(100vh - 75.8px);
+  min-height: calc(100vh - 70px);
 }
 
 .full-height-app {
@@ -17063,6 +18409,16 @@ body {
   }
 }
 
+@media (min-width: 1600px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1540px;
+  }
+}
+
 .language-flag {
   overflow: hidden;
   border-radius: 50%;
@@ -17071,3 +18427,295 @@ body {
   border: 3px solid #fff;
 }
 
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-mx": "./node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "./node_modules/moment/locale/es-mx.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";

@@ -4,6 +4,11 @@
  * building robust, powerful web applications using React + Laravel.
  */
 
+/**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
 require('./bootstrap');
 
 $(function () {
@@ -28,20 +33,6 @@ $(function () {
             starSize: 20,
         });
     });
-
-    const staticToolbar = $(".Toolbar .position-static");
-    const fixedToolbar = $(".Toolbar .fixed-top");
-    if ($(document).scrollTop() > staticToolbar.height()) fixedToolbar.css('opacity', 1);
-    $(document).scroll(function () {
-        if ($(this).scrollTop() > staticToolbar.height()) fixedToolbar.css('opacity', 1);
-        else fixedToolbar.css('opacity', 0);
-    });
 });
 
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-require('./index');
+require('./src/index');
