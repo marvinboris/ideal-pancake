@@ -167,17 +167,17 @@ class Add extends Component {
                                                     </div>
 
                                                     <div className="flex-fill">
-                                                        <Input type="select" name="tasks[]" onChange={this.inputChangeHandler} value={tasks_[index]} className="tasks" required>
+                                                        <Input type="select" name="tasks[]" onChange={this.inputChangeHandler} value={tasks_[index]} tabIndex={index} className="tasks" required>
                                                             <option>{form.select_task}</option>
                                                             {tasksOptions}
                                                         </Input>
                                                     </div>
                                                 </Col>
                                                 <Col xs={2} className="py-2 border-right">
-                                                    <Input type="number" name="prices[]" onChange={this.inputChangeHandler} value={price} required className="prices text-center" />
+                                                    <Input type="number" name="prices[]" onChange={this.inputChangeHandler} value={price} tabIndex={index} required className="prices text-center" />
                                                 </Col>
                                                 <Col xs={2} className="py-2 border-right">
-                                                    <Input type="number" name="quantities[]" onChange={this.inputChangeHandler} value={quantities[index]} required className="quantities text-center" />
+                                                    <Input type="number" name="quantities[]" onChange={this.inputChangeHandler} value={quantities[index]} tabIndex={index} required className="quantities text-center" />
                                                 </Col>
                                                 <Col xs={2} className="py-2 d-flex justify-content-center align-items-center">{price * quantities[index]}</Col>
                                             </Row>;
