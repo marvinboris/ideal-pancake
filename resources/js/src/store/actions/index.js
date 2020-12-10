@@ -28,6 +28,13 @@ export {
     patchCms,
     deleteCms,
 
+    resetCustomers,
+    getCustomer,
+    getCustomers,
+    postCustomers,
+    patchCustomers,
+    deleteCustomers,
+
     resetDashboard,
     getDashboard,
 
@@ -44,6 +51,14 @@ export {
     postFeatures,
     patchFeatures,
     deleteFeatures,
+
+    resetInvoices,
+    getInvoice,
+    getInvoices,
+    getInvoicesInfo,
+    postInvoices,
+    patchInvoices,
+    deleteInvoices,
 
     resetLanguages,
     getLanguages,
@@ -80,6 +95,13 @@ export {
     postRoles,
     patchRoles,
     deleteRoles,
+
+    resetTasks,
+    getTask,
+    getTasks,
+    postTasks,
+    patchTasks,
+    deleteTasks,
 
     resetUsers,
     getUsers,

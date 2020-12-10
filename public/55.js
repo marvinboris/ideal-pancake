@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[55],{
 
-/***/ "./resources/js/src/containers/Backend/User/Products/Add.js":
-/*!******************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Products/Add.js ***!
-  \******************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Invoices/Edit.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Invoices/Edit.js ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-regular-svg-icons */ "./node_modules/@fortawesome/free-regular-svg-icons/index.es.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../components/Backend/UI/Breadcrumb/Breadcrumb */ "./resources/js/src/components/Backend/UI/Breadcrumb/Breadcrumb.js");
 /* harmony import */ var _components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../components/UI/Titles/SpecialTitle/SpecialTitle */ "./resources/js/src/components/UI/Titles/SpecialTitle/SpecialTitle.js");
 /* harmony import */ var _components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../components/UI/Titles/Subtitle/Subtitle */ "./resources/js/src/components/UI/Titles/Subtitle/Subtitle.js");
@@ -29,13 +29,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/UI/Button/BetweenButton/BetweenButton */ "./resources/js/src/components/UI/Button/BetweenButton/BetweenButton.js");
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
+/* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
 
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -82,6 +95,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var Add = /*#__PURE__*/function (_Component) {
   _inherits(Add, _Component);
 
@@ -99,13 +113,16 @@ var Add = /*#__PURE__*/function (_Component) {
     _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      name: '',
-      description: '',
-      popular: 0,
-      details: '',
-      color: '',
-      link: '',
-      logo: null
+      customer_id: '',
+      date: '',
+      paid_amount: '',
+      total_amount: '',
+      discount: '',
+      tax: '',
+      prices: [0],
+      quantities: [0],
+      tasks: [""],
+      photo: null
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
@@ -116,7 +133,7 @@ var Add = /*#__PURE__*/function (_Component) {
               case 0:
                 e.preventDefault();
                 _context.next = 3;
-                return _this.props.post(e.target);
+                return _this.props.patch(_this.props.match.params.memberId, e.target);
 
               case 3:
               case "end":
@@ -131,17 +148,83 @@ var Add = /*#__PURE__*/function (_Component) {
       };
     }());
 
+    _defineProperty(_assertThisInitialized(_this), "totalAmount", function () {
+      return +_this.state.prices.reduce(function (a, b, i) {
+        return +a + +b * +_this.state.quantities[i];
+      }, 0) + +_this.state.tax - +_this.state.discount;
+    });
+
     _defineProperty(_assertThisInitialized(_this), "inputChangeHandler", function (e) {
       var _e$target = e.target,
           name = _e$target.name,
           value = _e$target.value,
-          files = _e$target.files;
+          files = _e$target.files,
+          tabIndex = _e$target.tabIndex;
+
+      if (name.includes('[]')) {
+        var prefix = name.split('[]')[0];
+        var element = _this.state[prefix];
+        element[tabIndex] = value;
+        return _this.setState(_defineProperty({}, prefix, element), function () {
+          _this.setState({
+            total_amount: _this.totalAmount()
+          });
+
+          setTimeout(function () {
+            var element = document.getElementsByClassName(prefix)[tabIndex];
+            element.focus();
+            element.selectionStart = element.selectionEnd = element.value.length;
+          }, 0);
+        });
+      }
+
+      if (['discount', 'tax'].includes(name)) return _this.setState(_defineProperty({}, name, value), function () {
+        return _this.setState({
+          total_amount: _this.totalAmount()
+        });
+      });
 
       _this.setState(_defineProperty({}, name, files ? files[0] : value));
     });
 
     _defineProperty(_assertThisInitialized(_this), "fileUpload", function () {
-      return document.getElementById('logo').click();
+      return document.getElementById('photo').click();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "plusBtnClickedHandler", function () {
+      var _this$state = _this.state,
+          prices = _this$state.prices,
+          quantities = _this$state.quantities,
+          tasks = _this$state.tasks;
+
+      _this.setState({
+        prices: [].concat(_toConsumableArray(prices), [0]),
+        quantities: [].concat(_toConsumableArray(quantities), [0]),
+        tasks: [].concat(_toConsumableArray(tasks), [""])
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "minusBtnClickedHandler", function (index) {
+      var _this$state2 = _this.state,
+          prices = _this$state2.prices,
+          quantities = _this$state2.quantities,
+          tasks = _this$state2.tasks;
+
+      _this.setState({
+        prices: prices.filter(function (p, i) {
+          return +i !== +index;
+        }),
+        quantities: quantities.filter(function (q, i) {
+          return +i !== +index;
+        }),
+        tasks: tasks.filter(function (t, i) {
+          return +i !== +index;
+        })
+      }, function () {
+        return _this.setState({
+          total_amount: _this.totalAmount()
+        });
+      });
     });
 
     return _this;
@@ -156,8 +239,9 @@ var Add = /*#__PURE__*/function (_Component) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 this.props.reset();
+                this.props.get(this.props.match.params.memberId);
 
-              case 1:
+              case 2:
               case "end":
                 return _context2.stop();
             }
@@ -179,37 +263,55 @@ var Add = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$props = this.props,
           _this$props$content$c = _this$props.content.cms.pages,
           _this$props$content$c2 = _this$props$content$c.components.form,
           save = _this$props$content$c2.save,
           selected_file = _this$props$content$c2.selected_file,
-          _this$props$content$c3 = _this$props$content$c.backend.pages.products,
+          _this$props$content$c3 = _this$props$content$c.backend.pages.invoices,
           title = _this$props$content$c3.title,
-          add = _this$props$content$c3.add,
+          edit = _this$props$content$c3.edit,
           index = _this$props$content$c3.index,
           form = _this$props$content$c3.form,
-          _this$props$backend$p = _this$props.backend.products,
-          loading = _this$props$backend$p.loading,
-          error = _this$props$backend$p.error,
-          message = _this$props$backend$p.message,
+          _this$props$backend$i = _this$props.backend.invoices,
+          loading = _this$props$backend$i.loading,
+          error = _this$props$backend$i.error,
+          message = _this$props$backend$i.message,
+          invoice = _this$props$backend$i.invoice,
+          customers = _this$props$backend$i.customers,
+          tasks = _this$props$backend$i.tasks,
           features = _this$props.auth.data.role.features;
-      var _this$state = this.state,
-          name = _this$state.name,
-          description = _this$state.description,
-          color = _this$state.color,
-          details = _this$state.details,
-          logo = _this$state.logo,
-          link = _this$state.link,
-          popular = _this$state.popular;
+      var _this$state3 = this.state,
+          customer_id = _this$state3.customer_id,
+          date = _this$state3.date,
+          discount = _this$state3.discount,
+          paid_amount = _this$state3.paid_amount,
+          total_amount = _this$state3.total_amount,
+          tax = _this$state3.tax,
+          prices = _this$state3.prices,
+          quantities = _this$state3.quantities,
+          tasks_ = _this$state3.tasks,
+          photo = _this$state3.photo;
       var content = null;
       var errors = null;
       var feature = features.find(function (f) {
-        return f.prefix === 'products';
+        return f.prefix === 'invoices';
       });
-      var redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
+      var redirect = !(feature && JSON.parse(feature.permissions).includes('u')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Redirect, {
         to: "/user/dashboard"
       });
+      if (!customers) customers = [];
+      var customersOptions = customers.sort(function (a, b) {
+        return a.name > b.name;
+      }).map(function (item) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+          key: JSON.stringify(item),
+          value: item.id
+        }, item.name);
+      });
+      if (!tasks) tasks = [];
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_CustomSpinner_CustomSpinner__WEBPACK_IMPORTED_MODULE_12__["default"], null));else {
@@ -218,70 +320,158 @@ var Add = /*#__PURE__*/function (_Component) {
         }));
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_13__["default"], {
           onSubmit: this.submitHandler,
-          icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faProductHunt"],
-          title: add,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFileInvoice"],
+          title: edit,
           list: index,
-          link: "/user/products",
+          link: "/user/invoices",
           innerClassName: "row",
           className: "shadow-sm"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
           lg: 8
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_16__["default"], {
           message: message
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
-          className: "col-md-6",
-          icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faProductHunt"],
-          onChange: this.inputChangeHandler,
-          value: name,
-          name: "name",
-          required: true,
-          placeholder: form.name
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "hidden",
+          name: "_method",
+          defaultValue: "PATCH"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
+          type: "date",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCalendar"],
           onChange: this.inputChangeHandler,
-          value: description,
-          name: "description",
+          value: date,
+          name: "date",
           required: true,
-          placeholder: form.description
+          placeholder: form.date
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
+          type: "select",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"],
           onChange: this.inputChangeHandler,
-          value: details,
-          name: "details",
+          value: customer_id,
+          name: "customer_id",
           required: true,
-          placeholder: form.details
+          placeholder: form.select_customer
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_customer), customersOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          type: "number",
+          className: "col-md-6",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMoneyBill"],
+          onChange: this.inputChangeHandler,
+          value: paid_amount,
+          name: "paid_amount",
+          required: true,
+          placeholder: form.paid_amount
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
+          type: "number",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLink"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMoneyBill"],
           onChange: this.inputChangeHandler,
-          value: link,
-          name: "link",
+          value: discount,
+          name: "discount",
           required: true,
-          placeholder: form.link
+          placeholder: form.discount
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
+          type: "number",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFill"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMoneyBill"],
           onChange: this.inputChangeHandler,
-          value: color,
-          name: "color",
+          value: tax,
+          name: "tax",
           required: true,
-          placeholder: form.color
+          placeholder: form.tax
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          type: "text",
+          type: "number",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFireAlt"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMoneyBill"],
           onChange: this.inputChangeHandler,
-          value: popular,
-          name: "popular",
-          required: true,
-          placeholder: form.popular
+          value: total_amount,
+          name: "total_amount",
+          readonly: true,
+          placeholder: form.total_amount
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+          xs: 12,
+          className: "pb-2 text-large text-700 d-flex justify-content-between"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, form.tasks), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+          type: "button",
+          color: "green",
+          onClick: this.plusBtnClickedHandler
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeIcon"], {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faPlus"],
+          className: "mr-2"
+        }), "Add"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+          xs: 12,
+          className: "mb-4"
+        }, prices.map(function (price, index) {
+          var tasksOptions = tasks.filter(function (task) {
+            return !tasks_.map(function (t) {
+              return +t;
+            }).includes(+task.id) || tasks_.map(function (t) {
+              return +t;
+            }).includes(+task.id) && +task.id === +tasks_[index];
+          }).sort(function (a, b) {
+            return a.title > b.title;
+          }).map(function (item) {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+              key: JSON.stringify(item),
+              value: item.id
+            }, item.title);
+          });
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
+            key: Math.random(),
+            className: "border-bottom"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+            xs: 6,
+            className: "d-flex py-2 border-right"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+            className: "pr-2"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+            type: "button",
+            color: "pink",
+            onClick: function onClick() {
+              return _this2.minusBtnClickedHandler(index);
+            }
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeIcon"], {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faMinus"]
+          }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+            className: "flex-fill"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Input"], {
+            type: "select",
+            name: "tasks[]",
+            onChange: _this2.inputChangeHandler,
+            value: tasks_[index],
+            className: "tasks",
+            required: true
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_task), tasksOptions))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+            xs: 2,
+            className: "py-2 border-right"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Input"], {
+            type: "number",
+            name: "prices[]",
+            onChange: _this2.inputChangeHandler,
+            value: price,
+            required: true,
+            className: "prices text-center"
+          })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+            xs: 2,
+            className: "py-2 border-right"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Input"], {
+            type: "number",
+            name: "quantities[]",
+            onChange: _this2.inputChangeHandler,
+            value: quantities[index],
+            required: true,
+            className: "quantities text-center"
+          })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+            xs: 2,
+            className: "py-2 d-flex justify-content-center align-items-center"
+          }, price * quantities[index]));
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "file",
+          id: "photo",
+          name: "photo",
+          className: "d-none",
+          onChange: this.inputChangeHandler,
+          accept: ".png,.jpg,.jpeg"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "col-12"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -292,12 +482,14 @@ var Add = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "embed-responsive embed-responsive-1by1 bg-soft border border-light d-flex justify-content-center align-items-center w-60 mx-auto",
           style: {
-            cursor: 'pointer'
+            cursor: 'pointer',
+            background: photo && "url(\"".concat(photo, "\") no-repeat center"),
+            backgroundSize: 'cover'
           },
           onClick: this.fileUpload
-        }, logo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        }, photo && photo !== invoice.photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "text-center text-green"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FontAwesomeIcon, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeIcon"], {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCheckCircle"],
           fixedWidth: true,
           size: "5x"
@@ -308,16 +500,30 @@ var Add = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        main: add,
-        icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faProductHunt"]
+        items: [{
+          to: '/user/invoices',
+          content: index
+        }],
+        main: edit,
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFileInvoice"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true,
-        icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faProductHunt"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFileInvoice"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
         user: true
-      }, add)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, edit)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, redirect, errors, content));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, prevState) {
+      if (nextProps.backend.invoices.invoice && prevState.customer_id === '') {
+        var invoice = nextProps.backend.invoices.invoice;
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_18__["updateObject"])(prevState, _objectSpread({}, invoice));
+      }
+
+      return prevState;
     }
   }]);
 
@@ -330,11 +536,14 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    post: function post(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["postProducts"](data));
+    get: function get(id) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["getInvoice"](id));
+    },
+    patch: function patch(id, data) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["patchInvoices"](id, data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["resetProducts"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["resetInvoices"]());
     }
   };
 };

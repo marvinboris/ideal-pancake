@@ -20,6 +20,18 @@ class FeatureSeeder extends Seeder
                 'prefix' => 'posts',
             ],
             [
+                'name' => 'Customers',
+                'prefix' => 'customers',
+            ],
+            [
+                'name' => 'Invoices',
+                'prefix' => 'invoices',
+            ],
+            [
+                'name' => 'Tasks',
+                'prefix' => 'tasks',
+            ],
+            [
                 'name' => 'Products',
                 'prefix' => 'products',
             ],

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleRight, faBusinessTime, faCircle, faCode, faDesktop, faHospital, faHospitalSymbol, faPencilRuler, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleRight, faBusinessTime, faCircle, faCode, faDesktop, faHome, faHospital, faHospitalSymbol, faPencilRuler, faShoppingBag, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
 
 import "./Home.css";
 
@@ -203,9 +203,9 @@ class Home extends Component {
 
                         <Col lg={7}>
                             <Row>
-                                <AngledBlock number="01" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="UI/UX Design">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="01" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="UI/UX Design">In order to limit the failure of any redesign project, we design for you prototypes that fit your needs before development of the said project.</AngledBlock>
                                 <AngledBlock number="03" iconColor="white" inverse stackColor="darkblue" bgColor="pink" color="white" title="Consultancy">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
-                                <AngledBlock number="02" iconColor="white" stackColor="orange" bgColor="green" color="white" title="Web & mobile Apps Dev">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
+                                <AngledBlock number="02" iconColor="white" stackColor="orange" bgColor="green" color="white" title="Web & mobile Apps Dev">We develop quality and dynamic Web applications for you.</AngledBlock>
                                 <AngledBlock number="04" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="Training Courses">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
                             </Row>
                         </Col>
@@ -219,9 +219,9 @@ class Home extends Component {
                                 <Col lg={10}>
                                     <Row className="justify-content-center align-items-center">
                                         <WorkBlock src={SoftImage} top="20%" bgColor="pink" title="Graphic Design" color="white">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
-                                        <WorkBlock src={SoftImage} top="-20%" left="-10%" title="Mobile Apps">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
-                                        <WorkBlock src={SoftImage} top="10%" left="10%" title="Web Apps">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
-                                        <WorkBlock src={SoftImage} top="-30%" bgColor="green" title="Ui & Ux" color="white">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
+                                        <WorkBlock src={SoftImage} top="-20%" left="-10%" title="Mobile Apps">Benefit from Mobile friendly applications on your various mobile devices.</WorkBlock>
+                                        <WorkBlock src={SoftImage} top="10%" left="10%" title="Web Apps">We develop quality and dynamic Web applications for you.</WorkBlock>
+                                        <WorkBlock src={SoftImage} top="-30%" bgColor="green" title="Ui & Ux" color="white">In order to limit the failure of any redesign project, we design for you prototypes that fit your needs before development of the said project.</WorkBlock>
                                     </Row>
                                 </Col>
                             </Row>
@@ -260,10 +260,10 @@ class Home extends Component {
                         </Col>
                     </Row>
                     <Row className="py-5 mb-5">
-                        <AppBlock icon={faHospital} title="Pharmacy Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
-                        <AppBlock icon={faShoppingBasket} title="Sales ERP Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
-                        <AppBlock icon={faHospital} title="Hospital Management System + Website">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
-                        <AppBlock icon={faHospitalSymbol} title="Hospital Management System + Website">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
+                        <AppBlock icon={faHospital} title="Pharmacy Management System">With its modern billing system, manage your price policy and optimize your productivity.</AppBlock>
+                        <AppBlock icon={faShoppingBasket} title="Sales ERP Management System">With a website made of modern interfaces, attractive and easy to use, automate your tasks and multiply your e-commerce earnings.</AppBlock>
+                        <AppBlock icon={faHome} title="Restaurant Management System">Manage efficiently your company thanks to our Restaurant Management System.</AppBlock>
+                        <AppBlock icon={faShoppingBag} title="E-commerce Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
                     </Row>
                     <div className="text-center">
                         <AbsoluteButton pill size="lg" color="pink" icon={faArrowAltCircleRight} className="text-montserrat-alt">

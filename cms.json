@@ -145,6 +145,24 @@
                     "updated": "Member successfully updated.",
                     "deleted": "Member successfully deleted."
                 },
+                "customers": {
+                    "not_found": "Customer not found.",
+                    "created": "Customer successfully created.",
+                    "updated": "Customer successfully updated.",
+                    "deleted": "Customer successfully deleted."
+                },
+                "invoices": {
+                    "not_found": "Invoice not found.",
+                    "created": "Invoice successfully created.",
+                    "updated": "Invoice successfully updated.",
+                    "deleted": "Invoice successfully deleted."
+                },
+                "tasks": {
+                    "not_found": "Task not found.",
+                    "created": "Task successfully created.",
+                    "updated": "Task successfully updated.",
+                    "deleted": "Task successfully deleted."
+                },
                 "posts": {
                     "not_found": "Post not found.",
                     "created": "Post successfully created.",
@@ -229,6 +247,21 @@
                             "title": "Members",
                             "add": "Add member",
                             "index": "Member list"
+                        },
+                        "customers": {
+                            "title": "Customers",
+                            "add": "Add customer",
+                            "index": "Customer list"
+                        },
+                        "invoices": {
+                            "title": "Invoices",
+                            "add": "Add invoice",
+                            "index": "Invoice list"
+                        },
+                        "tasks": {
+                            "title": "Tasks",
+                            "add": "Add task",
+                            "index": "Task list"
                         },
                         "products": {
                             "title": "Products",
@@ -424,6 +457,50 @@
                             "job": "Job",
                             "quote": "Quote",
                             "social_media": "Social media",
+                            "photo": "Photo"
+                        }
+                    },
+                    "customers": {
+                        "title": "Customers",
+                        "add": "Add customer",
+                        "edit": "Edit customer",
+                        "index": "Customer list",
+                        "form": {
+                            "name": "Name",
+                            "address": "Address",
+                            "country": "Country",
+                            "phone": "Phone",
+                            "email": "E-mail address",
+                            "photo": "Photo"
+                        }
+                    },
+                    "invoices": {
+                        "title": "Invoices",
+                        "add": "Add invoice",
+                        "edit": "Edit invoice",
+                        "index": "Invoice list",
+                        "form": {
+                            "customer": "Customer",
+                            "no": "Invoice number",
+                            "date": "Date",
+                            "paid_amount": "Paid amount",
+                            "total_amount": "Total amount",
+                            "discount": "Discount",
+                            "tax": "Tax",
+                            "select_customer": "Select customer",
+                            "tasks": "Tasks",
+                            "invoice_photo": "Invoice photo",
+                            "photo": "Photo"
+                        }
+                    },
+                    "tasks": {
+                        "title": "Tasks",
+                        "add": "Add task",
+                        "edit": "Edit task",
+                        "index": "Task list",
+                        "form": {
+                            "title": "Title",
+                            "description": "Description",
                             "photo": "Photo"
                         }
                     },
@@ -633,6 +710,24 @@
                     "updated": "Membre modifié avec succès.",
                     "deleted": "Membre supprimé avec succès."
                 },
+                "customers": {
+                    "not_found": "Client inexistant.",
+                    "created": "Client créé avec succès.",
+                    "updated": "Client modifié avec succès.",
+                    "deleted": "Client supprimé avec succès."
+                },
+                "invoices": {
+                    "not_found": "Facture inexistante.",
+                    "created": "Facture créée avec succès.",
+                    "updated": "Facture modifiée avec succès.",
+                    "deleted": "Facture supprimée avec succès."
+                },
+                "tasks": {
+                    "not_found": "Tâche inexistante.",
+                    "created": "Tâche créée avec succès.",
+                    "updated": "Tâche modifiée avec succès.",
+                    "deleted": "Tâche supprimée avec succès."
+                },
                 "posts": {
                     "not_found": "Article inexistant.",
                     "created": "Article créé avec succès.",
@@ -717,6 +812,21 @@
                             "title": "Membres",
                             "add": "Ajouter un membre",
                             "index": "Liste des membres"
+                        },
+                        "customers": {
+                            "title": "Clients",
+                            "add": "Ajouter un client",
+                            "index": "Liste des clients"
+                        },
+                        "invoices": {
+                            "title": "Factures",
+                            "add": "Ajouter une facture",
+                            "index": "Liste des factures"
+                        },
+                        "tasks": {
+                            "title": "Tâches",
+                            "add": "Ajouter une tâche",
+                            "index": "Liste des tâches"
                         },
                         "products": {
                             "title": "Produits",
@@ -912,6 +1022,50 @@
                             "job": "Poste",
                             "quote": "Citation",
                             "social_media": "Réseaux sociaux",
+                            "photo": "Photo"
+                        }
+                    },
+                    "customers": {
+                        "title": "Clients",
+                        "add": "Ajouter un client",
+                        "edit": "Modifier un client",
+                        "index": "Liste des clients",
+                        "form": {
+                            "name": "Nom",
+                            "address": "Adresse",
+                            "country": "Pays",
+                            "phone": "Téléphone",
+                            "email": "Adresse mail",
+                            "photo": "Photo"
+                        }
+                    },
+                    "invoices": {
+                        "title": "Factures",
+                        "add": "Ajouter une facture",
+                        "edit": "Modifier une facture",
+                        "index": "Liste des factures",
+                        "form": {
+                            "customer": "Client",
+                            "no": "Numéro de la facture",
+                            "date": "Date",
+                            "paid_amount": "Montant versé",
+                            "total_amount": "Montant total",
+                            "discount": "Réductions",
+                            "tax": "Taxes",
+                            "select_customer": "Sélectionner un client",
+                            "tasks": "Tâches",
+                            "invoice_photo": "Photo de la facture",
+                            "photo": "Photo"
+                        }
+                    },
+                    "tasks": {
+                        "title": "Tâches",
+                        "add": "Ajouter une tâche",
+                        "edit": "Modifier une tâche",
+                        "index": "Liste des tâches",
+                        "form": {
+                            "title": "Titre ",
+                            "description": "Description",
                             "photo": "Photo"
                         }
                     },

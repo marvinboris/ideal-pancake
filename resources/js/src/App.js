@@ -20,6 +20,10 @@ const asyncUserCmsComponents = asyncComponent(() => import('./containers/Backend
 const asyncUserCmsAuth = asyncComponent(() => import('./containers/Backend/User/Cms/Auth'));
 const asyncUserCmsBackend = asyncComponent(() => import('./containers/Backend/User/Cms/Backend'));
 
+const asyncUserCustomers = asyncComponent(() => import('./containers/Backend/User/Customers'));
+const asyncUserCustomersAdd = asyncComponent(() => import('./containers/Backend/User/Customers/Add'));
+const asyncUserCustomersEdit = asyncComponent(() => import('./containers/Backend/User/Customers/Edit'));
+
 const asyncUserDashboard = asyncComponent(() => import('./containers/Backend/User/Dashboard/Dashboard'));
 
 const asyncUserEmployees = asyncComponent(() => import('./containers/Backend/User/Employees'));
@@ -29,6 +33,10 @@ const asyncUserEmployeesEdit = asyncComponent(() => import('./containers/Backend
 const asyncUserFeatures = asyncComponent(() => import('./containers/Backend/User/Features'));
 const asyncUserFeaturesAdd = asyncComponent(() => import('./containers/Backend/User/Features/Add'));
 const asyncUserFeaturesEdit = asyncComponent(() => import('./containers/Backend/User/Features/Edit'));
+
+const asyncUserInvoices = asyncComponent(() => import('./containers/Backend/User/Invoices'));
+const asyncUserInvoicesAdd = asyncComponent(() => import('./containers/Backend/User/Invoices/Add'));
+const asyncUserInvoicesEdit = asyncComponent(() => import('./containers/Backend/User/Invoices/Edit'));
 
 const asyncUserLanguages = asyncComponent(() => import('./containers/Backend/User/Languages'));
 const asyncUserLanguagesAdd = asyncComponent(() => import('./containers/Backend/User/Languages/Add'));
@@ -47,6 +55,10 @@ const asyncUserRolesAdd = asyncComponent(() => import('./containers/Backend/User
 const asyncUserRolesEdit = asyncComponent(() => import('./containers/Backend/User/Roles/Edit'));
 
 const asyncUserSettingsLanguage = asyncComponent(() => import('./containers/Backend/User/Settings/Language'));
+
+const asyncUserTasks = asyncComponent(() => import('./containers/Backend/User/Tasks'));
+const asyncUserTasksAdd = asyncComponent(() => import('./containers/Backend/User/Tasks/Add'));
+const asyncUserTasksEdit = asyncComponent(() => import('./containers/Backend/User/Tasks/Edit'));
 
 const asyncUserUsers = asyncComponent(() => import('./containers/Backend/User/Users'));
 const asyncUserUsersAdd = asyncComponent(() => import('./containers/Backend/User/Users/Add'));
@@ -115,6 +127,7 @@ class App extends Component {
                 <Route path="/auth/user/login" component={asyncUserLogin} />
 
                 <Redirect to="/auth/user/login" path="/auth" />
+                <Redirect to="/auth/user/login" path="/user" />
 
                 <Route path="/about-us" component={asyncAbout} />
                 <Route path="/contact-us" component={asyncContact} />
@@ -134,6 +147,10 @@ class App extends Component {
                     <Route path="/user/cms/auth" component={asyncUserCmsAuth} />
                     <Route path="/user/cms/backend" component={asyncUserCmsBackend} />
 
+                    <Route path="/user/customers/:customerId/edit" component={asyncUserCustomersEdit} />
+                    <Route path="/user/customers/add" component={asyncUserCustomersAdd} />
+                    <Route path="/user/customers" component={asyncUserCustomers} />
+
                     <Route path="/user/dashboard" component={asyncUserDashboard} />
 
                     <Route path="/user/employees/:employeeId/edit" component={asyncUserEmployeesEdit} />
@@ -143,6 +160,10 @@ class App extends Component {
                     <Route path="/user/features/:featureId/edit" component={asyncUserFeaturesEdit} />
                     <Route path="/user/features/add" component={asyncUserFeaturesAdd} />
                     <Route path="/user/features" component={asyncUserFeatures} />
+
+                    <Route path="/user/invoices/:invoiceId/edit" component={asyncUserInvoicesEdit} />
+                    <Route path="/user/invoices/add" component={asyncUserInvoicesAdd} />
+                    <Route path="/user/invoices" component={asyncUserInvoices} />
 
                     <Route path="/user/languages/:languageId/edit" component={asyncUserLanguagesEdit} />
                     <Route path="/user/languages/add" component={asyncUserLanguagesAdd} />
@@ -161,6 +182,10 @@ class App extends Component {
                     <Route path="/user/roles" component={asyncUserRoles} />
 
                     <Route path="/user/settings/language" component={asyncUserSettingsLanguage} />
+
+                    <Route path="/user/tasks/:taskId/edit" component={asyncUserTasksEdit} />
+                    <Route path="/user/tasks/add" component={asyncUserTasksAdd} />
+                    <Route path="/user/tasks" component={asyncUserTasks} />
 
                     <Route path="/user/users/:userId/edit" component={asyncUserUsersEdit} />
                     <Route path="/user/users/add" component={asyncUserUsersAdd} />

@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[37],{
 
-/***/ "./resources/js/src/containers/Backend/Admin/Roles/Add.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Roles/Add.js ***!
-  \****************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Languages/Edit.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Languages/Edit.js ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28,33 +28,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../components/UI/Button/BetweenButton/BetweenButton */ "./resources/js/src/components/UI/Button/BetweenButton/BetweenButton.js");
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
+/* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
 
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -100,15 +81,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Add = /*#__PURE__*/function (_Component) {
-  _inherits(Add, _Component);
 
-  var _super = _createSuper(Add);
+var Edit = /*#__PURE__*/function (_Component) {
+  _inherits(Edit, _Component);
 
-  function Add() {
+  var _super = _createSuper(Edit);
+
+  function Edit() {
     var _this;
 
-    _classCallCheck(this, Add);
+    _classCallCheck(this, Edit);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
@@ -118,8 +100,9 @@ var Add = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       name: '',
-      description: '',
-      features: []
+      abbr: '',
+      flag: '',
+      countries: []
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
@@ -130,7 +113,7 @@ var Add = /*#__PURE__*/function (_Component) {
               case 0:
                 e.preventDefault();
                 _context.next = 3;
-                return _this.props.post(e.target);
+                return _this.props.patch(_this.props.match.params.languageId, e.target);
 
               case 3:
               case "end":
@@ -147,54 +130,9 @@ var Add = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "inputChangeHandler", function (e) {
       var _e$target = e.target,
-          id = _e$target.id,
           name = _e$target.name,
           value = _e$target.value,
-          checked = _e$target.checked,
           files = _e$target.files;
-
-      if (name.includes('features')) {
-        var features = _toConsumableArray(_this.state.features);
-
-        if (name.includes('id')) {
-          var _id$split = id.split('-'),
-              _id$split2 = _slicedToArray(_id$split, 2),
-              feature_id = _id$split2[1];
-
-          var feature = features.find(function (f) {
-            return +f.id === +feature_id;
-          });
-          if (checked && !feature) features.push({
-            id: feature_id,
-            permissions: []
-          });else features = features.filter(function (f) {
-            return +f.id !== +feature_id;
-          });
-        } else if (name.includes('permissions')) {
-          var _id$split3 = id.split('-'),
-              _id$split4 = _slicedToArray(_id$split3, 3),
-              _feature_id = _id$split4[1],
-              abbr = _id$split4[2];
-
-          var featureIndex = features.findIndex(function (f) {
-            return +f.id === +_feature_id;
-          });
-          var _feature = features[featureIndex];
-
-          var permissions = _toConsumableArray(_feature.permissions);
-
-          var found = permissions.includes(abbr);
-          if (checked && !found) permissions.push(abbr);else permissions = permissions.filter(function (p) {
-            return p !== abbr;
-          });
-          _feature.permissions = permissions;
-          features[featureIndex] = _feature;
-        }
-
-        return _this.setState({
-          features: features
-        });
-      }
 
       _this.setState(_defineProperty({}, name, files ? files[0] : value));
     });
@@ -202,18 +140,58 @@ var Add = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Add, [{
+  _createClass(Edit, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var cors, phoneRes, namesRes, phone, names, countries;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 this.props.reset();
-                this.props.get();
+                this.props.get(this.props.match.params.languageId);
+                cors = 'https://cors-anywhere.herokuapp.com/';
+                _context2.next = 5;
+                return fetch(cors + 'http://country.io/phone.json', {
+                  method: 'GET',
+                  mode: 'cors'
+                });
 
-              case 2:
+              case 5:
+                phoneRes = _context2.sent;
+                _context2.next = 8;
+                return fetch(cors + 'http://country.io/names.json', {
+                  method: 'GET',
+                  mode: 'cors'
+                });
+
+              case 8:
+                namesRes = _context2.sent;
+                _context2.next = 11;
+                return phoneRes.json();
+
+              case 11:
+                phone = _context2.sent;
+                _context2.next = 14;
+                return namesRes.json();
+
+              case 14:
+                names = _context2.sent;
+                countries = Object.keys(phone).map(function (key) {
+                  return {
+                    country: key,
+                    code: phone[key],
+                    name: names[key]
+                  };
+                }).sort(function (a, b) {
+                  return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+                });
+                this.setState({
+                  countries: countries
+                });
+
+              case 17:
               case "end":
                 return _context2.stop();
             }
@@ -235,71 +213,34 @@ var Add = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var _this$props = this.props,
           _this$props$content$c = _this$props.content.cms.pages,
           save = _this$props$content$c.components.form.save,
-          _this$props$content$c2 = _this$props$content$c.backend.pages.roles,
+          _this$props$content$c2 = _this$props$content$c.backend.pages.languages,
           title = _this$props$content$c2.title,
-          add = _this$props$content$c2.add,
+          edit = _this$props$content$c2.edit,
           index = _this$props$content$c2.index,
           form = _this$props$content$c2.form,
-          _this$props$backend$r = _this$props.backend.roles,
-          loading = _this$props$backend$r.loading,
-          error = _this$props$backend$r.error,
-          message = _this$props$backend$r.message,
-          features = _this$props$backend$r.features;
+          _this$props$backend$l = _this$props.backend.languages,
+          loading = _this$props$backend$l.loading,
+          error = _this$props$backend$l.error,
+          message = _this$props$backend$l.message;
       var _this$state = this.state,
           name = _this$state.name,
-          description = _this$state.description,
-          f = _this$state.features;
-      var content;
+          abbr = _this$state.abbr,
+          flag = _this$state.flag,
+          countries = _this$state.countries;
+      var content = null;
       var errors = null;
-      if (!features) features = [];
-      var featuresItems = features.sort(function (a, b) {
-        return a.name > b.name;
-      }).map(function (feature) {
-        var element = f.find(function (i) {
-          return +i.id === +feature.id;
-        });
-        var permissions = [{
-          abbr: 'c',
-          name: form.create
-        }, {
-          abbr: 'u',
-          name: form.update
-        }, {
-          abbr: 'd',
-          name: form["delete"]
-        }].map(function (p) {
-          var checked = element && element.permissions.includes(p.abbr);
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-            key: JSON.stringify(p),
-            lg: 4
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["FormGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["CustomInput"], {
-            type: "checkbox",
-            id: "feature-".concat(feature.id, "-").concat(p.abbr),
-            checked: checked,
-            name: "features[".concat(feature.id, "][permissions][").concat(p.abbr, "]"),
-            onChange: _this2.inputChangeHandler,
-            label: p.name
-          })));
-        });
-        var checked = element !== undefined;
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          key: JSON.stringify(feature)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["CustomInput"], {
-          type: "switch",
-          id: "feature-".concat(feature.id),
-          className: "col-12 pb-2",
-          checked: checked,
-          name: "features[".concat(feature.id, "][id]"),
-          onChange: _this2.inputChangeHandler,
-          label: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-            className: "text-500"
-          }, feature.name)
-        }), checked && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, permissions));
+      var countriesOptions = countries.map(function (_ref2) {
+        var country = _ref2.country,
+            code = _ref2.code,
+            name = _ref2.name;
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+          key: country,
+          value: country,
+          code: code
+        }, name);
       });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
@@ -309,20 +250,24 @@ var Add = /*#__PURE__*/function (_Component) {
         }));
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_12__["default"], {
           onSubmit: this.submitHandler,
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTag"],
-          title: add,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"],
+          title: edit,
           list: index,
-          link: "/admin/roles",
+          link: "/admin/languages",
           innerClassName: "row",
           className: "shadow-sm"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
           lg: 8
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__["default"], {
           message: message
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "hidden",
+          name: "_method",
+          defaultValue: "PATCH"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
           type: "text",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTag"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"],
           onChange: this.inputChangeHandler,
           value: name,
           name: "name",
@@ -331,18 +276,35 @@ var Add = /*#__PURE__*/function (_Component) {
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
           type: "text",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"],
           onChange: this.inputChangeHandler,
-          value: description,
-          name: "description",
+          value: abbr,
+          name: "abbr",
           required: true,
-          placeholder: form.description
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-          xs: 12,
-          className: "pb-2 text-large text-700"
-        }, form.features), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["FormGroup"], {
-          className: "col-12"
-        }, featuresItems), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          placeholder: form.abbr
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "col-md-6",
+          type: "select",
+          addon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            className: "text-secondary text-small d-inline-flex"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+            className: "rounded-circle overflow-hidden position-relative d-flex justify-content-center align-items-center",
+            style: {
+              width: 30,
+              height: 30
+            }
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            className: "flag-icon text-xx-large position-absolute flag-icon-".concat(flag.toLowerCase())
+          }))),
+          onChange: this.inputChangeHandler,
+          value: flag,
+          validation: {
+            required: true
+          },
+          name: "flag",
+          required: true,
+          placeholder: form.select_flag
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_flag), countriesOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "col-12"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_14__["default"], {
           color: "green",
@@ -352,20 +314,34 @@ var Add = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        main: add,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTag"]
+        items: [{
+          to: '/admin/languages',
+          content: index
+        }],
+        main: edit,
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTag"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true
-      }, add)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, edit)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, errors, content));
     }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(nextProps, prevState) {
+      if (nextProps.backend.languages.language && prevState.name === '') {
+        var language = nextProps.backend.languages.language;
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, language));
+      }
+
+      return prevState;
+    }
   }]);
 
-  return Add;
+  return Edit;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -374,19 +350,19 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    get: function get() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getRolesInfo"]());
+    get: function get(id) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getLanguage"](id));
     },
-    post: function post(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["postRoles"](data));
+    patch: function patch(data) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchLanguages"](data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetRoles"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetLanguages"]());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Add)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Edit)));
 
 /***/ })
 

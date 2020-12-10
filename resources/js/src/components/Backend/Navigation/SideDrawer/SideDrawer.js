@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Badge, Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTachometerAlt, faUserTie, faCog, faUserTag, faTools, faUser, faUserCog, faLanguage, faBell, faWrench, faBlog } from '@fortawesome/free-solid-svg-icons';
+import { faTachometerAlt, faUserTie, faCog, faUserTag, faTools, faUser, faUserCog, faLanguage, faBell, faWrench, faBlog, faFileInvoice, faTasks } from '@fortawesome/free-solid-svg-icons';
 import { faCircle } from '@fortawesome/free-regular-svg-icons';
 
 import SideDrawerItem from './SideDrawerItem/SideDrawerItem';
@@ -22,7 +22,7 @@ export default ({ data, role = 'user', notifications = [], toggle, isOpen, selec
             backend: {
                 sidebar: {
                     user, admin,
-                    menu: { dashboard, admins, users, roles, employees, members, products, posts, features, languages, cms: cms_, notifications: notifications_, settings, }
+                    menu: { dashboard, admins, users, roles, employees, members, customers, invoices, tasks, products, posts, features, languages, cms: cms_, notifications: notifications_, settings, }
                 }
             }
         }
@@ -77,6 +77,9 @@ export default ({ data, role = 'user', notifications = [], toggle, isOpen, selec
                 {sideDrawerItem(false, null, features, faTools, "/user/features")}
                 {sideDrawerItem(false, null, employees, faUserTie, "/user/employees")}
                 {sideDrawerItem(false, null, members, faUserTie, "/user/members")}
+                {sideDrawerItem(false, null, customers, faUserTie, "/user/customers")}
+                {sideDrawerItem(false, null, invoices, faFileInvoice, "/user/invoices")}
+                {sideDrawerItem(false, null, tasks, faTasks, "/user/tasks")}
                 {sideDrawerItem(false, null, products, faProductHunt, "/user/products")}
                 {sideDrawerItem(false, null, posts, faBlog, "/user/posts")}
                 {sideDrawerItem(false, null, languages, faLanguage, "/user/languages")}
@@ -109,6 +112,9 @@ export default ({ data, role = 'user', notifications = [], toggle, isOpen, selec
                 {sideDrawerItem(true, null, features, faTools, "/admin/features")}
                 {sideDrawerItem(true, null, employees, faUserTie, "/admin/employees")}
                 {sideDrawerItem(true, null, members, faUserTie, "/admin/members")}
+                {sideDrawerItem(true, null, customers, faUserTie, "/admin/customers")}
+                {sideDrawerItem(true, null, invoices, faFileInvoice, "/admin/invoices")}
+                {sideDrawerItem(true, null, tasks, faTasks, "/admin/tasks")}
                 {sideDrawerItem(true, null, products, faProductHunt, "/admin/products")}
                 {sideDrawerItem(true, null, posts, faBlog, "/admin/posts")}
                 {sideDrawerItem(true, null, languages, faLanguage, "/admin/languages")}

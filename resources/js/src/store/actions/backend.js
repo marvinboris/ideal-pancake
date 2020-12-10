@@ -217,6 +217,122 @@ export const deleteCms = id => async (dispatch, getState) => {
 
 
 
+export const resetCustomers = () => ({ type: actionTypes.CUSTOMERS_RESET });
+const customersStart = () => ({ type: actionTypes.CUSTOMERS_START });
+const customersSuccess = data => ({ type: actionTypes.CUSTOMERS_SUCCESS, ...data });
+const customersFail = error => ({ type: actionTypes.CUSTOMERS_FAIL, error });
+export const getCustomers = (page = 1, show = 10, search = '') => async (dispatch, getState) => {
+    dispatch(customersStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/customers?page=${page}&show=${show}&search=${search}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(customersSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(customersFail(error));
+    }
+};
+
+export const getCustomer = id => async (dispatch, getState) => {
+    dispatch(customersStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/customers/${id}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(customersSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(customersFail(error));
+    }
+};
+
+export const postCustomers = data => async (dispatch, getState) => {
+    dispatch(customersStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/customers`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        else if (res.status !== 200 && res.status !== 201) throw new Error(resData.error.message);
+        dispatch(customersSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(customersFail(error));
+    }
+};
+
+export const patchCustomers = (id, data) => async (dispatch, getState) => {
+    dispatch(customersStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/customers/${id}`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token,
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(customersSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(customersFail(error));
+    }
+};
+
+export const deleteCustomers = id => async (dispatch, getState) => {
+    dispatch(customersStart());
+    const { role } = getState().auth;
+
+    try {
+        const page = document.getElementById('table-page').value;
+        const show = document.getElementById('table-show').value;
+        const search = document.getElementById('table-search').value;
+
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/customers/${id}?page=${page}&show=${show}&search=${search}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(customersSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(customersFail(error));
+    }
+};
+
+
+
 export const resetDashboard = () => ({ type: actionTypes.DASHBOARD_RESET });
 const dashboardStart = () => ({ type: actionTypes.DASHBOARD_START });
 const dashboardSuccess = data => ({ type: actionTypes.DASHBOARD_SUCCESS, ...data });
@@ -469,6 +585,141 @@ export const deleteFeatures = id => async (dispatch, getState) => {
     } catch (error) {
         console.log(error);
         dispatch(featuresFail(error));
+    }
+};
+
+
+
+export const resetInvoices = () => ({ type: actionTypes.INVOICES_RESET });
+const invoicesStart = () => ({ type: actionTypes.INVOICES_START });
+const invoicesSuccess = data => ({ type: actionTypes.INVOICES_SUCCESS, ...data });
+const invoicesFail = error => ({ type: actionTypes.INVOICES_FAIL, error });
+export const getInvoices = (page = 1, show = 10, search = '') => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/invoices?page=${page}&show=${show}&search=${search}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
+    }
+};
+
+export const getInvoice = id => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/invoices/${id}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
+    }
+};
+
+export const getInvoicesInfo = () => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/invoices/info`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
+    }
+};
+
+export const postInvoices = data => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/invoices`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        else if (res.status !== 200 && res.status !== 201) throw new Error(resData.error.message);
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
+    }
+};
+
+export const patchInvoices = (id, data) => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/invoices/${id}`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token,
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
+    }
+};
+
+export const deleteInvoices = id => async (dispatch, getState) => {
+    dispatch(invoicesStart());
+    const { role } = getState().auth;
+
+    try {
+        const page = document.getElementById('table-page').value;
+        const show = document.getElementById('table-show').value;
+        const search = document.getElementById('table-search').value;
+
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/invoices/${id}?page=${page}&show=${show}&search=${search}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(invoicesSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(invoicesFail(error));
     }
 };
 
@@ -1068,6 +1319,122 @@ export const deleteRoles = id => async (dispatch, getState) => {
     } catch (error) {
         console.log(error);
         dispatch(rolesFail(error));
+    }
+};
+
+
+
+export const resetTasks = () => ({ type: actionTypes.TASKS_RESET });
+const tasksStart = () => ({ type: actionTypes.TASKS_START });
+const tasksSuccess = data => ({ type: actionTypes.TASKS_SUCCESS, ...data });
+const tasksFail = error => ({ type: actionTypes.TASKS_FAIL, error });
+export const getTasks = (page = 1, show = 10, search = '') => async (dispatch, getState) => {
+    dispatch(tasksStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/tasks?page=${page}&show=${show}&search=${search}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(tasksSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(tasksFail(error));
+    }
+};
+
+export const getTask = id => async (dispatch, getState) => {
+    dispatch(tasksStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/tasks/${id}`, {
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        dispatch(tasksSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(tasksFail(error));
+    }
+};
+
+export const postTasks = data => async (dispatch, getState) => {
+    dispatch(tasksStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/tasks`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        else if (res.status !== 200 && res.status !== 201) throw new Error(resData.error.message);
+        dispatch(tasksSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(tasksFail(error));
+    }
+};
+
+export const patchTasks = (id, data) => async (dispatch, getState) => {
+    dispatch(tasksStart());
+    const { role } = getState().auth;
+
+    try {
+        const token = localStorage.getItem('token');
+        const form = new FormData(data);
+        const res = await fetch(`${prefix + role}/tasks/${id}`, {
+            method: 'POST',
+            body: form,
+            headers: {
+                Authorization: token,
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(tasksSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(tasksFail(error));
+    }
+};
+
+export const deleteTasks = id => async (dispatch, getState) => {
+    dispatch(tasksStart());
+    const { role } = getState().auth;
+
+    try {
+        const page = document.getElementById('table-page').value;
+        const show = document.getElementById('table-show').value;
+        const search = document.getElementById('table-search').value;
+
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${prefix + role}/tasks/${id}?page=${page}&show=${show}&search=${search}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: token
+            }
+        });
+        const resData = await res.json();
+        if (res.status === 422) throw new Error(Object.values(resData.errors).join('\n'));
+        dispatch(tasksSuccess(resData));
+    } catch (error) {
+        console.log(error);
+        dispatch(tasksFail(error));
     }
 };
 

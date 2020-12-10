@@ -105,7 +105,7 @@ const SubNavLinks = ({ messages, language }) => {
         },
     ]);
 
-    const resourceTabPanes = ['admins', 'users', 'roles', 'features', 'members', 'posts', 'products', 'languages', 'notifications', 'cms', 'settings'].map(item => {
+    const resourceTabPanes = ['admins', 'users', 'roles', 'features', 'members', 'customers', 'invoices', 'tasks', 'posts', 'products', 'languages', 'notifications', 'cms', 'settings'].map(item => {
         const currentItem = MESSAGES[item];
         const currentName = `${prefix}[${item}]`;
         const currentValue = value[item];

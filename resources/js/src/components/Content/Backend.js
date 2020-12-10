@@ -51,6 +51,21 @@ export default {
                 "add": "Add member",
                 "index": "Member list"
             },
+            "customers": {
+                "title": "Customers",
+                "add": "Add customer",
+                "index": "Customer list"
+            },
+            "invoices": {
+                "title": "Invoices",
+                "add": "Add invoice",
+                "index": "Invoice list"
+            },
+            "tasks": {
+                "title": "Tasks",
+                "add": "Add task",
+                "index": "Task list"
+            },
             "products": {
                 "title": "Products",
                 "add": "Add product",
@@ -245,6 +260,50 @@ export default {
                 "job": "Job",
                 "quote": "Quote",
                 "social_media": "Social media",
+                "photo": "Photo"
+            }
+        },
+        "customers": {
+            "title": "Customers",
+            "add": "Add customer",
+            "edit": "Edit customer",
+            "index": "Customer list",
+            "form": {
+                "name": "Name",
+                "address": "Address",
+                "country": "Country",
+                "phone": "Phone",
+                "email": "E-mail address",
+                "photo": "Photo"
+            }
+        },
+        "invoices": {
+            "title": "Invoices",
+            "add": "Add invoice",
+            "edit": "Edit invoice",
+            "index": "Invoice list",
+            "form": {
+                "customer": "Customer",
+                "no": "Invoice number",
+                "date": "Date",
+                "paid_amount": "Paid amount",
+                "total_amount": "Total amount",
+                "discount": "Discount",
+                "tax": "Tax",
+                "select_customer": "Select customer",
+                "tasks": "Tasks",
+                "invoice_photo": "Invoice photo",
+                "photo": "Photo"
+            }
+        },
+        "tasks": {
+            "title": "Tasks",
+            "add": "Add task",
+            "edit": "Edit task",
+            "index": "Task list",
+            "form": {
+                "title": "Title",
+                "description": "Description",
                 "photo": "Photo"
             }
         },

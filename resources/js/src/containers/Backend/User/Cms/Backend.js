@@ -135,7 +135,7 @@ const SubNavLinks = ({ backend, language }) => {
         { regex: `${dashboardName}[.+][subtitle]`, action: () => <Separator sm /> },
     ]);
 
-    const resourceTabPanes = ['admins', 'users', 'roles', 'features', 'languages', 'employees', 'members', 'posts', 'products'].map(item => {
+    const resourceTabPanes = ['admins', 'users', 'roles', 'features', 'languages', 'employees', 'members', 'customers', 'invoices', 'tasks', 'posts', 'products'].map(item => {
         const currentItem = BACKEND.pages[item];
         const currentName = `${prefix}[pages][${item}]`;
         const currentValue = value[item];

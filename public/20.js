@@ -1,336 +1,54 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[20],{
 
-/***/ "./resources/js/src/components/Content/Backend.js":
-/*!********************************************************!*\
-  !*** ./resources/js/src/components/Content/Backend.js ***!
-  \********************************************************/
+/***/ "./resources/js/src/components/Content/Auth.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/src/components/Content/Auth.js ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  "header": {
-    "sign_out": "Sign out",
-    "no_message": "No message",
-    "no_notification": "No notification",
-    "logout": "Logout",
-    "close": "Close",
-    "sure_logout": "Are you sure you want to logout",
-    "you_have": "You have",
-    "messages": "messages",
-    "view_all_messages": "View all messages",
-    "notifications": "notifications",
-    "view_all_notifications": "View all notifications"
-  },
   "footer": {
     "copyright": "Copyright",
     "all_rights": "All rights reserved by"
   },
-  "sidebar": {
-    "admin": "Administrator",
-    "user": "User",
-    "menu": {
-      "dashboard": "Dashboard",
-      "admins": {
-        "title": "Admins",
-        "add": "Add admin",
-        "index": "Admin list"
-      },
-      "users": {
-        "title": "Users",
-        "add": "Add user",
-        "index": "User list"
-      },
-      "roles": {
-        "title": "Roles",
-        "add": "Add role",
-        "index": "Role list"
-      },
-      "features": {
-        "title": "Features",
-        "add": "Add feature",
-        "index": "Feature list"
-      },
-      "employees": {
-        "title": "Employees",
-        "add": "Add employee",
-        "index": "Employee list"
-      },
-      "members": {
-        "title": "Members",
-        "add": "Add member",
-        "index": "Member list"
-      },
-      "products": {
-        "title": "Products",
-        "add": "Add product",
-        "index": "Product list"
-      },
-      "posts": {
-        "title": "Posts",
-        "add": "Add posts",
-        "index": "Post list"
-      },
-      "languages": {
-        "title": "Languages",
-        "add": "Add language",
-        "index": "Language list"
-      },
-      "cms": {
-        "title": "CMS",
-        "global": "Global",
-        "general": "General",
-        "components": "Components",
-        "auth": "Auth",
-        "messages": "Messages",
-        "backend": "Backend",
-        "frontend": "Frontend"
-      },
-      "notifications": "Notifications",
-      "settings": {
-        "title": "Settings",
-        "cms": "CMS",
-        "language": "Language settings"
-      }
+  "user": {
+    "login": {
+      "dont_be_late": "Don't be late",
+      "sign_in": "Sign In",
+      "email_address": "E-mail address",
+      "password": "Password"
     }
   },
-  "pages": {
-    "dashboard": {
-      "admin": {
-        "title": "Admin panel",
-        "subtitle": "Dashboard",
-        "blocks": {
-          "subscription": {
-            "title": "Subscription Amount",
-            "description": "Amount of services offered"
-          },
-          "total_customers": {
-            "title": "Total Customers",
-            "description": "Customers in the system"
-          },
-          "expenses": {
-            "title": "Expenses",
-            "description": "All recorded expenses"
-          },
-          "total_cash": {
-            "title": "Total Case",
-            "description": "Amount available at checkout"
-          }
-        },
-        "sales_report": "Sales Report"
-      },
-      "user": {
-        "title": "User panel",
-        "subtitle": "Dashboard",
-        "blocks": {
-          "subscription": {
-            "title": "Subscription Amount",
-            "description": "Amount of services offered"
-          },
-          "total_customers": {
-            "title": "Total Customers",
-            "description": "Customers in the system"
-          },
-          "expenses": {
-            "title": "Expenses",
-            "description": "All recorded expenses"
-          },
-          "total_cash": {
-            "title": "Total Case",
-            "description": "Amount available at checkout"
-          }
-        },
-        "sales_report": "Sales Report"
-      }
+  "admin": {
+    "login": {
+      "sign_in_to": "Sign In to",
+      "sign_in": "Sign In",
+      "admin_panel": "Admin Panel",
+      "email_address": "E-mail address",
+      "password": "Password",
+      "sms": "SMS",
+      "email": "E-mail",
+      "otp_method": "OTP Method"
     },
-    "admins": {
-      "title": "Administrators",
-      "add": "Add admin",
-      "edit": "Edit admin",
-      "index": "Admin list",
-      "form": {
-        "name": "Admin name",
-        "full_name": "Full name",
-        "phone": "Phone number",
-        "password": "Password",
-        "password_confirmation": "Confirm password",
-        "email": "E-mail address",
-        "admin_photo": "Admin photo",
-        "photo": "Photo"
-      }
-    },
-    "users": {
-      "title": "Users",
-      "add": "Add user",
-      "edit": "Edit user",
-      "index": "User list",
-      "form": {
-        "name": "User name",
-        "full_name": "Full name",
-        "phone": "Phone number",
-        "password": "Password",
-        "password_confirmation": "Confirm password",
-        "email": "E-mail address",
-        "role": "Role",
-        "select_role": "Select role",
-        "user_photo": "User photo",
-        "photo": "Photo"
-      }
-    },
-    "roles": {
-      "title": "Roles",
-      "add": "Add role",
-      "edit": "Edit role",
-      "index": "Role list",
-      "form": {
-        "name": "Name",
-        "description": "Description",
-        "features": "Features",
-        "created_at": "Created at",
-        "create": "Create",
-        "update": "Update",
-        "delete": "Delete"
-      }
-    },
-    "features": {
-      "title": "Features",
-      "add": "Add feature",
-      "edit": "Edit feature",
-      "index": "Feature list",
-      "form": {
-        "name": "Name",
-        "prefix": "Prefix",
-        "created_at": "Created at"
-      }
-    },
-    "employees": {
-      "title": "Employees",
-      "add": "Add employee",
-      "edit": "Edit employee",
-      "index": "Employee list",
-      "form": {
-        "first_name": "First name",
-        "last_name": "Last name",
-        "name": "Full name",
-        "job": "Job",
-        "email": "E-mail address",
-        "phone": "Phone number",
-        "matricule": "Matricule",
-        "gender": "Gender",
-        "marital": "Marital status",
-        "select_gender": "Select gender",
-        "select_marital": "Select marital status",
-        "gender_list": {
-          "m": "Male",
-          "f": "Female",
-          "o": "Other"
-        },
-        "marital_list": {
-          "m": "Married",
-          "s": "Single",
-          "f": "Fiancé(e)",
-          "d": "Divorced",
-          "w": "Widow(er)"
-        },
-        "birthdate": "Birthdate",
-        "country": "Country",
-        "diploma": "Diploma",
-        "address": "Address",
-        "number_children": "Number of children",
-        "languages": "Languages",
-        "driving_licenses": "Driving licenses",
-        "employee_photo": "Employee photo",
-        "photo": "Photo"
-      }
-    },
-    "members": {
-      "title": "Members",
-      "add": "Add member",
-      "edit": "Edit member",
-      "index": "Member list",
-      "form": {
-        "first_name": "First name",
-        "last_name": "Last name",
-        "name": "Full name",
-        "job": "Job",
-        "quote": "Quote",
-        "social_media": "Social media",
-        "photo": "Photo"
-      }
-    },
-    "products": {
-      "title": "Products",
-      "add": "Add product",
-      "edit": "Edit product",
-      "index": "Product list",
-      "form": {
-        "name": "Name",
-        "description": "Description",
-        "popular": "Popular",
-        "details": "Details",
-        "logo": "Logo",
-        "color": "Color",
-        "link": "Link"
-      }
-    },
-    "posts": {
-      "title": "Posts",
-      "add": "Add post",
-      "edit": "Edit post",
-      "index": "Post list",
-      "form": {
-        "title": "Title",
-        "body": "Body",
-        "photo": "Photo"
-      }
-    },
-    "languages": {
-      "title": "Languages",
-      "add": "Add language",
-      "edit": "Edit language",
-      "index": "Language list",
-      "form": {
-        "name": "Name",
-        "abbr": "Abbreviation",
-        "flag": "Flag",
-        "select_flag": "Select flag",
-        "created_at": "Created at"
-      }
-    },
-    "cms": {
-      "title": "CMS",
-      "global": "Global",
-      "general": "General",
-      "messages": "Messages",
-      "frontend": "Frontend",
-      "components": "Components",
-      "backend": "Backend",
-      "auth": "Auth",
-      "form": {
-        "logo": "Logo",
-        "app_name": "App name",
-        "company_name": "Company name"
-      }
-    },
-    "settings": {
-      "title": "Settings",
-      "language": {
-        "title": "Language settings",
-        "form": {
-          "select_language": "Select a language"
-        }
-      }
+    "verify": {
+      "enter": "Enter",
+      "verification_code": "Verification code",
+      "continue": "Continue",
+      "didnt_receive_code": "Didn't receive code",
+      "resend": "Resend"
     }
   }
 });
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/User/Cms/Backend.js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Cms/Backend.js ***!
-  \*****************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Cms/Auth.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Cms/Auth.js ***!
+  \**************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -356,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
 /* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
-/* harmony import */ var _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../components/Content/Backend */ "./resources/js/src/components/Content/Backend.js");
+/* harmony import */ var _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../components/Content/Auth */ "./resources/js/src/components/Content/Auth.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -431,24 +149,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Separator = function Separator(_ref) {
-  var sm = _ref.sm;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-    xs: 12,
-    className: "mb-".concat(sm ? 2 : 3)
-  });
-};
+var SubNavLinks = function SubNavLinks(_ref) {
+  var auth = _ref.auth,
+      language = _ref.language;
 
-var SubNavLinks = function SubNavLinks(_ref2) {
-  var backend = _ref2.backend,
-      language = _ref2.language;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(language.abbr + '-header'),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(language.abbr + '-footer'),
       _useState2 = _slicedToArray(_useState, 2),
       activeTab = _useState2[0],
       setActiveTab = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(backend),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(auth),
       _useState4 = _slicedToArray(_useState3, 2),
       value = _useState4[0],
       setValue = _useState4[1];
@@ -525,7 +235,7 @@ var SubNavLinks = function SubNavLinks(_ref2) {
     });
   };
 
-  var navItems = Object.keys(backend).map(function (key) {
+  var navItems = Object.keys(auth).map(function (key) {
     var id = language.abbr + '-' + key;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavItem"], {
       key: id
@@ -538,162 +248,62 @@ var SubNavLinks = function SubNavLinks(_ref2) {
       className: "text-capitalize"
     }, key)));
   });
-  var prefix = "".concat(language.abbr, "[backend]");
-  var headerItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['header'];
-  var headerName = "".concat(prefix, "[header]");
-  var headerValue = value['header'];
-  var headerDeepness = ['header'];
-  var header = recursiveDeepness(headerItem, headerName, headerValue, headerDeepness, [], [{
-    regex: "".concat(headerName, "[no_notification]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
-    }
-  }, {
-    regex: "".concat(headerName, "[sure_logout]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
-    }
-  }]);
-  var footerItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['footer'];
+  var prefix = "".concat(language.abbr, "[auth]");
+  var footerItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['footer'];
   var footerName = "".concat(prefix, "[footer]");
   var footerValue = value['footer'];
   var footerDeepness = ['footer'];
   var footer = recursiveDeepness(footerItem, footerName, footerValue, footerDeepness);
-  var sidebarItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['sidebar'];
-  var sidebarName = "".concat(prefix, "[sidebar]");
-  var sidebarValue = value['sidebar'];
-  var sidebarDeepness = ['sidebar'];
-  var sidebar = recursiveDeepness(sidebarItem, sidebarName, sidebarValue, sidebarDeepness, [{
-    regex: "".concat(sidebarName, "[admin]"),
+  var userItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['user'];
+  var userName = "".concat(prefix, "[user]");
+  var userValue = value['user'];
+  var userDeepness = ['user'];
+  var user = recursiveDeepness(userItem, userName, userValue, userDeepness);
+  var adminItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['admin'];
+  var adminName = "".concat(prefix, "[admin]");
+  var adminValue = value['admin'];
+  var adminDeepness = ['admin'];
+  var admin = recursiveDeepness(adminItem, adminName, adminValue, adminDeepness, [{
+    regex: "".concat(prefix, "[admin][login][sign_in_to]"),
     action: function action() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Roles"));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Login"));
     }
   }, {
-    regex: "".concat(sidebarName, "[menu][dashboard]"),
+    regex: "".concat(prefix, "[admin][verify][enter]"),
     action: function action() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Menu"));
-    }
-  }, {
-    regex: "".concat(sidebarName, "[menu][.+][title]"),
-    action: function action(item) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, item));
-    }
-  }], [{
-    regex: "".concat(sidebarName, "[user]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Verify"));
     }
   }]);
-  var dashboardItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['dashboard'];
-  var dashboardName = "".concat(prefix, "[pages][dashboard]");
-  var dashboardValue = value['dashboard'];
-  var dashboardDeepness = ['pages', 'dashboard'];
-  var dashboard = recursiveDeepness(dashboardItem, dashboardName, dashboardValue, dashboardDeepness, [{
-    regex: "".concat(dashboardName, "[admin][title]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Admin"));
-    }
-  }, {
-    regex: "".concat(dashboardName, "[.+][blocks][subscription][title]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, "Blocks"));
-    }
-  }, {
-    regex: "".concat(dashboardName, "[user][title]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "User")));
-    }
-  }], [{
-    regex: "".concat(dashboardName, "[.+][subtitle]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, {
-        sm: true
-      });
-    }
-  }]);
-  var resourceTabPanes = ['admins', 'users', 'roles', 'features', 'languages', 'employees', 'members', 'posts', 'products'].map(function (item) {
-    var currentItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages[item];
-    var currentName = "".concat(prefix, "[pages][").concat(item, "]");
-    var currentValue = value[item];
-    var currentDeepness = ['pages', item];
-    var current = recursiveDeepness(currentItem, currentName, currentValue, currentDeepness, [], [{
-      regex: "".concat(currentName, "[index]"),
-      action: function action() {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-          xs: 12
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Form")));
-      }
-    }]);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-      key: Math.random(),
-      tabId: "".concat(language.abbr, "-").concat(item),
-      className: "pt-4"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, current));
-  });
-  var cmsItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['cms'];
-  var cmsName = "".concat(prefix, "[pages][cms]");
-  var cmsValue = value['cms'];
-  var cmsDeepness = ['pages', 'cms'];
-  var cms = recursiveDeepness(cmsItem, cmsName, cmsValue, cmsDeepness, [], [{
-    regex: "".concat(cmsName, "[auth]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Form")));
-    }
-  }]);
-  var settingsItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['settings'];
-  var settingsName = "".concat(prefix, "[pages][settings]");
-  var settingsValue = value['settings'];
-  var settingsDeepness = ['pages', 'settings'];
-  var settings = recursiveDeepness(settingsItem, settingsName, settingsValue, settingsDeepness);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
     tabs: true,
     pills: true
   }, navItems), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabContent"], {
     activeTab: activeTab
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-header',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, header)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
     tabId: language.abbr + '-footer',
     className: "pt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, footer)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-sidebar',
+    tabId: language.abbr + '-user',
     className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, sidebar)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-dashboard',
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, user)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-admin',
     className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, dashboard)), resourceTabPanes, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-cms',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, cms)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-settings',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, settings))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, admin))));
 };
 
-var Backend = /*#__PURE__*/function (_Component) {
-  _inherits(Backend, _Component);
+var Auth = /*#__PURE__*/function (_Component) {
+  _inherits(Auth, _Component);
 
-  var _super = _createSuper(Backend);
+  var _super = _createSuper(Auth);
 
-  function Backend() {
+  function Auth() {
     var _this;
 
-    _classCallCheck(this, Backend);
+    _classCallCheck(this, Auth);
 
     for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
       args[_key2] = arguments[_key2];
@@ -706,7 +316,7 @@ var Backend = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -724,7 +334,7 @@ var Backend = /*#__PURE__*/function (_Component) {
       }));
 
       return function (_x) {
-        return _ref3.apply(this, arguments);
+        return _ref2.apply(this, arguments);
       };
     }());
 
@@ -750,7 +360,7 @@ var Backend = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Backend, [{
+  _createClass(Auth, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
@@ -790,7 +400,7 @@ var Backend = /*#__PURE__*/function (_Component) {
           save = _this$props$content$c.components.form.save,
           _this$props$content$c2 = _this$props$content$c.backend.pages.cms,
           title = _this$props$content$c2.title,
-          backend = _this$props$content$c2.backend,
+          auth = _this$props$content$c2.auth,
           _this$props$backend$c = _this$props.backend.cms,
           loading = _this$props$backend$c.loading,
           error = _this$props$backend$c.error,
@@ -804,7 +414,7 @@ var Backend = /*#__PURE__*/function (_Component) {
       var feature = features.find(function (f) {
         return f.prefix === 'cms';
       });
-      var redirect = !(feature && JSON.parse(feature.permissions).includes('u')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Redirect, {
+      var redirect = !(feature && JSON.parse(feature.permissions).includes('u')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
         to: "/user/dashboard"
       });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
@@ -825,26 +435,18 @@ var Backend = /*#__PURE__*/function (_Component) {
           }, language.name));
         });
         var tabContent = languages.map(function (language) {
-          var data = cms.pages[language.abbr].backend;
-
-          var backend = _objectSpread({
-            header: data.header,
-            footer: data.footer,
-            sidebar: data.sidebar
-          }, data.pages);
-
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
             key: Math.random(),
             tabId: language.abbr
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubNavLinks, {
-            backend: backend,
+            auth: cms.pages[language.abbr].auth,
             language: language
           }));
         });
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_12__["default"], {
           onSubmit: this.submitHandler,
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"],
-          title: backend,
+          title: auth,
           link: "/admin/cms",
           innerClassName: "row",
           className: "shadow-sm"
@@ -876,14 +478,14 @@ var Backend = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        main: backend,
+        main: auth,
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true,
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true
-      }, backend)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, auth)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, redirect, errors, content));
     }
@@ -891,15 +493,15 @@ var Backend = /*#__PURE__*/function (_Component) {
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps, prevState) {
       if (nextProps.backend.cms.cms && prevState.app_name === '') {
-        var backend = nextProps.backend.cms.cms.backend;
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, backend));
+        var auth = nextProps.backend.cms.cms.auth;
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, auth));
       }
 
       return prevState;
     }
   }]);
 
-  return Backend;
+  return Auth;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -912,7 +514,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getCms"]());
     },
     patch: function patch(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchCms"]('backend', data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchCms"]('auth', data));
     },
     reset: function reset() {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetCms"]());
@@ -920,7 +522,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Backend)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Auth)));
 
 /***/ })
 

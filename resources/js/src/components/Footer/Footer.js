@@ -21,7 +21,7 @@ const footer = () => (
                     <Logo big />
                     <FooterBlock title="Address" className="mt-4">
                         <p className="text-300">
-                            Douala - Cameroun<br />Akwa, Mobile Bonakouamoung <br />Sis en face Beneficial Life
+                            Douala - Cameroun<br />Shell New-Bell, Derrière station MRS <br />Résidence Lordia
                         </p>
                     </FooterBlock>
                 </Col>
@@ -35,8 +35,8 @@ const footer = () => (
                                 </dl>
                                 <div />
                                 <dl className="flex-grow-1 pl-sm-4 text-300">
-                                    <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
-                                    <div><a href="tel:(+237) 123 345 545" className="text-white text-decoration-none">(+237) 123 345 545</a></div>
+                                    <div><a href="tel:(+237) 650 646 109" className="text-white text-decoration-none">(+237) 650 646 109</a></div>
+                                    <div><a href="tel:(+237) 693 886 386" className="text-white text-decoration-none">(+237) 693 886 386</a></div>
                                 </dl>
                             </div>
 
@@ -47,7 +47,7 @@ const footer = () => (
                                 </dl>
                                 <div />
                                 <dl className="flex-grow-1 pl-sm-4 text-300">
-                                    <div><a href="mailto:contact@briluce.org" className="text-white text-decoration-none">contact@briluce.org</a></div>
+                                    <div><a href="mailto:contact@briluce.com" className="text-white text-decoration-none">contact@briluce.com</a></div>
                                     <div><a href="mailto:briluceservices@gmail.com" className="text-white text-decoration-none">briluceservices@gmail.com</a></div>
                                 </dl>
                             </div>

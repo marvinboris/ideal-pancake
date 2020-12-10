@@ -44,12 +44,12 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                             <span>contact@briluce.com</span>
                         </a>
 
-                        <a href="tel:(+237) 694422725" className="d-inline-flex align-items-center text-light text-decoration-none">
+                        <a href="tel:(+237) 693886386" className="d-inline-flex align-items-center text-light text-decoration-none">
                             <div className="embed-responsive embed-responsive-1by1 rounded-circle border border-2 mr-2 border-white d-flex justify-content-center align-items-center" style={{ width: 28 }}>
                                 <FontAwesomeIcon icon={faPhone} />
                             </div>
 
-                            <span>(+237) 694422725</span>
+                            <span>(+237) 693886386</span>
                         </a>
                     </div>
 
@@ -126,12 +126,12 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                                 <span>contact@briluce.com</span>
                             </a>
 
-                            <a href="tel:(+237) 694422725" className="d-inline-flex align-items-center text-light text-decoration-none">
+                            <a href="tel:(+237) 693886386" className="d-inline-flex align-items-center text-light text-decoration-none">
                                 <div className="embed-responsive embed-responsive-1by1 rounded-circle border border-2 mr-2 border-dark d-flex justify-content-center align-items-center" style={{ width: 28 }}>
                                     <FontAwesomeIcon icon={faPhone} />
                                 </div>
 
-                                <span>(+237) 694422725</span>
+                                <span>(+237) 693886386</span>
                             </a>
                         </div>
 

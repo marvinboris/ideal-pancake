@@ -29,7 +29,7 @@ export default ({ data, sidedrawerToggle, logoutHandler, role, messages = [], no
         } = cms;
 
         dateTimeContent = <>
-            <div className="d-none d-lg-block" style={{ width: 190 }}>
+            <div className="d-none d-lg-block" style={{ width: 200 }}>
                 <FontAwesomeIcon icon={faClock} className="text-orange mr-2" />
                 <strong className="text-orange">{(time || '').toUpperCase()} : {hours} : {minutes} : {seconds}</strong>
             </div>

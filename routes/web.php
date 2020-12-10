@@ -1,5 +1,6 @@
 <?php
 
+use App\Invoice;
 use Illuminate\Support\Facades\Route;
 
 /*

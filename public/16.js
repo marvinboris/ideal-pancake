@@ -61,10 +61,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/User/Users/index.js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Users/index.js ***!
-  \*****************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Members/index.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Members/index.js ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -164,28 +164,27 @@ var Index = /*#__PURE__*/function (_Component) {
           _this$props$content$c2 = _this$props$content$c.components.list,
           action = _this$props$content$c2.action,
           see = _this$props$content$c2.see,
-          _this$props$content$c3 = _this$props$content$c.backend.pages.users,
+          _this$props$content$c3 = _this$props$content$c.backend.pages.members,
           title = _this$props$content$c3.title,
           add = _this$props$content$c3.add,
           index = _this$props$content$c3.index,
           _this$props$content$c4 = _this$props$content$c3.form,
-          full_name = _this$props$content$c4.full_name,
-          phone = _this$props$content$c4.phone,
+          name = _this$props$content$c4.name,
+          job = _this$props$content$c4.job,
+          quote = _this$props$content$c4.quote,
           photo = _this$props$content$c4.photo,
-          email = _this$props$content$c4.email,
-          user_photo = _this$props$content$c4.user_photo,
-          role = _this$props$content$c4.role,
-          _this$props$backend$u = _this$props.backend.users,
-          loading = _this$props$backend$u.loading,
-          error = _this$props$backend$u.error,
-          message = _this$props$backend$u.message,
-          users = _this$props$backend$u.users,
-          total = _this$props$backend$u.total,
+          member_photo = _this$props$content$c4.member_photo,
+          _this$props$backend$m = _this$props.backend.members,
+          loading = _this$props$backend$m.loading,
+          error = _this$props$backend$m.error,
+          message = _this$props$backend$m.message,
+          members = _this$props$backend$m.members,
+          total = _this$props$backend$m.total,
           features = _this$props.auth.data.role.features;
       var feature = features.find(function (f) {
-        return f.prefix === 'users';
+        return f.prefix === 'members';
       });
-      var redirect = !feature && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+      var redirect = !feature && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Redirect, {
         to: "/user/dashboard"
       });
       var errors = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Error_Error__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -194,18 +193,17 @@ var Index = /*#__PURE__*/function (_Component) {
       var feedback = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_11__["default"], {
         message: message
       });
-      if (!users) users = [];
-      var data = users.map(function (user) {
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_15__["updateObject"])(user, {
-          created_at: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_15__["convertDate"])(user.created_at),
-          photo: user.photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      if (!members) members = [];
+      var data = members.map(function (member) {
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_15__["updateObject"])(member, {
+          photo: member.photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "d-flex"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, see), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
             className: "ml-auto"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            title: "".concat(user_photo, ": ").concat(user.name),
+            title: "".concat(member_photo, ": ").concat(member.name),
             content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-              src: user.photo,
+              src: member.photo,
               className: "w-100"
             })
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
@@ -216,14 +214,14 @@ var Index = /*#__PURE__*/function (_Component) {
           action: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "text-center"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-            to: "/user/users/".concat(user.id),
-            className: "mx-1"
+            to: "/user/members/".concat(member.id),
+            className: "mr-2"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEye"],
             className: "text-green",
             fixedWidth: true
           })), JSON.parse(feature.permissions).includes('u') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-            to: "/user/users/".concat(user.id, "/edit"),
+            to: "/user/members/".concat(member.id, "/edit"),
             className: "mx-1"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
@@ -233,7 +231,7 @@ var Index = /*#__PURE__*/function (_Component) {
             className: "mx-1"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_12__["default"], {
             deleteAction: function deleteAction() {
-              return _this.props["delete"](user.id);
+              return _this.props["delete"](member.id);
             }
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTrash"],
@@ -245,27 +243,24 @@ var Index = /*#__PURE__*/function (_Component) {
       var content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_List_List__WEBPACK_IMPORTED_MODULE_9__["default"], {
         array: data,
         loading: loading,
-        data: JSON.stringify(users),
+        data: JSON.stringify(members),
         get: this.props.get,
         total: total,
         bordered: true,
         add: add,
-        link: "/user/users/add",
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUser"],
+        link: "/user/members/add",
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"],
         title: index,
         className: "shadow-sm",
         fields: [{
-          name: full_name,
+          name: name,
           key: 'name'
         }, {
-          name: email,
-          key: 'email'
+          name: job,
+          key: 'job'
         }, {
-          name: phone,
-          key: 'phone'
-        }, {
-          name: role,
-          key: 'role'
+          name: quote,
+          key: 'quote'
         }, {
           name: photo,
           key: 'photo'
@@ -279,10 +274,10 @@ var Index = /*#__PURE__*/function (_Component) {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_6__["default"], {
         main: index,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUser"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUser"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true
       }, index)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -301,13 +296,13 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     get: function get(page, show, search) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["getUsers"](page, show, search));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["getMembers"](page, show, search));
     },
     "delete": function _delete(id) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["deleteUsers"](id));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["deleteMembers"](id));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["resetUsers"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["resetMembers"]());
     }
   };
 };

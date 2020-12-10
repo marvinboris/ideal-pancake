@@ -49,6 +49,24 @@ export default {
         "updated": "Member successfully updated.",
         "deleted": "Member successfully deleted."
     },
+    "customers": {
+        "not_found": "Customer not found.",
+        "created": "Customer successfully created.",
+        "updated": "Customer successfully updated.",
+        "deleted": "Customer successfully deleted."
+    },
+    "invoices": {
+        "not_found": "Invoice not found.",
+        "created": "Invoice successfully created.",
+        "updated": "Invoice successfully updated.",
+        "deleted": "Invoice successfully deleted."
+    },
+    "tasks": {
+        "not_found": "Task not found.",
+        "created": "Task successfully created.",
+        "updated": "Task successfully updated.",
+        "deleted": "Task successfully deleted."
+    },
     "posts": {
         "not_found": "Post not found.",
         "created": "Post successfully created.",

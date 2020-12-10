@@ -113,12 +113,22 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                 });
             });
 
+            Route::prefix('customers')->name('customers.')->group(function () {
+                Route::get('{customer}', 'CustomerController@show')->name('show');
+            });
+
             Route::prefix('employees')->name('employees.')->group(function () {
                 Route::get('{employee}', 'EmployeeController@show')->name('show');
             });
 
             Route::prefix('features')->name('features.')->group(function () {
                 Route::get('{feature}', 'FeatureController@show')->name('show');
+            });
+
+            Route::prefix('invoices')->name('invoices.')->group(function () {
+                Route::get('info', 'InvoiceController@info')->name('info');
+                Route::get('{invoice}', 'InvoiceController@show')->name('show');
+                Route::post('{invoice}/print', 'InvoiceController@print')->name('print');
             });
 
             Route::prefix('languages')->name('languages.')->group(function () {
@@ -138,6 +148,10 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
                 Route::get('{role}', 'RoleController@show')->name('show');
             });
 
+            Route::prefix('tasks')->name('tasks.')->group(function () {
+                Route::get('{task}', 'TaskController@show')->name('show');
+            });
+
             Route::prefix('users')->name('users.')->group(function () {
                 Route::get('info', 'UserController@info')->name('info');
                 Route::get('{user}', 'UserController@show')->name('show');
@@ -146,10 +160,13 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
             Route::apiResources([
                 'users' => 'UserController',
                 'roles' => 'RoleController',
+                'customers' => 'CustomerController',
                 'employees' => 'EmployeeController',
+                'invoices' => 'InvoiceController',
                 'features' => 'FeatureController',
                 'languages' => 'LanguageController',
                 'members' => 'MemberController',
+                'tasks' => 'TaskController',
                 'products' => 'ProductController',
             ]);
         });

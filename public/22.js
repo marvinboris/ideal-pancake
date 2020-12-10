@@ -1,48 +1,395 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[22],{
 
-/***/ "./resources/js/src/components/Content/Components.js":
-/*!***********************************************************!*\
-  !*** ./resources/js/src/components/Content/Components.js ***!
-  \***********************************************************/
+/***/ "./resources/js/src/components/Content/Backend.js":
+/*!********************************************************!*\
+  !*** ./resources/js/src/components/Content/Backend.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  "form": {
-    "save": "Save",
-    "selected_file": "File selected"
+  "header": {
+    "sign_out": "Sign out",
+    "no_message": "No message",
+    "no_notification": "No notification",
+    "logout": "Logout",
+    "close": "Close",
+    "sure_logout": "Are you sure you want to logout",
+    "you_have": "You have",
+    "messages": "messages",
+    "view_all_messages": "View all messages",
+    "notifications": "notifications",
+    "view_all_notifications": "View all notifications"
   },
-  "list": {
-    "action": "Action",
-    "all": "All",
-    "first": "First",
-    "last": "Last",
-    "loading": "Loading",
-    "print": "Print",
-    "pdf": "PDF",
-    "csv": "CSV",
-    "excel": "Excel",
-    "search": "Search",
-    "see": "See",
-    "show": "Show",
-    "sl": "SL",
-    "showing": "Showing",
-    "from": "from",
-    "entries": {
-      "singular": "entry",
-      "plural": "entries"
+  "footer": {
+    "copyright": "Copyright",
+    "all_rights": "All rights reserved by"
+  },
+  "sidebar": {
+    "admin": "Administrator",
+    "user": "User",
+    "menu": {
+      "dashboard": "Dashboard",
+      "admins": {
+        "title": "Admins",
+        "add": "Add admin",
+        "index": "Admin list"
+      },
+      "users": {
+        "title": "Users",
+        "add": "Add user",
+        "index": "User list"
+      },
+      "roles": {
+        "title": "Roles",
+        "add": "Add role",
+        "index": "Role list"
+      },
+      "features": {
+        "title": "Features",
+        "add": "Add feature",
+        "index": "Feature list"
+      },
+      "employees": {
+        "title": "Employees",
+        "add": "Add employee",
+        "index": "Employee list"
+      },
+      "members": {
+        "title": "Members",
+        "add": "Add member",
+        "index": "Member list"
+      },
+      "customers": {
+        "title": "Customers",
+        "add": "Add customer",
+        "index": "Customer list"
+      },
+      "invoices": {
+        "title": "Invoices",
+        "add": "Add invoice",
+        "index": "Invoice list"
+      },
+      "tasks": {
+        "title": "Tasks",
+        "add": "Add task",
+        "index": "Task list"
+      },
+      "products": {
+        "title": "Products",
+        "add": "Add product",
+        "index": "Product list"
+      },
+      "posts": {
+        "title": "Posts",
+        "add": "Add posts",
+        "index": "Post list"
+      },
+      "languages": {
+        "title": "Languages",
+        "add": "Add language",
+        "index": "Language list"
+      },
+      "cms": {
+        "title": "CMS",
+        "global": "Global",
+        "general": "General",
+        "components": "Components",
+        "auth": "Auth",
+        "messages": "Messages",
+        "backend": "Backend",
+        "frontend": "Frontend"
+      },
+      "notifications": "Notifications",
+      "settings": {
+        "title": "Settings",
+        "cms": "CMS",
+        "language": "Language settings"
+      }
+    }
+  },
+  "pages": {
+    "dashboard": {
+      "admin": {
+        "title": "Admin panel",
+        "subtitle": "Dashboard",
+        "blocks": {
+          "subscription": {
+            "title": "Subscription Amount",
+            "description": "Amount of services offered"
+          },
+          "total_customers": {
+            "title": "Total Customers",
+            "description": "Customers in the system"
+          },
+          "expenses": {
+            "title": "Expenses",
+            "description": "All recorded expenses"
+          },
+          "total_cash": {
+            "title": "Total Case",
+            "description": "Amount available at checkout"
+          }
+        },
+        "sales_report": "Sales Report"
+      },
+      "user": {
+        "title": "User panel",
+        "subtitle": "Dashboard",
+        "blocks": {
+          "subscription": {
+            "title": "Subscription Amount",
+            "description": "Amount of services offered"
+          },
+          "total_customers": {
+            "title": "Total Customers",
+            "description": "Customers in the system"
+          },
+          "expenses": {
+            "title": "Expenses",
+            "description": "All recorded expenses"
+          },
+          "total_cash": {
+            "title": "Total Case",
+            "description": "Amount available at checkout"
+          }
+        },
+        "sales_report": "Sales Report"
+      }
+    },
+    "admins": {
+      "title": "Administrators",
+      "add": "Add admin",
+      "edit": "Edit admin",
+      "index": "Admin list",
+      "form": {
+        "name": "Admin name",
+        "full_name": "Full name",
+        "phone": "Phone number",
+        "password": "Password",
+        "password_confirmation": "Confirm password",
+        "email": "E-mail address",
+        "admin_photo": "Admin photo",
+        "photo": "Photo"
+      }
+    },
+    "users": {
+      "title": "Users",
+      "add": "Add user",
+      "edit": "Edit user",
+      "index": "User list",
+      "form": {
+        "name": "User name",
+        "full_name": "Full name",
+        "phone": "Phone number",
+        "password": "Password",
+        "password_confirmation": "Confirm password",
+        "email": "E-mail address",
+        "role": "Role",
+        "select_role": "Select role",
+        "user_photo": "User photo",
+        "photo": "Photo"
+      }
+    },
+    "roles": {
+      "title": "Roles",
+      "add": "Add role",
+      "edit": "Edit role",
+      "index": "Role list",
+      "form": {
+        "name": "Name",
+        "description": "Description",
+        "features": "Features",
+        "created_at": "Created at",
+        "create": "Create",
+        "update": "Update",
+        "delete": "Delete"
+      }
+    },
+    "features": {
+      "title": "Features",
+      "add": "Add feature",
+      "edit": "Edit feature",
+      "index": "Feature list",
+      "form": {
+        "name": "Name",
+        "prefix": "Prefix",
+        "created_at": "Created at"
+      }
+    },
+    "employees": {
+      "title": "Employees",
+      "add": "Add employee",
+      "edit": "Edit employee",
+      "index": "Employee list",
+      "form": {
+        "first_name": "First name",
+        "last_name": "Last name",
+        "name": "Full name",
+        "job": "Job",
+        "email": "E-mail address",
+        "phone": "Phone number",
+        "matricule": "Matricule",
+        "gender": "Gender",
+        "marital": "Marital status",
+        "select_gender": "Select gender",
+        "select_marital": "Select marital status",
+        "gender_list": {
+          "m": "Male",
+          "f": "Female",
+          "o": "Other"
+        },
+        "marital_list": {
+          "m": "Married",
+          "s": "Single",
+          "f": "Fiancé(e)",
+          "d": "Divorced",
+          "w": "Widow(er)"
+        },
+        "birthdate": "Birthdate",
+        "country": "Country",
+        "diploma": "Diploma",
+        "address": "Address",
+        "number_children": "Number of children",
+        "languages": "Languages",
+        "driving_licenses": "Driving licenses",
+        "employee_photo": "Employee photo",
+        "photo": "Photo"
+      }
+    },
+    "members": {
+      "title": "Members",
+      "add": "Add member",
+      "edit": "Edit member",
+      "index": "Member list",
+      "form": {
+        "first_name": "First name",
+        "last_name": "Last name",
+        "name": "Full name",
+        "job": "Job",
+        "quote": "Quote",
+        "social_media": "Social media",
+        "photo": "Photo"
+      }
+    },
+    "customers": {
+      "title": "Customers",
+      "add": "Add customer",
+      "edit": "Edit customer",
+      "index": "Customer list",
+      "form": {
+        "name": "Name",
+        "address": "Address",
+        "country": "Country",
+        "phone": "Phone",
+        "email": "E-mail address",
+        "photo": "Photo"
+      }
+    },
+    "invoices": {
+      "title": "Invoices",
+      "add": "Add invoice",
+      "edit": "Edit invoice",
+      "index": "Invoice list",
+      "form": {
+        "customer": "Customer",
+        "no": "Invoice number",
+        "date": "Date",
+        "paid_amount": "Paid amount",
+        "total_amount": "Total amount",
+        "discount": "Discount",
+        "tax": "Tax",
+        "select_customer": "Select customer",
+        "tasks": "Tasks",
+        "invoice_photo": "Invoice photo",
+        "photo": "Photo"
+      }
+    },
+    "tasks": {
+      "title": "Tasks",
+      "add": "Add task",
+      "edit": "Edit task",
+      "index": "Task list",
+      "form": {
+        "title": "Title",
+        "description": "Description",
+        "photo": "Photo"
+      }
+    },
+    "products": {
+      "title": "Products",
+      "add": "Add product",
+      "edit": "Edit product",
+      "index": "Product list",
+      "form": {
+        "name": "Name",
+        "description": "Description",
+        "popular": "Popular",
+        "details": "Details",
+        "logo": "Logo",
+        "color": "Color",
+        "link": "Link"
+      }
+    },
+    "posts": {
+      "title": "Posts",
+      "add": "Add post",
+      "edit": "Edit post",
+      "index": "Post list",
+      "form": {
+        "title": "Title",
+        "body": "Body",
+        "photo": "Photo"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "add": "Add language",
+      "edit": "Edit language",
+      "index": "Language list",
+      "form": {
+        "name": "Name",
+        "abbr": "Abbreviation",
+        "flag": "Flag",
+        "select_flag": "Select flag",
+        "created_at": "Created at"
+      }
+    },
+    "cms": {
+      "title": "CMS",
+      "global": "Global",
+      "general": "General",
+      "messages": "Messages",
+      "frontend": "Frontend",
+      "components": "Components",
+      "backend": "Backend",
+      "auth": "Auth",
+      "form": {
+        "logo": "Logo",
+        "app_name": "App name",
+        "company_name": "Company name"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "language": {
+        "title": "Language settings",
+        "form": {
+          "select_language": "Select a language"
+        }
+      }
     }
   }
 });
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/User/Cms/Components.js":
-/*!********************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Cms/Components.js ***!
-  \********************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Cms/Backend.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Cms/Backend.js ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -68,7 +415,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
 /* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
-/* harmony import */ var _components_Content_Components__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../components/Content/Components */ "./resources/js/src/components/Content/Components.js");
+/* harmony import */ var _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../components/Content/Backend */ "./resources/js/src/components/Content/Backend.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -143,16 +490,24 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var SubNavLinks = function SubNavLinks(_ref) {
-  var components = _ref.components,
-      language = _ref.language;
+var Separator = function Separator(_ref) {
+  var sm = _ref.sm;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+    xs: 12,
+    className: "mb-".concat(sm ? 2 : 3)
+  });
+};
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(language.abbr + '-form'),
+var SubNavLinks = function SubNavLinks(_ref2) {
+  var backend = _ref2.backend,
+      language = _ref2.language;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(language.abbr + '-header'),
       _useState2 = _slicedToArray(_useState, 2),
       activeTab = _useState2[0],
       setActiveTab = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(components),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(backend),
       _useState4 = _slicedToArray(_useState3, 2),
       value = _useState4[0],
       setValue = _useState4[1];
@@ -229,7 +584,7 @@ var SubNavLinks = function SubNavLinks(_ref) {
     });
   };
 
-  var navItems = Object.keys(components).map(function (key) {
+  var navItems = Object.keys(backend).map(function (key) {
     var id = language.abbr + '-' + key;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavItem"], {
       key: id
@@ -242,40 +597,162 @@ var SubNavLinks = function SubNavLinks(_ref) {
       className: "text-capitalize"
     }, key)));
   });
-  var prefix = "".concat(language.abbr, "[components]");
-  var formItem = _components_Content_Components__WEBPACK_IMPORTED_MODULE_18__["default"]['form'];
-  var formName = "".concat(prefix, "[form]");
-  var formValue = value['form'];
-  var formDeepness = ['form'];
-  var form = recursiveDeepness(formItem, formName, formValue, formDeepness);
-  var listItem = _components_Content_Components__WEBPACK_IMPORTED_MODULE_18__["default"]['list'];
-  var listName = "".concat(prefix, "[list]");
-  var listValue = value['list'];
-  var listDeepness = ['list'];
-  var list = recursiveDeepness(listItem, listName, listValue, listDeepness);
+  var prefix = "".concat(language.abbr, "[backend]");
+  var headerItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['header'];
+  var headerName = "".concat(prefix, "[header]");
+  var headerValue = value['header'];
+  var headerDeepness = ['header'];
+  var header = recursiveDeepness(headerItem, headerName, headerValue, headerDeepness, [], [{
+    regex: "".concat(headerName, "[no_notification]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
+    }
+  }, {
+    regex: "".concat(headerName, "[sure_logout]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
+    }
+  }]);
+  var footerItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['footer'];
+  var footerName = "".concat(prefix, "[footer]");
+  var footerValue = value['footer'];
+  var footerDeepness = ['footer'];
+  var footer = recursiveDeepness(footerItem, footerName, footerValue, footerDeepness);
+  var sidebarItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"]['sidebar'];
+  var sidebarName = "".concat(prefix, "[sidebar]");
+  var sidebarValue = value['sidebar'];
+  var sidebarDeepness = ['sidebar'];
+  var sidebar = recursiveDeepness(sidebarItem, sidebarName, sidebarValue, sidebarDeepness, [{
+    regex: "".concat(sidebarName, "[admin]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Roles"));
+    }
+  }, {
+    regex: "".concat(sidebarName, "[menu][dashboard]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Menu"));
+    }
+  }, {
+    regex: "".concat(sidebarName, "[menu][.+][title]"),
+    action: function action(item) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, item));
+    }
+  }], [{
+    regex: "".concat(sidebarName, "[user]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null);
+    }
+  }]);
+  var dashboardItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['dashboard'];
+  var dashboardName = "".concat(prefix, "[pages][dashboard]");
+  var dashboardValue = value['dashboard'];
+  var dashboardDeepness = ['pages', 'dashboard'];
+  var dashboard = recursiveDeepness(dashboardItem, dashboardName, dashboardValue, dashboardDeepness, [{
+    regex: "".concat(dashboardName, "[admin][title]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Admin"));
+    }
+  }, {
+    regex: "".concat(dashboardName, "[.+][blocks][subscription][title]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", null, "Blocks"));
+    }
+  }, {
+    regex: "".concat(dashboardName, "[user][title]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "User")));
+    }
+  }], [{
+    regex: "".concat(dashboardName, "[.+][subtitle]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, {
+        sm: true
+      });
+    }
+  }]);
+  var resourceTabPanes = ['admins', 'users', 'roles', 'features', 'languages', 'employees', 'members', 'customers', 'invoices', 'tasks', 'posts', 'products'].map(function (item) {
+    var currentItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages[item];
+    var currentName = "".concat(prefix, "[pages][").concat(item, "]");
+    var currentValue = value[item];
+    var currentDeepness = ['pages', item];
+    var current = recursiveDeepness(currentItem, currentName, currentValue, currentDeepness, [], [{
+      regex: "".concat(currentName, "[index]"),
+      action: function action() {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+          xs: 12
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Form")));
+      }
+    }]);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+      key: Math.random(),
+      tabId: "".concat(language.abbr, "-").concat(item),
+      className: "pt-4"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, current));
+  });
+  var cmsItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['cms'];
+  var cmsName = "".concat(prefix, "[pages][cms]");
+  var cmsValue = value['cms'];
+  var cmsDeepness = ['pages', 'cms'];
+  var cms = recursiveDeepness(cmsItem, cmsName, cmsValue, cmsDeepness, [], [{
+    regex: "".concat(cmsName, "[auth]"),
+    action: function action() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Separator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+        xs: 12
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Form")));
+    }
+  }]);
+  var settingsItem = _components_Content_Backend__WEBPACK_IMPORTED_MODULE_18__["default"].pages['settings'];
+  var settingsName = "".concat(prefix, "[pages][settings]");
+  var settingsValue = value['settings'];
+  var settingsDeepness = ['pages', 'settings'];
+  var settings = recursiveDeepness(settingsItem, settingsName, settingsValue, settingsDeepness);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
     tabs: true,
     pills: true
   }, navItems), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabContent"], {
     activeTab: activeTab
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-form',
+    tabId: language.abbr + '-header',
     className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, form)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-list',
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, header)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-footer',
     className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, list))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, footer)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-sidebar',
+    className: "pt-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, sidebar)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-dashboard',
+    className: "pt-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, dashboard)), resourceTabPanes, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-cms',
+    className: "pt-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, cms)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
+    tabId: language.abbr + '-settings',
+    className: "pt-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, settings))));
 };
 
-var Components = /*#__PURE__*/function (_Component) {
-  _inherits(Components, _Component);
+var Backend = /*#__PURE__*/function (_Component) {
+  _inherits(Backend, _Component);
 
-  var _super = _createSuper(Components);
+  var _super = _createSuper(Backend);
 
-  function Components() {
+  function Backend() {
     var _this;
 
-    _classCallCheck(this, Components);
+    _classCallCheck(this, Backend);
 
     for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
       args[_key2] = arguments[_key2];
@@ -288,7 +765,7 @@ var Components = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -306,7 +783,7 @@ var Components = /*#__PURE__*/function (_Component) {
       }));
 
       return function (_x) {
-        return _ref2.apply(this, arguments);
+        return _ref3.apply(this, arguments);
       };
     }());
 
@@ -332,7 +809,7 @@ var Components = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Components, [{
+  _createClass(Backend, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
@@ -372,7 +849,7 @@ var Components = /*#__PURE__*/function (_Component) {
           save = _this$props$content$c.components.form.save,
           _this$props$content$c2 = _this$props$content$c.backend.pages.cms,
           title = _this$props$content$c2.title,
-          components = _this$props$content$c2.components,
+          backend = _this$props$content$c2.backend,
           _this$props$backend$c = _this$props.backend.cms,
           loading = _this$props$backend$c.loading,
           error = _this$props$backend$c.error,
@@ -407,18 +884,26 @@ var Components = /*#__PURE__*/function (_Component) {
           }, language.name));
         });
         var tabContent = languages.map(function (language) {
+          var data = cms.pages[language.abbr].backend;
+
+          var backend = _objectSpread({
+            header: data.header,
+            footer: data.footer,
+            sidebar: data.sidebar
+          }, data.pages);
+
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
             key: Math.random(),
             tabId: language.abbr
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubNavLinks, {
-            components: cms.pages[language.abbr].components,
+            backend: backend,
             language: language
           }));
         });
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_12__["default"], {
           onSubmit: this.submitHandler,
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"],
-          title: components,
+          title: backend,
           link: "/admin/cms",
           innerClassName: "row",
           className: "shadow-sm"
@@ -450,14 +935,14 @@ var Components = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        main: components,
+        main: backend,
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true,
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true
-      }, components)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, backend)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, redirect, errors, content));
     }
@@ -465,15 +950,15 @@ var Components = /*#__PURE__*/function (_Component) {
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps, prevState) {
       if (nextProps.backend.cms.cms && prevState.app_name === '') {
-        var components = nextProps.backend.cms.cms.components;
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, components));
+        var backend = nextProps.backend.cms.cms.backend;
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, backend));
       }
 
       return prevState;
     }
   }]);
 
-  return Components;
+  return Backend;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -486,7 +971,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getCms"]());
     },
     patch: function patch(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchCms"]('components', data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchCms"]('backend', data));
     },
     reset: function reset() {
       return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetCms"]());
@@ -494,7 +979,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Components)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Backend)));
 
 /***/ })
 

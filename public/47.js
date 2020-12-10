@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[47],{
 
-/***/ "./resources/js/src/containers/Backend/User/Features/Add.js":
-/*!******************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Features/Add.js ***!
-  \******************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Customers/Add.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Customers/Add.js ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -100,7 +100,12 @@ var Add = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       name: '',
-      prefix: ''
+      address: '',
+      country: '',
+      phone: '',
+      email: '',
+      photo: null,
+      countries: []
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
@@ -130,10 +135,13 @@ var Add = /*#__PURE__*/function (_Component) {
       var _e$target = e.target,
           name = _e$target.name,
           value = _e$target.value,
-          checked = _e$target.checked,
           files = _e$target.files;
 
       _this.setState(_defineProperty({}, name, files ? files[0] : value));
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fileUpload", function () {
+      return document.getElementById('photo').click();
     });
 
     return _this;
@@ -143,13 +151,53 @@ var Add = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var cors, phoneRes, namesRes, phone, names, countries;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 this.props.reset();
+                cors = 'https://cors-anywhere.herokuapp.com/';
+                _context2.next = 4;
+                return fetch(cors + 'http://country.io/phone.json', {
+                  method: 'GET',
+                  mode: 'cors'
+                });
 
-              case 1:
+              case 4:
+                phoneRes = _context2.sent;
+                _context2.next = 7;
+                return fetch(cors + 'http://country.io/names.json', {
+                  method: 'GET',
+                  mode: 'cors'
+                });
+
+              case 7:
+                namesRes = _context2.sent;
+                _context2.next = 10;
+                return phoneRes.json();
+
+              case 10:
+                phone = _context2.sent;
+                _context2.next = 13;
+                return namesRes.json();
+
+              case 13:
+                names = _context2.sent;
+                countries = Object.keys(phone).map(function (key) {
+                  return {
+                    country: key,
+                    code: phone[key],
+                    name: names[key]
+                  };
+                }).sort(function (a, b) {
+                  return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+                });
+                this.setState({
+                  countries: countries
+                });
+
+              case 16:
               case "end":
                 return _context2.stop();
             }
@@ -173,27 +221,44 @@ var Add = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$props = this.props,
           _this$props$content$c = _this$props.content.cms.pages,
-          save = _this$props$content$c.components.form.save,
-          _this$props$content$c2 = _this$props$content$c.backend.pages.features,
-          title = _this$props$content$c2.title,
-          add = _this$props$content$c2.add,
-          index = _this$props$content$c2.index,
-          form = _this$props$content$c2.form,
-          _this$props$backend$f = _this$props.backend.features,
-          loading = _this$props$backend$f.loading,
-          error = _this$props$backend$f.error,
-          message = _this$props$backend$f.message,
+          _this$props$content$c2 = _this$props$content$c.components.form,
+          save = _this$props$content$c2.save,
+          selected_file = _this$props$content$c2.selected_file,
+          _this$props$content$c3 = _this$props$content$c.backend.pages.customers,
+          title = _this$props$content$c3.title,
+          add = _this$props$content$c3.add,
+          index = _this$props$content$c3.index,
+          form = _this$props$content$c3.form,
+          _this$props$backend$c = _this$props.backend.customers,
+          loading = _this$props$backend$c.loading,
+          error = _this$props$backend$c.error,
+          message = _this$props$backend$c.message,
           features = _this$props.auth.data.role.features;
       var _this$state = this.state,
           name = _this$state.name,
-          prefix = _this$state.prefix;
+          address = _this$state.address,
+          phone = _this$state.phone,
+          email = _this$state.email,
+          photo = _this$state.photo,
+          country = _this$state.country,
+          countries = _this$state.countries;
       var content = null;
       var errors = null;
       var feature = features.find(function (f) {
-        return f.prefix === 'features';
+        return f.prefix === 'customers';
       });
-      var redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
+      var redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Redirect, {
         to: "/user/dashboard"
+      });
+      var countriesOptions = countries.map(function (_ref2) {
+        var country = _ref2.country,
+            code = _ref2.code,
+            name = _ref2.name;
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+          key: country,
+          value: country,
+          code: code
+        }, name);
       });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
@@ -203,10 +268,10 @@ var Add = /*#__PURE__*/function (_Component) {
         }));
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_13__["default"], {
           onSubmit: this.submitHandler,
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTools"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"],
           title: add,
           list: index,
-          link: "/user/features",
+          link: "/user/customers",
           innerClassName: "row",
           className: "shadow-sm"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
@@ -216,36 +281,99 @@ var Add = /*#__PURE__*/function (_Component) {
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
           type: "text",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTools"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUser"],
           onChange: this.inputChangeHandler,
           value: name,
           name: "name",
           required: true,
           placeholder: form.name
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          className: "col-md-6",
+          type: "select",
+          addon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            className: "text-secondary text-small d-inline-flex"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+            className: "rounded-circle overflow-hidden position-relative d-flex justify-content-center align-items-center",
+            style: {
+              width: 30,
+              height: 30
+            }
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            className: "flag-icon text-xx-large position-absolute flag-icon-".concat(country.toLowerCase())
+          }))),
+          onChange: this.inputChangeHandler,
+          value: country,
+          validation: {
+            required: true
+          },
+          name: "country",
+          required: true,
+          placeholder: form.select_country
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_country), countriesOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
           type: "text",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faAnchor"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faPhone"],
           onChange: this.inputChangeHandler,
-          value: prefix,
-          name: "prefix",
+          value: phone,
+          name: "phone",
           required: true,
-          placeholder: form.prefix
+          placeholder: form.phone
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          type: "email",
+          className: "col-md-6",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEnvelope"],
+          onChange: this.inputChangeHandler,
+          value: email,
+          name: "email",
+          required: true,
+          placeholder: form.email
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          type: "textarea",
+          className: "col-md-6",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLocationArrow"],
+          onChange: this.inputChangeHandler,
+          value: address,
+          name: "address",
+          required: true,
+          placeholder: form.address
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+          type: "file",
+          id: "photo",
+          name: "photo",
+          className: "d-none",
+          onChange: this.inputChangeHandler,
+          accept: ".png,.jpg,.jpeg"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "col-12"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_15__["default"], {
           color: "green",
           icon: _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_6__["faSave"]
-        }, save)))))));
+        }, save)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
+          lg: 4
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "embed-responsive embed-responsive-1by1 bg-soft border border-light d-flex justify-content-center align-items-center w-60 mx-auto",
+          style: {
+            cursor: 'pointer'
+          },
+          onClick: this.fileUpload
+        }, photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "text-center text-green"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeIcon"], {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCheckCircle"],
+          fixedWidth: true,
+          size: "5x"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "mt-3"
+        }, selected_file)))))));
       }
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_8__["default"], {
         main: add,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTools"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTools"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_10__["default"], {
         user: true
       }, add)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -264,10 +392,10 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     post: function post(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["postFeatures"](data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["postCustomers"](data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["resetFeatures"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_17__["resetCustomers"]());
     }
   };
 };

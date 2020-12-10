@@ -61,9 +61,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/User/Employees/index.js":
+/***/ "./resources/js/src/containers/Backend/User/Customers/index.js":
 /*!*********************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Employees/index.js ***!
+  !*** ./resources/js/src/containers/Backend/User/Customers/index.js ***!
   \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -164,36 +164,27 @@ var Index = /*#__PURE__*/function (_Component) {
           _this$props$content$c2 = _this$props$content$c.components.list,
           action = _this$props$content$c2.action,
           see = _this$props$content$c2.see,
-          _this$props$content$c3 = _this$props$content$c.backend.pages.employees,
+          _this$props$content$c3 = _this$props$content$c.backend.pages.customers,
           title = _this$props$content$c3.title,
           add = _this$props$content$c3.add,
           index = _this$props$content$c3.index,
           _this$props$content$c4 = _this$props$content$c3.form,
           name = _this$props$content$c4.name,
-          job = _this$props$content$c4.job,
-          email = _this$props$content$c4.email,
-          gender = _this$props$content$c4.gender,
-          diploma = _this$props$content$c4.diploma,
-          birthdate = _this$props$content$c4.birthdate,
-          country = _this$props$content$c4.country,
           address = _this$props$content$c4.address,
+          country = _this$props$content$c4.country,
           phone = _this$props$content$c4.phone,
-          marital = _this$props$content$c4.marital,
-          number_children = _this$props$content$c4.number_children,
-          languages = _this$props$content$c4.languages,
-          driving_licenses = _this$props$content$c4.driving_licenses,
-          matricule = _this$props$content$c4.matricule,
+          email = _this$props$content$c4.email,
           photo = _this$props$content$c4.photo,
-          employee_photo = _this$props$content$c4.employee_photo,
-          _this$props$backend$e = _this$props.backend.employees,
-          loading = _this$props$backend$e.loading,
-          error = _this$props$backend$e.error,
-          message = _this$props$backend$e.message,
-          employees = _this$props$backend$e.employees,
-          total = _this$props$backend$e.total,
+          customer_photo = _this$props$content$c4.customer_photo,
+          _this$props$backend$c = _this$props.backend.customers,
+          loading = _this$props$backend$c.loading,
+          error = _this$props$backend$c.error,
+          message = _this$props$backend$c.message,
+          customers = _this$props$backend$c.customers,
+          total = _this$props$backend$c.total,
           features = _this$props.auth.data.role.features;
       var feature = features.find(function (f) {
-        return f.prefix === 'employees';
+        return f.prefix === 'customers';
       });
       var redirect = !feature && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Redirect, {
         to: "/user/dashboard"
@@ -204,17 +195,20 @@ var Index = /*#__PURE__*/function (_Component) {
       var feedback = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_11__["default"], {
         message: message
       });
-      if (!employees) employees = [];
-      var data = employees.map(function (employee) {
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_15__["updateObject"])(employee, {
-          photo: employee.photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      if (!customers) customers = [];
+      var data = customers.map(function (customer) {
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_15__["updateObject"])(customer, {
+          country: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+            className: "flag-icon flag-icon-".concat(customer.country.toLowerCase(), " mr-1")
+          }), customer.country),
+          photo: customer.photo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "d-flex"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, see), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
             className: "ml-auto"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            title: "".concat(employee_photo, ": ").concat(employee.matricule),
+            title: "".concat(customer_photo, ": ").concat(customer.name),
             content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-              src: employee.photo,
+              src: customer.photo,
               className: "w-100"
             })
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
@@ -225,14 +219,14 @@ var Index = /*#__PURE__*/function (_Component) {
           action: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "text-center"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-            to: "/user/employees/".concat(employee.id),
+            to: "/user/customers/".concat(customer.id),
             className: "mr-2"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEye"],
             className: "text-green",
             fixedWidth: true
           })), JSON.parse(feature.permissions).includes('u') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-            to: "/user/employees/".concat(employee.id, "/edit"),
+            to: "/user/customers/".concat(customer.id, "/edit"),
             className: "mx-1"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
@@ -242,7 +236,7 @@ var Index = /*#__PURE__*/function (_Component) {
             className: "mx-1"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_12__["default"], {
             deleteAction: function deleteAction() {
-              return _this.props["delete"](employee.id);
+              return _this.props["delete"](customer.id);
             }
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTrash"],
@@ -254,12 +248,12 @@ var Index = /*#__PURE__*/function (_Component) {
       var content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_List_List__WEBPACK_IMPORTED_MODULE_9__["default"], {
         array: data,
         loading: loading,
-        data: JSON.stringify(employees),
+        data: JSON.stringify(customers),
         get: this.props.get,
         total: total,
         bordered: true,
         add: add,
-        link: "/user/employees/add",
+        link: "/user/customers/add",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faUserTie"],
         title: index,
         className: "shadow-sm",
@@ -267,44 +261,17 @@ var Index = /*#__PURE__*/function (_Component) {
           name: name,
           key: 'name'
         }, {
-          name: matricule,
-          key: 'matricule'
-        }, {
-          name: email,
-          key: 'email'
-        }, {
-          name: phone,
-          key: 'phone'
-        }, {
-          name: gender,
-          key: 'gender'
-        }, {
-          name: job,
-          key: 'job'
-        }, {
-          name: birthdate,
-          key: 'birthdate'
+          name: address,
+          key: 'address'
         }, {
           name: country,
           key: 'country'
         }, {
-          name: diploma,
-          key: 'diploma'
+          name: phone,
+          key: 'phone'
         }, {
-          name: address,
-          key: 'address'
-        }, {
-          name: marital,
-          key: 'marital'
-        }, {
-          name: number_children,
-          key: 'number_children'
-        }, {
-          name: languages,
-          key: 'languages'
-        }, {
-          name: driving_licenses,
-          key: 'driving_licenses'
+          name: email,
+          key: 'email'
         }, {
           name: photo,
           key: 'photo'
@@ -340,13 +307,13 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     get: function get(page, show, search) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["getEmployees"](page, show, search));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["getCustomers"](page, show, search));
     },
     "delete": function _delete(id) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["deleteEmployees"](id));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["deleteCustomers"](id));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["resetEmployees"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_14__["resetCustomers"]());
     }
   };
 };
