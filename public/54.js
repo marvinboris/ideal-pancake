@@ -449,6 +449,7 @@ var Add = /*#__PURE__*/function (_Component) {
             name: "tasks[]",
             onChange: _this2.inputChangeHandler,
             value: tasks_[index],
+            tabIndex: index,
             className: "tasks",
             required: true
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_task), tasksOptions))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
@@ -459,6 +460,7 @@ var Add = /*#__PURE__*/function (_Component) {
             name: "prices[]",
             onChange: _this2.inputChangeHandler,
             value: price,
+            tabIndex: index,
             required: true,
             className: "prices text-center"
           })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
@@ -469,6 +471,7 @@ var Add = /*#__PURE__*/function (_Component) {
             name: "quantities[]",
             onChange: _this2.inputChangeHandler,
             value: quantities[index],
+            tabIndex: index,
             required: true,
             className: "quantities text-center"
           })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
