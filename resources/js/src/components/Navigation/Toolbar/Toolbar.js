@@ -64,10 +64,10 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                             <CenterButton color="pink" icon={faHeadset} className="shadow-sm">Request call</CenterButton>
                         </div>
                         <div className="d-flex">
-                            <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faFacebookSquare} /></a></div>
-                            <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faTwitterSquare} /></a></div>
-                            <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faInstagram} /></a></div>
-                            <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faWhatsapp} /></a></div>
+                            <div className="d-flex align-items-center px-2"><a className="text-light" href="https://www.facebook.com/briluceservices" target="_blank"><FontAwesomeIcon size="lg" icon={faFacebookSquare} /></a></div>
+                            <div className="d-flex align-items-center px-2"><a className="text-light" href="https://twitter.com/BriluceServices" target="_blank"><FontAwesomeIcon size="lg" icon={faTwitterSquare} /></a></div>
+                            <div className="d-flex align-items-center px-2"><a className="text-light" href="https://www.instagram.com/briluceservices/" target="_blank"><FontAwesomeIcon size="lg" icon={faInstagram} /></a></div>
+                            <div className="d-flex align-items-center px-2"><a className="text-light" href="/" target="_blank"><FontAwesomeIcon size="lg" icon={faWhatsapp} /></a></div>
                         </div>
                     </div>
 
@@ -146,10 +146,10 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                                 <CenterButton color="pink" icon={faHeadset} className="shadow-sm">Request call</CenterButton>
                             </div>
                             <div className="d-flex">
-                                <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faFacebookSquare} /></a></div>
-                                <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faTwitterSquare} /></a></div>
-                                <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faInstagram} /></a></div>
-                                <div className="d-flex align-items-center px-2"><a className="text-light" href="/"><FontAwesomeIcon size="lg" icon={faWhatsapp} /></a></div>
+                                <div className="d-flex align-items-center px-2"><a className="text-light" href="https://www.facebook.com/briluceservices" target="_blank"><FontAwesomeIcon size="lg" icon={faFacebookSquare} /></a></div>
+                                <div className="d-flex align-items-center px-2"><a className="text-light" href="https://twitter.com/BriluceServices" target="_blank"><FontAwesomeIcon size="lg" icon={faTwitterSquare} /></a></div>
+                                <div className="d-flex align-items-center px-2"><a className="text-light" href="https://www.instagram.com/briluceservices/" target="_blank"><FontAwesomeIcon size="lg" icon={faInstagram} /></a></div>
+                                <div className="d-flex align-items-center px-2"><a className="text-light" href="/" target="_blank"><FontAwesomeIcon size="lg" icon={faWhatsapp} /></a></div>
                             </div>
                         </div>
 

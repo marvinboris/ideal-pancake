@@ -94,12 +94,12 @@ const footer = () => (
                 </div>
 
                 <div className="d-flex justify-content-center">
-                    <FontAwesomeIcon size="2x" icon={faFacebookSquare} className="fa-icon mr-3" />
-                    <FontAwesomeIcon size="2x" icon={faTwitterSquare} className="fa-icon mr-3" />
-                    <FontAwesomeIcon size="2x" icon={faLinkedin} className="fa-icon mr-3" />
-                    <FontAwesomeIcon size="2x" icon={faInstagram} className="fa-icon mr-3" />
-                    <FontAwesomeIcon size="2x" icon={faSkype} className="fa-icon mr-3" />
-                    <FontAwesomeIcon size="2x" icon={faYoutube} className="fa-icon " />
+                    <a href="https://www.facebook.com/briluceservices" target="_blank" className="text-reset mr-3"><FontAwesomeIcon size="2x" icon={faFacebookSquare} className="fa-icon" /></a>
+                    <a href="https://twitter.com/BriluceServices" target="_blank" className="text-reset mr-3"><FontAwesomeIcon size="2x" icon={faTwitterSquare} className="fa-icon" /></a>
+                    <a href="https://www.linkedin.com/in/briluce-services-702725179/" target="_blank" className="text-reset mr-3"><FontAwesomeIcon size="2x" icon={faLinkedin} className="fa-icon" /></a>
+                    <a href="https://www.instagram.com/briluceservices/" target="_blank" className="text-reset mr-3"><FontAwesomeIcon size="2x" icon={faInstagram} className="fa-icon" /></a>
+                    {/* <a href="" target="_blank" className="text-reset mr-3"><FontAwesomeIcon size="2x" icon={faSkype} className="fa-icon" /></a> */}
+                    <a href="/" target="_blank" className="text-reset"><FontAwesomeIcon size="2x" icon={faYoutube} className="fa-icon" /></a>
                 </div>
             </div>
         </footer>
