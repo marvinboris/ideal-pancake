@@ -15,8 +15,9 @@ import Feedback from '../../../../components/Feedback/Feedback';
 import Delete from '../../../../components/Backend/UI/Delete/Delete';
 import View from '../../../../components/Backend/UI/View/View';
 
+
 import * as actions from '../../../../store/actions';
-import { updateObject } from '../../../../shared/utility';
+import { updateObject, convertDate } from '../../../../shared/utility';
 
 class Index extends Component {
     componentDidMount() {
@@ -31,10 +32,10 @@ class Index extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { list: { action, see } }, backend: { pages: { expenses: { title, add, index, form: { description, amount, method, category, user, proof } } } } }
+                    pages: { components: { list: { action, see } }, backend: { pages: { customers: { title, add, index, form: { name, address, country, phone, email, photo, customer_photo } } } } }
                 }
             },
-            backend: { expenses: { loading, error, message, expenses, total } }
+            backend: { customers: { loading, error, message, customers, total } },
         } = this.props;
 
         const errors = <>
@@ -42,27 +43,29 @@ class Index extends Component {
         </>;
         const feedback = <Feedback message={message} />;
 
-        if (!expenses) expenses = [];
-        const data = expenses.map(expense => {
-            return updateObject(expense, {
-                // date: convertDate(expense.date),
-                proof: expense.proof && <div className="d-flex">
+        if (!customers) customers = [];
+        const data = customers.map(customer => {
+            return updateObject(customer, {
+                country: <div>
+                    <span className={`flag-icon flag-icon-${customer.country.toLowerCase()} mr-1`} />{customer.country}
+                </div>,
+                photo: customer.photo && <div className="d-flex">
                     <span>{see}</span>
 
                     <span className="ml-auto">
-                        <View title={`${proof}`} content={<img src={expense.proof} className="w-100" />}>
+                        <View title={`${customer_photo}: ${customer.name}`} content={<img src={customer.photo} className="w-100" />}>
                             <FontAwesomeIcon icon={faEye} className="text-green mr-2" fixedWidth />
                         </View>
                     </span>
                 </div>,
                 action: <div className="text-center">
-                    <Link to={`/admin/expenses/${expense.id}`} className="mr-2">
+                    <Link to={`/user/customers/${customer.id}`} className="mr-2">
                         <FontAwesomeIcon icon={faEye} className="text-green" fixedWidth />
                     </Link>
-                    <Link to={`/admin/expenses/${expense.id}/edit`} className="mr-2">
+                    <Link to={`/user/customers/${customer.id}/edit`} className="mx-1">
                         <FontAwesomeIcon icon={faEdit} className="text-brokenblue" fixedWidth />
                     </Link>
-                    <Delete deleteAction={() => this.props.delete(expense.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete>
+                    <span className="mx-1"><Delete deleteAction={() => this.props.delete(customer.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete></span>
                 </div>,
             });
         });
@@ -70,14 +73,14 @@ class Index extends Component {
         const content = (
             <>
                 <Row>
-                    <List array={data} loading={loading} data={JSON.stringify(expenses)} get={this.props.get} total={total} bordered add={add} link="/admin/expenses/add" icon={faUserTie} title={index} className="shadow-sm"
+                    <List array={data} loading={loading} data={JSON.stringify(customers)} get={this.props.get} total={total} bordered add={add} link="/user/customers/add" icon={faUserTie} title={index} className="shadow-sm"
                         fields={[
-                            { name: description, key: 'description' },
-                            { name: amount, key: 'amount' },
-                            { name: method, key: 'method' },
-                            { name: category, key: 'expendable' },
-                            { name: user, key: 'expender' },
-                            { name: proof, key: 'proof' },
+                            { name, key: 'name' },
+                            { name: address, key: 'address' },
+                            { name: country, key: 'country' },
+                            { name: phone, key: 'phone' },
+                            { name: email, key: 'email' },
+                            { name: photo, key: 'photo' },
                             { name: action, key: 'action', fixed: true }
                         ]} />
                 </Row>
@@ -104,9 +107,9 @@ class Index extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
-    get: (page, show, search) => dispatch(actions.getExpenses(page, show, search)),
-    delete: id => dispatch(actions.deleteExpenses(id)),
-    reset: () => dispatch(actions.resetExpenses()),
+    get: (page, show, search) => dispatch(actions.getCustomers(page, show, search)),
+    delete: id => dispatch(actions.deleteCustomers(id)),
+    reset: () => dispatch(actions.resetCustomers()),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Index));

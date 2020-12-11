@@ -17,6 +17,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -27,8 +28,17 @@ class Add extends Component {
         countries: [],
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.languages.language && prevState.name === '') {
+            const { backend: { languages: { language } } } = nextProps;
+            return updateObject(prevState, { ...language });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.show(this.props.match.params.languageId);
 
         const cors = 'https://cors-anywhere.herokuapp.com/';
 
@@ -49,7 +59,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.languageId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -61,7 +72,7 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save } }, backend: { pages: { languages: { title, add, index, form } } } }
+                    pages: { components: { form: { save } }, backend: { pages: { languages: { title, add, edit, index, form } } } }
                 }
             },
             backend: { languages: { loading, error, message } }
@@ -82,7 +93,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faLanguage} title={add} list={index} link="/admin/languages" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faLanguage} title={this.props.edit ? edit : add} list={index} link="/admin/languages" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -112,9 +125,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faLanguage} />
+                    <Breadcrumb main={this.props.edit ? edit : add} icon={faLanguage} />
                     <SpecialTitle user icon={faLanguage}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {errors}
@@ -128,7 +141,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    show: id => dispatch(actions.getLanguage(id)),
     post: data => dispatch(actions.postLanguages(data)),
+    patch: data => dispatch(actions.patchLanguages(data)),
     reset: () => dispatch(actions.resetLanguages()),
 });
 

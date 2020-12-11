@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
-import { Col, Row, FormGroup, CustomInput } from 'reactstrap';
-import { faUserTie, faUser, faMoneyBillWave, faPlusCircle, faUsers, faLock, faEnvelope, faCity, faPhone, faUserTag, faCheckCircle, faEdit, faAnchor, faTools, faTasks, faParagraph } from '@fortawesome/free-solid-svg-icons';
-import { faBuilding, faSave, faCalendar } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Col, Row } from 'reactstrap';
+import { faTasks, faParagraph } from '@fortawesome/free-solid-svg-icons';
+import { faSave } from '@fortawesome/free-regular-svg-icons';
 
 // Components
 import Breadcrumb from '../../../../components/Backend/UI/Breadcrumb/Breadcrumb';
@@ -18,6 +17,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -25,8 +25,17 @@ class Add extends Component {
         description: '',
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.tasks.task && prevState.title === '') {
+            const { backend: { tasks: { task } } } = nextProps;
+            return updateObject(prevState, { ...task });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.get(this.props.match.params.taskId);
     }
 
     componentWillUnmount() {
@@ -35,11 +44,12 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.taskId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
-        const { name, value, checked, files } = e.target;
+        const { name, value, files } = e.target;
         this.setState({ [name]: files ? files[0] : value });
     }
 
@@ -47,7 +57,7 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save } }, backend: { pages: { tasks: { title, add, index, form } } } }
+                    pages: { components: { form: { save } }, backend: { pages: { tasks: { title, add, edit, index, form } } } }
                 }
             },
             backend: { tasks: { loading, error, message } },
@@ -58,7 +68,7 @@ class Add extends Component {
         let errors = null;
 
         const feature = features.find(f => f.prefix === 'features');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
+        const redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && <Redirect to="/user/dashboard" />;
 
         if (loading) content = <Col xs={12}>
             <CustomSpinner />
@@ -70,7 +80,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faTasks} title={add} list={index} link="/user/tasks" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faTasks} title={this.props.edit ? edit : add} list={index} link="/user/tasks" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -91,9 +103,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faTasks} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/user/tasks', content: index }]} main={this.props.edit ? edit : add} icon={faTasks} />
                     <SpecialTitle user icon={faTasks}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {redirect}
@@ -108,7 +120,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    get: id => dispatch(actions.getTask(id)),
     post: data => dispatch(actions.postTasks(data)),
+    patch: (id, data) => dispatch(actions.patchTasks(id, data)),
     reset: () => dispatch(actions.resetTasks()),
 });
 

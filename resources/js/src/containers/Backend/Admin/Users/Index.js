@@ -16,7 +16,7 @@ import Delete from '../../../../components/Backend/UI/Delete/Delete';
 import View from '../../../../components/Backend/UI/View/View';
 
 import * as actions from '../../../../store/actions';
-import { updateObject, convertDate, } from '../../../../shared/utility';
+import { updateObject, convertDate } from '../../../../shared/utility';
 
 class Index extends Component {
     componentDidMount() {
@@ -34,7 +34,7 @@ class Index extends Component {
                     pages: { components: { list: { action, see } }, backend: { pages: { users: { title, add, index, form: { full_name, phone, photo, email, user_photo, role } } } } }
                 }
             },
-            backend: { users: { loading, error, message, users, total } }
+            backend: { users: { loading, error, message, users, total } },
         } = this.props;
 
         const errors = <>
@@ -56,13 +56,13 @@ class Index extends Component {
                     </span>
                 </div>,
                 action: <div className="text-center">
-                    <Link to={`/admin/users/${user.id}`} className="mr-2">
+                    <Link to={`/admin/users/${user.id}`} className="mx-1">
                         <FontAwesomeIcon icon={faEye} className="text-green" fixedWidth />
                     </Link>
-                    <Link to={`/admin/users/${user.id}/edit`} className="mr-2">
+                    <Link to={`/admin/users/${user.id}/edit`} className="mx-1">
                         <FontAwesomeIcon icon={faEdit} className="text-brokenblue" fixedWidth />
                     </Link>
-                    <Delete deleteAction={() => this.props.delete(user.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete>
+                    <span className="mx-1"><Delete deleteAction={() => this.props.delete(user.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete></span>
                 </div>,
             });
         });

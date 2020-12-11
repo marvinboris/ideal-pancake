@@ -19,6 +19,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -35,8 +36,17 @@ class Add extends Component {
         photo: null,
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.members.member && prevState.first_name === '') {
+            const { backend: { members: { member } } } = nextProps;
+            return updateObject(prevState, { ...member });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.show(this.props.match.params.memberId);
     }
 
     componentWillUnmount() {
@@ -45,7 +55,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.memberId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -66,10 +77,10 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save, selected_file } }, backend: { pages: { members: { title, add, index, form } } } }
+                    pages: { components: { form: { save, selected_file } }, backend: { pages: { members: { title, add, edit, index, form } } } }
                 }
             },
-            backend: { members: { loading, error, message } }
+            backend: { members: { loading, error, message, member } },
         } = this.props;
         let { first_name, last_name, job, quote, social_media, photo } = this.state;
         let content = null;
@@ -85,7 +96,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={add} list={index} link="/admin/members" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={this.props.edit ? edit : add} list={index} link="/admin/members" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -93,7 +106,7 @@ class Add extends Component {
                                     <FormInput type="text" className="col-md-6" icon={faUser} onChange={this.inputChangeHandler} value={last_name} name="last_name" required placeholder={form.last_name} />
                                     <FormInput type="text" className="col-md-6" icon={faUserTag} onChange={this.inputChangeHandler} value={job} name="job" required placeholder={form.job} />
                                     <FormInput type="textarea" className="col-md-12" icon={faEdit} onChange={this.inputChangeHandler} value={quote} name="quote" required placeholder={form.quote} />
-                                    
+
                                     <Col xs={12} className="pb-2 text-large text-700">{form.social_media}</Col>
                                     <FormInput type="text" className="col-md-6" icon={faFacebookSquare} onChange={this.inputChangeHandler} value={social_media.facebook} name="social_media[facebook]" required placeholder="Facebook" />
                                     <FormInput type="text" className="col-md-6" icon={faLinkedin} onChange={this.inputChangeHandler} value={social_media.linkedin} name="social_media[linkedin]" required placeholder="Linkedin" />
@@ -110,7 +123,7 @@ class Add extends Component {
 
                             <Col lg={4}>
                                 <div className="embed-responsive embed-responsive-1by1 bg-soft border border-light d-flex justify-content-center align-items-center w-60 mx-auto" style={{ cursor: 'pointer' }} onClick={this.fileUpload}>
-                                    {photo && <div className="text-center text-green">
+                                    {(this.props.edit ? (photo && (photo !== member.photo)) : photo) && <div className="text-center text-green">
                                         <div><FontAwesomeIcon icon={faCheckCircle} fixedWidth size="5x" /></div>
                                         <div className="mt-3">{selected_file}</div>
                                     </div>}
@@ -125,9 +138,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faUserTie} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/admin/members', content: index }]} main={this.props.edit ? edit : add} icon={faUserTie} />
                     <SpecialTitle user icon={faUserTie}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {errors}
@@ -141,7 +154,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    show: id => dispatch(actions.getMember(id)),
     post: data => dispatch(actions.postMembers(data)),
+    patch: (id, data) => dispatch(actions.patchMembers(id, data)),
     reset: () => dispatch(actions.resetMembers()),
 });
 

@@ -17,6 +17,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -25,9 +26,18 @@ class Add extends Component {
         features: []
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.roles.role && prevState.name === '') {
+            const { backend: { roles: { role } } } = nextProps;
+            return updateObject(prevState, { ...role });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
-        this.props.get();
+        if (this.props.edit) this.props.show(this.props.match.params.roleId);
+        else this.props.info();
     }
 
     componentWillUnmount() {
@@ -36,7 +46,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.roleId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -73,7 +84,7 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save } }, backend: { pages: { roles: { title, add, index, form } } } }
+                    pages: { components: { form: { save } }, backend: { pages: { roles: { title, add, edit, index, form } } } }
                 }
             },
             backend: { roles: { loading, error, message, features } },
@@ -84,7 +95,7 @@ class Add extends Component {
         let errors = null;
 
         const feature = features_.find(f => f.prefix === 'roles');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
+        const redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && <Redirect to="/user/dashboard" />;
 
         if (!features) features = [];
 
@@ -120,7 +131,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faUserTag} title={add} list={index} link="/user/roles" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faUserTag} title={this.props.edit ? edit : add} list={index} link="/user/roles" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -146,9 +159,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faUserTag} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/user/roles', content: index }]} main={this.props.edit ? edit : add} icon={faUserTag} />
                     <SpecialTitle user icon={faUserTag}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {redirect}
@@ -163,8 +176,10 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
-    get: () => dispatch(actions.getRolesInfo()),
+    show: id => dispatch(actions.getRole(id)),
+    info: () => dispatch(actions.getRolesInfo()),
     post: data => dispatch(actions.postRoles(data)),
+    patch: (id, data) => dispatch(actions.patchRoles(id, data)),
     reset: () => dispatch(actions.resetRoles()),
 });
 

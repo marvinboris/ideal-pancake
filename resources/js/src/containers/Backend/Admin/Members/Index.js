@@ -32,10 +32,10 @@ class Index extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { list: { action, see } }, backend: { pages: { members: { title, add, index, form: { full_name, job, quote, photo, member_photo } } } } }
+                    pages: { components: { list: { action, see } }, backend: { pages: { members: { title, add, index, form: { name, job, quote, photo, member_photo } } } } }
                 }
             },
-            backend: { members: { loading, error, message, members, total } }
+            backend: { members: { loading, error, message, members, total } },
         } = this.props;
 
         const errors = <>
@@ -59,10 +59,10 @@ class Index extends Component {
                     <Link to={`/admin/members/${member.id}`} className="mr-2">
                         <FontAwesomeIcon icon={faEye} className="text-green" fixedWidth />
                     </Link>
-                    <Link to={`/admin/members/${member.id}/edit`} className="mr-2">
+                    <Link to={`/admin/members/${member.id}/edit`} className="mx-1">
                         <FontAwesomeIcon icon={faEdit} className="text-brokenblue" fixedWidth />
                     </Link>
-                    <Delete deleteAction={() => this.props.delete(member.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete>
+                    <span className="mx-1"><Delete deleteAction={() => this.props.delete(member.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete></span>
                 </div>,
             });
         });
@@ -72,7 +72,7 @@ class Index extends Component {
                 <Row>
                     <List array={data} loading={loading} data={JSON.stringify(members)} get={this.props.get} total={total} bordered add={add} link="/admin/members/add" icon={faUserTie} title={index} className="shadow-sm"
                         fields={[
-                            { name: full_name, key: 'name' },
+                            { name, key: 'name' },
                             { name: job, key: 'job' },
                             { name: quote, key: 'quote' },
                             { name: photo, key: 'photo' },

@@ -1,53 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[19],{
 
-/***/ "./resources/js/src/components/Content/Auth.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/src/components/Content/Auth.js ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "footer": {
-    "copyright": "Copyright",
-    "all_rights": "All rights reserved by"
-  },
-  "user": {
-    "login": {
-      "dont_be_late": "Don't be late",
-      "sign_in": "Sign In",
-      "email_address": "E-mail address",
-      "password": "Password"
-    }
-  },
-  "admin": {
-    "login": {
-      "sign_in_to": "Sign In to",
-      "sign_in": "Sign In",
-      "admin_panel": "Admin Panel",
-      "email_address": "E-mail address",
-      "password": "Password",
-      "sms": "SMS",
-      "email": "E-mail",
-      "otp_method": "OTP Method"
-    },
-    "verify": {
-      "enter": "Enter",
-      "verification_code": "Verification code",
-      "continue": "Continue",
-      "didnt_receive_code": "Didn't receive code",
-      "resend": "Resend"
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/src/containers/Backend/Admin/Cms/Auth.js":
+/***/ "./resources/js/src/containers/Backend/User/Tasks/Add.js":
 /*!***************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Cms/Auth.js ***!
+  !*** ./resources/js/src/containers/Backend/User/Tasks/Add.js ***!
   \***************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -74,10 +29,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
 /* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
-/* harmony import */ var _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../components/Content/Auth */ "./resources/js/src/components/Content/Auth.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -103,31 +61,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -148,184 +82,52 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+var Add = /*#__PURE__*/function (_Component) {
+  _inherits(Add, _Component);
 
-var SubNavLinks = function SubNavLinks(_ref) {
-  var auth = _ref.auth,
-      language = _ref.language;
+  var _super = _createSuper(Add);
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(language.abbr + '-footer'),
-      _useState2 = _slicedToArray(_useState, 2),
-      activeTab = _useState2[0],
-      setActiveTab = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(auth),
-      _useState4 = _slicedToArray(_useState3, 2),
-      value = _useState4[0],
-      setValue = _useState4[1];
-
-  var toggle = function toggle(tab) {
-    if (activeTab !== tab) setActiveTab(tab);
-  };
-
-  var _onChange = function onChange(e) {
-    var valueCopy = _objectSpread({}, value);
-
-    for (var _len = arguments.length, deepness = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      deepness[_key - 1] = arguments[_key];
-    }
-
-    if (deepness.length === 1) {
-      valueCopy[deepness[0]] = e.target.value;
-      return setValue(valueCopy);
-    }
-
-    var subValues = [];
-
-    var subValue = _objectSpread({}, value);
-
-    for (var i = 0; i < deepness.length - 1; i++) {
-      var element = deepness[i];
-      subValue = subValue[element];
-      subValues.push(subValue);
-    }
-
-    subValues[subValues.length - 1][deepness[deepness.length - 1]] = e.target.value;
-
-    for (var _i2 = 1; _i2 < deepness.length - 1; _i2++) {
-      var _element = deepness[deepness.length - 1 - _i2];
-      var index = subValues.length - 1 - _i2;
-      subValues[index][_element] = subValues[index + 1];
-    }
-
-    valueCopy[deepness[0]] = subValues[0];
-    setValue(valueCopy);
-  };
-
-  var recursiveDeepness = function recursiveDeepness(paramItem, paramName, paramValue, paramDeepness) {
-    var paramPrepends = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : [];
-    var paramAppends = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : [];
-    return Object.keys(paramItem).map(function (item) {
-      var mainItem = paramItem[item];
-      var mainName = "".concat(paramName, "[").concat(item, "]");
-      var mainValue = paramValue[item];
-      var mainDeepness = paramDeepness.concat(item);
-      var prepend;
-      var findPrepend = paramPrepends.find(function (el) {
-        return new RegExp(el.regex.replace(/\[/g, '\\[').replace(/\]/g, '\\]')).test(mainName);
-      });
-      prepend = !findPrepend ? null : findPrepend.action(mainItem);
-      var append;
-      var findAppend = paramAppends.find(function (el) {
-        return new RegExp(el.regex.replace(/\[/g, '\\[').replace(/\]/g, '\\]')).test(mainName);
-      });
-      append = !findAppend ? null : findAppend.action(mainItem);
-      return typeof mainItem === 'string' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, prepend, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        type: "text",
-        className: "col-md-6 col-lg-4",
-        name: mainName,
-        placeholder: mainItem,
-        addon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-          className: "text-small text-700"
-        }, mainItem),
-        onChange: function onChange(e) {
-          return _onChange.apply(void 0, [e].concat(_toConsumableArray(mainDeepness)));
-        },
-        value: mainValue
-      }), append) : recursiveDeepness(mainItem, mainName, mainValue, mainDeepness, paramPrepends, paramAppends);
-    });
-  };
-
-  var navItems = Object.keys(auth).map(function (key) {
-    var id = "".concat(language.abbr, "-").concat(key);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavItem"], {
-      key: id
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavLink"], {
-      className: activeTab === id && 'active',
-      onClick: function onClick() {
-        return toggle(id);
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "text-capitalize"
-    }, key)));
-  });
-  var prefix = "".concat(language.abbr, "[auth]");
-  var footerItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['footer'];
-  var footerName = "".concat(prefix, "[footer]");
-  var footerValue = value['footer'];
-  var footerDeepness = ['footer'];
-  var footer = recursiveDeepness(footerItem, footerName, footerValue, footerDeepness);
-  var userItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['user'];
-  var userName = "".concat(prefix, "[user]");
-  var userValue = value['user'];
-  var userDeepness = ['user'];
-  var user = recursiveDeepness(userItem, userName, userValue, userDeepness);
-  var adminItem = _components_Content_Auth__WEBPACK_IMPORTED_MODULE_18__["default"]['admin'];
-  var adminName = "".concat(prefix, "[admin]");
-  var adminValue = value['admin'];
-  var adminDeepness = ['admin'];
-  var admin = recursiveDeepness(adminItem, adminName, adminValue, adminDeepness, [{
-    regex: "".concat(prefix, "[admin][login][sign_in_to]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Login"));
-    }
-  }, {
-    regex: "".concat(prefix, "[admin][verify][enter]"),
-    action: function action() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-        xs: 12
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "Verify"));
-    }
-  }]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
-    tabs: true,
-    pills: true
-  }, navItems), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabContent"], {
-    activeTab: activeTab
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-footer',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, footer)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-user',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, user)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-    tabId: language.abbr + '-admin',
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, admin))));
-};
-
-var Auth = /*#__PURE__*/function (_Component) {
-  _inherits(Auth, _Component);
-
-  var _super = _createSuper(Auth);
-
-  function Auth() {
+  function Add() {
     var _this;
 
-    _classCallCheck(this, Auth);
+    _classCallCheck(this, Add);
 
-    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
     _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      activeTab: "en"
+      title: '',
+      description: ''
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 e.preventDefault();
-                _context.next = 3;
-                return _this.props.patch(e.target);
 
-              case 3:
+                if (!_this.props.edit) {
+                  _context.next = 6;
+                  break;
+                }
+
+                _context.next = 4;
+                return _this.props.patch(_this.props.match.params.taskId, e.target);
+
+              case 4:
+                _context.next = 8;
+                break;
+
+              case 6:
+                _context.next = 8;
+                return _this.props.post(e.target);
+
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -334,7 +136,7 @@ var Auth = /*#__PURE__*/function (_Component) {
       }));
 
       return function (_x) {
-        return _ref2.apply(this, arguments);
+        return _ref.apply(this, arguments);
       };
     }());
 
@@ -347,20 +149,10 @@ var Auth = /*#__PURE__*/function (_Component) {
       _this.setState(_defineProperty({}, name, files ? files[0] : value));
     });
 
-    _defineProperty(_assertThisInitialized(_this), "fileUpload", function () {
-      return document.getElementById('logo').click();
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "toggle", function (tab) {
-      if (_this.state.activeTab !== tab) _this.setState({
-        activeTab: tab
-      });
-    });
-
     return _this;
   }
 
-  _createClass(Auth, [{
+  _createClass(Add, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
@@ -369,7 +161,7 @@ var Auth = /*#__PURE__*/function (_Component) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 this.props.reset();
-                this.props.get();
+                if (this.props.edit) this.props.get(this.props.match.params.taskId);
 
               case 2:
               case "end":
@@ -393,75 +185,72 @@ var Auth = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var _this$props = this.props,
           _this$props$content$c = _this$props.content.cms.pages,
           save = _this$props$content$c.components.form.save,
-          _this$props$content$c2 = _this$props$content$c.backend.pages.cms,
+          _this$props$content$c2 = _this$props$content$c.backend.pages.tasks,
           title = _this$props$content$c2.title,
-          auth = _this$props$content$c2.auth,
-          _this$props$backend$c = _this$props.backend.cms,
-          loading = _this$props$backend$c.loading,
-          error = _this$props$backend$c.error,
-          message = _this$props$backend$c.message,
-          cms = _this$props$backend$c.cms,
-          languages = _this$props$backend$c.languages;
-      var activeTab = this.state.activeTab;
+          add = _this$props$content$c2.add,
+          edit = _this$props$content$c2.edit,
+          index = _this$props$content$c2.index,
+          form = _this$props$content$c2.form,
+          _this$props$backend$t = _this$props.backend.tasks,
+          loading = _this$props$backend$t.loading,
+          error = _this$props$backend$t.error,
+          message = _this$props$backend$t.message,
+          features = _this$props.auth.data.role.features;
+      var _this$state = this.state,
+          title_ = _this$state.title,
+          description = _this$state.description;
       var content = null;
       var errors = null;
+      var feature = features.find(function (f) {
+        return f.prefix === 'features';
+      });
+      var redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
+        to: "/user/dashboard"
+      });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_CustomSpinner_CustomSpinner__WEBPACK_IMPORTED_MODULE_11__["default"], null));else {
         errors = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Error_Error__WEBPACK_IMPORTED_MODULE_10__["default"], {
           err: error
         }));
-        if (!languages) languages = [];
-        var nav = languages.map(function (language) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavItem"], {
-            key: Math.random()
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["NavLink"], {
-            className: activeTab === language.abbr && 'active',
-            onClick: function onClick() {
-              return _this2.toggle(language.abbr);
-            }
-          }, language.name));
-        });
-        var tabContent = languages.map(function (language) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabPane"], {
-            key: Math.random(),
-            tabId: language.abbr
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubNavLinks, {
-            auth: cms.pages[language.abbr].auth,
-            language: language
-          }));
-        });
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_12__["default"], {
           onSubmit: this.submitHandler,
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"],
-          title: auth,
-          link: "/admin/cms",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"],
+          title: this.props.edit ? edit : add,
+          list: index,
+          link: "/user/tasks",
           innerClassName: "row",
           className: "shadow-sm"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-          lg: 12
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__["default"], {
-          message: message
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        }, this.props.edit && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
           type: "hidden",
           name: "_method",
           defaultValue: "PATCH"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-          lg: 2
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Nav"], {
-          tabs: true,
-          vertical: true,
-          pills: true
-        }, nav)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-          lg: 10
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["TabContent"], {
-          activeTab: activeTab
-        }, tabContent)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          lg: 8
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          message: message
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          type: "text",
+          className: "col-md-6",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"],
+          onChange: this.inputChangeHandler,
+          value: title_,
+          name: "title",
+          required: true,
+          placeholder: form.title
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          type: "text",
+          className: "col-md-6",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faParagraph"],
+          onChange: this.inputChangeHandler,
+          value: description,
+          name: "description",
+          required: true,
+          placeholder: form.description
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           className: "col-12"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_14__["default"], {
           color: "green",
@@ -471,30 +260,34 @@ var Auth = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        main: auth,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
+        items: this.props.edit && [{
+          to: '/user/tasks',
+          content: index
+        }],
+        main: this.props.edit ? edit : add,
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faWrench"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true
-      }, auth)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, this.props.edit ? edit : add)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
-      }, errors, content));
+      }, redirect, errors, content));
     }
   }], [{
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps, prevState) {
-      if (nextProps.backend.cms.cms && prevState.app_name === '') {
-        var auth = nextProps.backend.cms.cms.auth;
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, auth));
+      if (nextProps.backend.tasks.task && prevState.title === '') {
+        var task = nextProps.backend.tasks.task;
+        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, task));
       }
 
       return prevState;
     }
   }]);
 
-  return Auth;
+  return Add;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -503,19 +296,22 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    get: function get() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getCms"]());
+    get: function get(id) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getTask"](id));
     },
-    patch: function patch(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchCms"]('auth', data));
+    post: function post(data) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["postTasks"](data));
+    },
+    patch: function patch(id, data) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchTasks"](id, data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetCms"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetTasks"]());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Auth)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Add)));
 
 /***/ })
 

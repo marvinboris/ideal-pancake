@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
 import { Col, Row } from 'reactstrap';
-import { faCity } from '@fortawesome/free-solid-svg-icons';
+import { faTasks, faParagraph } from '@fortawesome/free-solid-svg-icons';
 import { faSave } from '@fortawesome/free-regular-svg-icons';
 
 // Components
@@ -17,14 +17,25 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
-        name: '',
+        title: '',
+        description: '',
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.tasks.task && prevState.title === '') {
+            const { backend: { tasks: { task } } } = nextProps;
+            return updateObject(prevState, { ...task });
+        }
+        return prevState;
     }
 
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.get(this.props.match.params.taskId);
     }
 
     componentWillUnmount() {
@@ -33,7 +44,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.taskId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -45,18 +57,14 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save } }, backend: { pages: { cities: { title, add, index, form } } } }
+                    pages: { components: { form: { save } }, backend: { pages: { tasks: { title, add, edit, index, form } } } }
                 }
             },
-            backend: { cities: { loading, error, message } },
-            auth: { data: { role: { features } } }
+            backend: { tasks: { loading, error, message } },
         } = this.props;
-        let { name } = this.state;
+        let { title: title_, description } = this.state;
         let content = null;
         let errors = null;
-
-        const feature = features.find(f => f.prefix === 'cities');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
 
         if (loading) content = <Col xs={12}>
             <CustomSpinner />
@@ -68,11 +76,14 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faCity} title={add} list={index} link="/user/cities" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faTasks} title={this.props.edit ? edit : add} list={index} link="/admin/tasks" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
-                                    <FormInput type="text" className="col-md-6" icon={faCity} onChange={this.inputChangeHandler} value={name} name="name" required placeholder={form.name} />
+                                    <FormInput type="text" className="col-md-6" icon={faTasks} onChange={this.inputChangeHandler} value={title_} name="title" required placeholder={form.title} />
+                                    <FormInput type="text" className="col-md-6" icon={faParagraph} onChange={this.inputChangeHandler} value={description} name="description" required placeholder={form.description} />
 
                                     <div className="col-12">
                                         <FormButton color="green" icon={faSave}>{save}</FormButton>
@@ -88,12 +99,11 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faCity} />
-                    <SpecialTitle user icon={faCity}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Breadcrumb items={this.props.edit && [{ to: '/admin/tasks', content: index }]} main={this.props.edit ? edit : add} icon={faTasks} />
+                    <SpecialTitle user icon={faTasks}>{title}</SpecialTitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
-                    {redirect}
                     {errors}
                     {content}
                 </div>
@@ -105,8 +115,10 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
-    post: data => dispatch(actions.postCities(data)),
-    reset: () => dispatch(actions.resetCities()),
+    get: id => dispatch(actions.getTask(id)),
+    post: data => dispatch(actions.postTasks(data)),
+    patch: (id, data) => dispatch(actions.patchTasks(id, data)),
+    reset: () => dispatch(actions.resetTasks()),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Add));

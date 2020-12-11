@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[68],{
 
-/***/ "./resources/js/src/containers/Backend/User/Tasks/Edit.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Tasks/Edit.js ***!
-  \****************************************************************/
+/***/ "./resources/js/src/containers/Backend/User/Settings/Language.js":
+/*!***********************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/User/Settings/Language.js ***!
+  \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28,14 +28,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../components/UI/Button/BetweenButton/BetweenButton */ "./resources/js/src/components/UI/Button/BetweenButton/BetweenButton.js");
 /* harmony import */ var _components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Feedback/Feedback */ "./resources/js/src/components/Feedback/Feedback.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
-/* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
 
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -81,7 +80,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var Edit = /*#__PURE__*/function (_Component) {
   _inherits(Edit, _Component);
 
@@ -99,8 +97,8 @@ var Edit = /*#__PURE__*/function (_Component) {
     _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      name: '',
-      description: ''
+      id: '',
+      abbr: ''
     });
 
     _defineProperty(_assertThisInitialized(_this), "submitHandler", /*#__PURE__*/function () {
@@ -111,7 +109,7 @@ var Edit = /*#__PURE__*/function (_Component) {
               case 0:
                 e.preventDefault();
                 _context.next = 3;
-                return _this.props.patch(_this.props.match.params.taskId, e.target);
+                return _this.props.post(_this.state.id);
 
               case 3:
               case "end":
@@ -132,6 +130,17 @@ var Edit = /*#__PURE__*/function (_Component) {
           value = _e$target.value,
           files = _e$target.files;
 
+      if (name === 'abbr') {
+        var language = _this.props.backend.languages.languages.find(function (l) {
+          return l.abbr === value;
+        });
+
+        return _this.setState({
+          id: language.id,
+          abbr: value
+        });
+      }
+
       _this.setState(_defineProperty({}, name, files ? files[0] : value));
     });
 
@@ -146,8 +155,10 @@ var Edit = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                this.props.reset();
-                this.props.get(this.props.match.params.taskId);
+                this.props.get();
+                this.setState({
+                  abbr: localStorage.getItem('lang')
+                });
 
               case 2:
               case "end":
@@ -164,36 +175,34 @@ var Edit = /*#__PURE__*/function (_Component) {
       return componentDidMount;
     }()
   }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.props.reset();
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
           _this$props$content$c = _this$props.content.cms.pages,
           save = _this$props$content$c.components.form.save,
-          _this$props$content$c2 = _this$props$content$c.backend.pages.tasks,
+          _this$props$content$c2 = _this$props$content$c.backend.pages.settings,
           title = _this$props$content$c2.title,
-          edit = _this$props$content$c2.edit,
-          index = _this$props$content$c2.index,
-          form = _this$props$content$c2.form,
-          _this$props$backend$t = _this$props.backend.tasks,
-          loading = _this$props$backend$t.loading,
-          error = _this$props$backend$t.error,
-          message = _this$props$backend$t.message,
-          features = _this$props.auth.data.role.features;
+          _this$props$content$c3 = _this$props$content$c2.language,
+          title_ = _this$props$content$c3.title,
+          form = _this$props$content$c3.form,
+          _this$props$backend$l = _this$props.backend.languages,
+          loading = _this$props$backend$l.loading,
+          error = _this$props$backend$l.error,
+          message = _this$props$backend$l.message,
+          languages = _this$props$backend$l.languages;
       var _this$state = this.state,
-          title_ = _this$state.title,
-          description = _this$state.description;
+          id = _this$state.id,
+          abbr = _this$state.abbr;
       var content = null;
       var errors = null;
-      var feature = features.find(function (f) {
-        return f.prefix === 'features';
-      });
-      var redirect = !(feature && JSON.parse(feature.permissions).includes('u')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
-        to: "/user/dashboard"
+      if (!languages) languages = [];
+      var languagesOptions = languages.sort(function (a, b) {
+        return a.name > b.name;
+      }).map(function (item) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+          key: item.name,
+          value: item.abbr
+        }, item.name);
       });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
@@ -203,40 +212,31 @@ var Edit = /*#__PURE__*/function (_Component) {
         }));
         content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Form_Form__WEBPACK_IMPORTED_MODULE_12__["default"], {
           onSubmit: this.submitHandler,
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"],
-          title: edit,
-          list: index,
-          link: "/user/tasks",
-          innerClassName: "row",
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCog"],
+          title: title_,
+          innerClassName: "row justify-content-center",
           className: "shadow-sm"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
           lg: 8
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_15__["default"], {
           message: message
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
+          className: "justify-content-center"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
           type: "hidden",
-          name: "_method",
-          defaultValue: "PATCH"
+          name: "id",
+          value: id
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          type: "text",
+          type: "select",
           className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"],
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLanguage"],
           onChange: this.inputChangeHandler,
-          value: title_,
-          name: "title",
+          value: abbr,
+          name: "abbr",
           required: true,
-          placeholder: form.title
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Input_Input__WEBPACK_IMPORTED_MODULE_13__["default"], {
-          type: "text",
-          className: "col-md-6",
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faParagraph"],
-          onChange: this.inputChangeHandler,
-          value: description,
-          name: "description",
-          required: true,
-          placeholder: form.description
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-          className: "col-12"
+          placeholder: form.select_language
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", null, form.select_language), languagesOptions), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+          className: "col-12 text-center"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_14__["default"], {
           color: "green",
           icon: _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_6__["faSave"]
@@ -245,30 +245,16 @@ var Edit = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "bg-soft py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        items: [{
-          to: '/user/tasks',
-          content: index
-        }],
-        main: edit,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"]
+        main: title_,
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCog"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTasks"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faCog"]
       }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], {
         user: true
-      }, edit)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, title_)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
-      }, redirect, errors, content));
-    }
-  }], [{
-    key: "getDerivedStateFromProps",
-    value: function getDerivedStateFromProps(nextProps, prevState) {
-      if (nextProps.backend.tasks.feature && prevState.name === '') {
-        var feature = nextProps.backend.tasks.feature;
-        return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_17__["updateObject"])(prevState, _objectSpread({}, feature));
-      }
-
-      return prevState;
+      }, errors, content));
     }
   }]);
 
@@ -281,14 +267,11 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    get: function get(id) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getTask"](id));
+    get: function get() {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["getLanguages"]());
     },
-    patch: function patch(id, data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["patchTasks"](id, data));
-    },
-    reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["resetTasks"]());
+    post: function post(id) {
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_16__["setLanguage"](id));
     }
   };
 };

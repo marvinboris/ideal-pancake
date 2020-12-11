@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[46],{
 
-/***/ "./resources/js/src/containers/Backend/User/Cms/Global.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/User/Cms/Global.js ***!
-  \****************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Cms/Global.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Cms/Global.js ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -191,20 +191,13 @@ var Global = /*#__PURE__*/function (_Component) {
           loading = _this$props$backend$c.loading,
           error = _this$props$backend$c.error,
           message = _this$props$backend$c.message,
-          cms = _this$props$backend$c.cms,
-          features = _this$props.auth.data.role.features;
+          cms = _this$props$backend$c.cms;
       var _this$state = this.state,
           logo = _this$state.logo,
           app_name = _this$state.app_name,
           company_name = _this$state.company_name;
       var content = null;
       var errors = null;
-      var feature = features.find(function (f) {
-        return f.prefix === 'cms';
-      });
-      var redirect = !(feature && JSON.parse(feature.permissions).includes('u')) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Redirect, {
-        to: "/user/dashboard"
-      });
       if (loading) content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
         xs: 12
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_UI_CustomSpinner_CustomSpinner__WEBPACK_IMPORTED_MODULE_11__["default"], null));else {
@@ -288,7 +281,7 @@ var Global = /*#__PURE__*/function (_Component) {
         user: true
       }, global)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "p-4 pb-0"
-      }, redirect, errors, content));
+      }, errors, content));
     }
   }], [{
     key: "getDerivedStateFromProps",

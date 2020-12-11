@@ -60,7 +60,7 @@ class Dashboard extends Component {
         let {
             content: {
                 cms: {
-                    pages: { backend: { pages: { dashboard: { admin: { title, subtitle, blocks: { subscription, total_customers, expenses: expenses_, total_cash }, sales_report } } } } }
+                    pages: { backend: { pages: { dashboard: { user: { title, subtitle, blocks: { subscription, total_customers, expenses: expenses_, total_cash }, sales_report } } } } }
                 }
             },
             backend: { dashboard: { loading, error } }
@@ -69,10 +69,6 @@ class Dashboard extends Component {
 
         let content = null;
         let errors = null;
-
-        const colors = ['orange', 'green'];
-        const texts = ['Pending', 'Completed'];
-        const icons = [faSpinner, faCheckCircle];
 
         if (loading) content = <Col xs={12}>
             <CustomSpinner />
@@ -89,21 +85,21 @@ class Dashboard extends Component {
                         children: subscriptionsAmount,
                         icon: faClock,
                         link: '/admin/services/',
-                        color: 'limo',
+                        color: 'pink',
                         details: subscription.description,
                         titleColor: 'white',
                         circleColor: 'white',
-                        circleBorder: 'limo'
+                        circleBorder: 'white'
                     },
                     {
                         title: total_customers.title,
                         children: totalCustomers,
                         icon: faLandmark,
                         link: '/admin/customers/',
-                        color: 'blue',
+                        color: 'scarlet',
                         details: total_customers.description,
                         titleColor: 'white',
-                        circleColor: 'limo',
+                        circleColor: 'pink',
                         circleBorder: 'white'
                     },
                     {
@@ -111,10 +107,10 @@ class Dashboard extends Component {
                         children: expenses,
                         icon: faEnvelope,
                         link: '/admin/expenses',
-                        color: 'lightblue',
+                        color: 'orange',
                         details: expenses_.description,
                         titleColor: 'white',
-                        circleColor: 'limo',
+                        circleColor: 'pink',
                         circleBorder: 'white'
                     },
                     {
@@ -122,7 +118,7 @@ class Dashboard extends Component {
                         children: totalCase,
                         icon: faStopwatch,
                         link: '/admin/case',
-                        color: 'middarkblue',
+                        color: 'green',
                         details: total_cash.description,
                         titleColor: 'white',
                         circleColor: 'white',
@@ -134,7 +130,7 @@ class Dashboard extends Component {
 
                 content = (
                     <>
-                        <div className="pt-4 px-4 pb-3 bg-limo-10">
+                        <div className="pt-4 px-4 pb-3 bg-pink-10">
                             <Row>
                                 {cards}
                             </Row>

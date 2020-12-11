@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import { Row } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faTrash, faUserTag } from '@fortawesome/free-solid-svg-icons';
@@ -33,7 +33,7 @@ class Index extends Component {
                     pages: { components: { list: { action } }, backend: { pages: { roles: { title, add, index, form: { name, description, created_at } } } } }
                 }
             },
-            backend: { roles: { loading, error, message, roles, total } }
+            backend: { roles: { loading, error, message, roles, total } },
         } = this.props;
 
         const errors = <>
@@ -46,13 +46,13 @@ class Index extends Component {
             return updateObject(role, {
                 created_at: convertDate(role.created_at),
                 action: <div className="text-center">
-                    <Link to={`/admin/roles/${role.id}`} className="mr-2">
+                    <Link to={`/user/roles/${role.id}`} className="mr-2">
                         <FontAwesomeIcon icon={faEye} className="text-green" fixedWidth />
                     </Link>
-                    <Link to={`/admin/roles/${role.id}/edit`} className="mr-2">
+                    <Link to={`/user/roles/${role.id}/edit`} className="mr-2">
                         <FontAwesomeIcon icon={faEdit} className="text-brokenblue" fixedWidth />
                     </Link>
-                    <Delete deleteAction={() => this.props.delete(role.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete>
+                    <span className="mx-1"><Delete deleteAction={() => this.props.delete(role.id)}><FontAwesomeIcon icon={faTrash} className="text-red" fixedWidth /></Delete></span>
                 </div>,
             });
         });
@@ -60,7 +60,7 @@ class Index extends Component {
         const content = (
             <>
                 <Row>
-                    <List array={data} loading={loading} data={JSON.stringify(roles)} get={this.props.get} total={total} bordered add={add} link="/admin/roles/add" icon={faUserTag} title={index} className="shadow-sm"
+                    <List array={data} loading={loading} data={JSON.stringify(roles)} get={this.props.get} total={total} bordered add={add} link="/user/roles/add" icon={faUserTag} title={index} className="shadow-sm"
                         fields={[
                             { name, key: 'name' },
                             { name: description, key: 'description' },

@@ -28,13 +28,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             Route::get('{admin}', 'AdminController@show')->name('show');
         });
 
-        Route::name('cms.')->prefix('cms')->namespace('CMS')->group(function () {
-            Route::patch('global', 'GlobalController@patch')->name('global');
-            Route::patch('general', 'GeneralController@patch')->name('general');
-            Route::patch('components', 'ComponentsController@patch')->name('components');
-            Route::patch('frontend', 'FrontendController@patch')->name('frontend');
-            Route::patch('backend', 'BackendController@patch')->name('backend');
-            Route::patch('auth', 'AuthController@patch')->name('auth');
+        Route::name('cms.')->prefix('cms')->group(function () {
+            Route::patch('global', 'CmsController@global')->name('global');
+            Route::patch('general', 'CmsController@general')->name('general');
+            Route::patch('components', 'CmsController@components')->name('components');
+            Route::patch('frontend', 'CmsController@frontend')->name('frontend');
+            Route::patch('backend', 'CmsController@backend')->name('backend');
+            Route::patch('auth', 'CmsController@auth')->name('auth');
 
             Route::name('index')->get('', function () {
                 $jsonString = file_get_contents(base_path('cms.json'));
@@ -47,8 +47,22 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             });
         });
 
+        Route::prefix('customers')->name('customers.')->group(function () {
+            Route::get('{customer}', 'CustomerController@show')->name('show');
+        });
+
+        Route::prefix('employees')->name('employees.')->group(function () {
+            Route::get('{employee}', 'EmployeeController@show')->name('show');
+        });
+
         Route::prefix('features')->name('features.')->group(function () {
             Route::get('{feature}', 'FeatureController@show')->name('show');
+        });
+
+        Route::prefix('invoices')->name('invoices.')->group(function () {
+            Route::get('info', 'InvoiceController@info')->name('info');
+            Route::get('{invoice}', 'InvoiceController@show')->name('show');
+            Route::post('{invoice}/print', 'InvoiceController@print')->name('print');
         });
 
         Route::prefix('languages')->name('languages.')->group(function () {
@@ -68,6 +82,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             Route::get('{role}', 'RoleController@show')->name('show');
         });
 
+        Route::prefix('tasks')->name('tasks.')->group(function () {
+            Route::get('{task}', 'TaskController@show')->name('show');
+        });
+
         Route::prefix('users')->name('users.')->group(function () {
             Route::get('info', 'UserController@info')->name('info');
             Route::get('{user}', 'UserController@show')->name('show');
@@ -77,9 +95,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             'admins' => 'AdminController',
             'users' => 'UserController',
             'roles' => 'RoleController',
+            'customers' => 'CustomerController',
+            'employees' => 'EmployeeController',
+            'invoices' => 'InvoiceController',
             'features' => 'FeatureController',
             'languages' => 'LanguageController',
             'members' => 'MemberController',
+            'tasks' => 'TaskController',
             'products' => 'ProductController',
         ]);
     });
@@ -94,18 +116,18 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
         Route::middleware('permission')->group(function () {
-            Route::name('cms.')->prefix('cms')->namespace('CMS')->group(function () {
-                Route::patch('global', 'GlobalController@patch')->name('global');
-                Route::patch('general', 'GeneralController@patch')->name('general');
-                Route::patch('components', 'ComponentsController@patch')->name('components');
-                Route::patch('frontend', 'FrontendController@patch')->name('frontend');
-                Route::patch('backend', 'BackendController@patch')->name('backend');
-                Route::patch('auth', 'AuthController@patch')->name('auth');
-
+            Route::name('cms.')->prefix('cms')->group(function () {
+                Route::patch('global', 'CmsController@global')->name('global');
+                Route::patch('general', 'CmsController@general')->name('general');
+                Route::patch('components', 'CmsController@components')->name('components');
+                Route::patch('frontend', 'CmsController@frontend')->name('frontend');
+                Route::patch('backend', 'CmsController@backend')->name('backend');
+                Route::patch('auth', 'CmsController@auth')->name('auth');
+    
                 Route::name('index')->get('', function () {
                     $jsonString = file_get_contents(base_path('cms.json'));
                     $cms = json_decode($jsonString, true);
-
+    
                     return response()->json([
                         'cms' => $cms,
                         'languages' => Language::all(),
@@ -200,9 +222,7 @@ Route::middleware('auth:admin,api')->group(function () {
                 'message' => UtilController::message($cmsFile['pages'][$user->language->abbr]['messages']['languages']['not_found'], 'danger')
             ]);
 
-            $user->update([
-                'language_id' => $id
-            ]);
+            $user->update(['language_id' => $id]);
 
             $cms = [
                 'global' => $cmsFile['global'],

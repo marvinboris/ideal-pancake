@@ -18,6 +18,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -33,9 +34,18 @@ class Add extends Component {
         photo: null,
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.invoices.invoice && prevState.customer_id === '') {
+            const { backend: { invoices: { invoice } } } = nextProps;
+            return updateObject(prevState, { ...invoice });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
-        this.props.get();
+        if (this.props.edit) this.props.show(this.props.match.params.invoiceId);
+        else this.props.info();
     }
 
     componentWillUnmount() {
@@ -44,7 +54,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.invoiceId, e.target);
+        else await this.props.post(e.target);
     }
 
     totalAmount = () => +this.state.prices.reduce((a, b, i) => +a + +b * +this.state.quantities[i], 0) + +this.state.tax - +this.state.discount;
@@ -92,10 +103,10 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save, selected_file } }, backend: { pages: { invoices: { title, add, index, form } } } }
+                    pages: { components: { form: { save, selected_file } }, backend: { pages: { invoices: { title, add, edit, index, form } } } }
                 }
             },
-            backend: { invoices: { loading, error, message, customers, tasks } },
+            backend: { invoices: { loading, error, message, customers, tasks, invoice } },
             auth: { data: { role: { features } } }
         } = this.props;
         let { customer_id, date, discount, paid_amount, total_amount, tax, prices, quantities, tasks: tasks_, photo } = this.state;
@@ -103,7 +114,7 @@ class Add extends Component {
         let errors = null;
 
         const feature = features.find(f => f.prefix === 'invoices');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
+        const redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && <Redirect to="/user/dashboard" />;
 
         if (!customers) customers = [];
         const customersOptions = customers.sort((a, b) => a.name > b.name).map(item => <option key={JSON.stringify(item)} value={item.id}>{item.name}</option>);
@@ -120,7 +131,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faFileInvoice} title={add} list={index} link="/user/invoices" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faFileInvoice} title={this.props.edit ? edit : add} list={index} link="/user/invoices" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -138,9 +151,8 @@ class Add extends Component {
                                         <div>{form.tasks}</div>
                                         <div>
                                             <Button type="button" color="green" onClick={this.plusBtnClickedHandler}>
-                                                <FontAwesomeIcon icon={faPlus} className="mr-2" />
-                                            Add
-                                        </Button>
+                                                <FontAwesomeIcon icon={faPlus} className="mr-2" />Add
+                                            </Button>
                                         </div>
                                     </Col>
                                     <Col xs={12} className="pb-2 border-bottom">
@@ -190,8 +202,8 @@ class Add extends Component {
                             </Col>
 
                             <Col lg={4}>
-                                <div className="embed-responsive embed-responsive-1by1 bg-soft border border-light d-flex justify-content-center align-items-center w-60 mx-auto" style={{ cursor: 'pointer' }} onClick={this.fileUpload}>
-                                    {photo && <div className="text-center text-green">
+                                <div className="embed-responsive embed-responsive-1by1 bg-soft border d-flex justify-content-center align-items-center w-60 mx-auto" style={{ cursor: 'pointer' }} onClick={this.fileUpload}>
+                                    {(this.props.edit ? (photo && (photo !== invoice.photo)) : photo) && <div className="text-center text-green">
                                         <div><FontAwesomeIcon icon={faCheckCircle} fixedWidth size="5x" /></div>
                                         <div className="mt-3">{selected_file}</div>
                                     </div>}
@@ -206,9 +218,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faFileInvoice} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/user/invoices', content: index }]} main={this.props.edit ? edit : add} icon={faFileInvoice} />
                     <SpecialTitle user icon={faFileInvoice}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {redirect}
@@ -223,8 +235,10 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
-    get: () => dispatch(actions.getInvoicesInfo()),
+    show: id => dispatch(actions.getInvoice(id)),
+    info: () => dispatch(actions.getInvoicesInfo()),
     post: data => dispatch(actions.postInvoices(data)),
+    patch: (id, data) => dispatch(actions.patchInvoices(id, data)),
     reset: () => dispatch(actions.resetInvoices()),
 });
 

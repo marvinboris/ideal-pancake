@@ -103,8 +103,12 @@ class InvoiceController extends Controller
             'message' => UtilController::message($cms['pages'][$user->language->abbr]['messages']['invoices']['not_found'], 'danger'),
         ]);
 
-        $invoice_tasks = $invoice->tasks()->toArray();
-        $invoice = $invoice->toArray() + [
+        $invoice_tasks = [];
+        foreach ($invoice->tasks as $task) {
+            $invoice_tasks[] = $task;
+        }
+
+        $invoice = array_merge($invoice->toArray(), [
             'prices' => array_map(function ($task) {
                 return $task->pivot->price;
             }, $invoice_tasks),
@@ -117,7 +121,7 @@ class InvoiceController extends Controller
             'totals' => array_map(function ($task) {
                 return $task->pivot->price * $task->pivot->quantity;
             }, $invoice_tasks),
-        ];
+        ]);
 
         $tasks = Task::all();
         $customers = Customer::all();

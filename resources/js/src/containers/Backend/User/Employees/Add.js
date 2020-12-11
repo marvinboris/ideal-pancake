@@ -18,6 +18,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -39,8 +40,17 @@ class Add extends Component {
         photo: null,
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.employees.employee && prevState.first_name === '') {
+            const { backend: { employees: { employee } } } = nextProps;
+            return updateObject(prevState, { ...employee });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.show(this.props.match.params.employeeId);
     }
 
     componentWillUnmount() {
@@ -49,7 +59,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.employeeId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -63,10 +74,10 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save, selected_file } }, backend: { pages: { employees: { title, add, index, form } } } }
+                    pages: { components: { form: { save, selected_file } }, backend: { pages: { employees: { title, add, edit, index, form } } } }
                 }
             },
-            backend: { employees: { loading, error, message } },
+            backend: { employees: { loading, error, message, employee } },
             auth: { data: { role: { features } } }
         } = this.props;
         let { first_name, last_name, job, matricule, address, birthdate, country, diploma, driving_licenses, email, languages, number_children, phone, photo, marital, gender } = this.state;
@@ -74,7 +85,7 @@ class Add extends Component {
         let errors = null;
 
         const feature = features.find(f => f.prefix === 'employees');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
+        const redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && <Redirect to="/user/dashboard" />;
 
         const gendersOptions = Object.keys(form.gender_list).map(id => ({ id, name: form.gender_list[id] })).sort((a, b) => a.name > b.name).map(item => <option key={JSON.stringify(item)} value={item.id}>{item.name}</option>);
         const maritalsOptions = Object.keys(form.marital_list).map(id => ({ id, name: form.marital_list[id] })).sort((a, b) => a.name > b.name).map(item => <option key={JSON.stringify(item)} value={item.id}>{item.name}</option>);
@@ -89,7 +100,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={add} list={index} link="/user/employees" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={this.props.edit ? edit : add} list={index} link="/user/employees" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -125,7 +138,7 @@ class Add extends Component {
 
                             <Col lg={4}>
                                 <div className="embed-responsive embed-responsive-1by1 bg-soft border d-flex justify-content-center align-items-center w-60 mx-auto" style={{ cursor: 'pointer' }} onClick={this.fileUpload}>
-                                    {photo && <div className="text-center text-green">
+                                    {(this.props.edit ? (photo && (photo !== employee.photo)) : photo) && <div className="text-center text-green">
                                         <div><FontAwesomeIcon icon={faCheckCircle} fixedWidth size="5x" /></div>
                                         <div className="mt-3">{selected_file}</div>
                                     </div>}
@@ -140,9 +153,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faUserTie} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/user/employees', content: index }]} main={this.props.edit ? edit : add} icon={faUserTie} />
                     <SpecialTitle user icon={faUserTie}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {redirect}
@@ -157,7 +170,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    show: id => dispatch(actions.getEmployee(id)),
     post: data => dispatch(actions.postEmployees(data)),
+    patch: (id, data) => dispatch(actions.patchEmployees(id, data)),
     reset: () => dispatch(actions.resetEmployees()),
 });
 

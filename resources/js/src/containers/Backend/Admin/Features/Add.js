@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Col, Row, FormGroup, CustomInput } from 'reactstrap';
-import { faUserTie, faUser, faMoneyBillWave, faPlusCircle, faUsers, faLock, faEnvelope, faCity, faPhone, faUserTag, faCheckCircle, faEdit, faAnchor, faTools } from '@fortawesome/free-solid-svg-icons';
-import { faBuilding, faSave, faCalendar } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Col, Row } from 'reactstrap';
+import { faAnchor, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faSave } from '@fortawesome/free-regular-svg-icons';
 
 // Components
 import Breadcrumb from '../../../../components/Backend/UI/Breadcrumb/Breadcrumb';
@@ -18,6 +17,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -25,8 +25,17 @@ class Add extends Component {
         prefix: '',
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.features.feature && prevState.name === '') {
+            const { backend: { features: { feature } } } = nextProps;
+            return updateObject(prevState, { ...feature });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.show(this.props.match.params.featureId);
     }
 
     componentWillUnmount() {
@@ -35,11 +44,12 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.featureId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
-        const { name, value, checked, files } = e.target;
+        const { name, value, files } = e.target;
         this.setState({ [name]: files ? files[0] : value });
     }
 
@@ -47,7 +57,7 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save } }, backend: { pages: { features: { title, add, index, form } } } }
+                    pages: { components: { form: { save } }, backend: { pages: { features: { title, add, edit, index, form } } } }
                 }
             },
             backend: { features: { loading, error, message } }
@@ -66,7 +76,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faTools} title={add} list={index} link="/admin/features" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faTools} title={this.props.edit ? edit : add} list={index} link="/admin/features" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -87,9 +99,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faTools} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/admin/features', content: index }]} main={this.props.edit ? edit : add} icon={faTools} />
                     <SpecialTitle user icon={faTools}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {errors}
@@ -103,7 +115,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    show: id => dispatch(actions.getFeature(id)),
     post: data => dispatch(actions.postFeatures(data)),
+    patch: (id, data) => dispatch(actions.patchFeatures(id, data)),
     reset: () => dispatch(actions.resetFeatures()),
 });
 

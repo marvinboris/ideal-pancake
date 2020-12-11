@@ -18,6 +18,7 @@ import FormButton from '../../../../components/UI/Button/BetweenButton/BetweenBu
 import Feedback from '../../../../components/Feedback/Feedback';
 
 import * as actions from '../../../../store/actions';
+import { updateObject } from '../../../../shared/utility';
 
 class Add extends Component {
     state = {
@@ -31,8 +32,17 @@ class Add extends Component {
         countries: [],
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.backend.customers.customer && prevState.name === '') {
+            const { backend: { customers: { customer } } } = nextProps;
+            return updateObject(prevState, { ...customer });
+        }
+        return prevState;
+    }
+
     async componentDidMount() {
         this.props.reset();
+        if (this.props.edit) this.props.show(this.props.match.params.customerId);
 
         const cors = 'https://cors-anywhere.herokuapp.com/';
 
@@ -53,7 +63,8 @@ class Add extends Component {
 
     submitHandler = async e => {
         e.preventDefault();
-        await this.props.post(e.target);
+        if (this.props.edit) await this.props.patch(this.props.match.params.customerId, e.target);
+        else await this.props.post(e.target);
     }
 
     inputChangeHandler = e => {
@@ -67,10 +78,10 @@ class Add extends Component {
         let {
             content: {
                 cms: {
-                    pages: { components: { form: { save, selected_file } }, backend: { pages: { customers: { title, add, index, form } } } }
+                    pages: { components: { form: { save, selected_file } }, backend: { pages: { customers: { title, add, edit, index, form } } } }
                 }
             },
-            backend: { customers: { loading, error, message } },
+            backend: { customers: { loading, error, message, customer } },
             auth: { data: { role: { features } } }
         } = this.props;
         let { name, address, phone, email, photo, country, countries } = this.state;
@@ -78,7 +89,7 @@ class Add extends Component {
         let errors = null;
 
         const feature = features.find(f => f.prefix === 'customers');
-        const redirect = !(feature && JSON.parse(feature.permissions).includes('c')) && <Redirect to="/user/dashboard" />;
+        const redirect = !(feature && JSON.parse(feature.permissions).includes(this.props.edit ? 'u' : 'c')) && <Redirect to="/user/dashboard" />;
 
         const countriesOptions = countries.map(({ country, code, name }) => <option key={country} value={country} code={code}>{name}</option>);
 
@@ -92,7 +103,9 @@ class Add extends Component {
             content = (
                 <>
                     <Row>
-                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={add} list={index} link="/user/customers" innerClassName="row" className="shadow-sm">
+                        <Form onSubmit={this.submitHandler} icon={faUserTie} title={this.props.edit ? edit : add} list={index} link="/user/customers" innerClassName="row" className="shadow-sm">
+                            {this.props.edit && <input type="hidden" name="_method" defaultValue="PATCH" />}
+
                             <Col lg={8}>
                                 <Feedback message={message} />
                                 <Row>
@@ -119,7 +132,7 @@ class Add extends Component {
 
                             <Col lg={4}>
                                 <div className="embed-responsive embed-responsive-1by1 bg-soft border border-light d-flex justify-content-center align-items-center w-60 mx-auto" style={{ cursor: 'pointer' }} onClick={this.fileUpload}>
-                                    {photo && <div className="text-center text-green">
+                                    {(this.props.edit ? (photo && (photo !== customer.photo)) : photo) && <div className="text-center text-green">
                                         <div><FontAwesomeIcon icon={faCheckCircle} fixedWidth size="5x" /></div>
                                         <div className="mt-3">{selected_file}</div>
                                     </div>}
@@ -134,9 +147,9 @@ class Add extends Component {
         return (
             <>
                 <div className="bg-soft py-4 pl-5 pr-4 position-relative">
-                    <Breadcrumb main={add} icon={faUserTie} />
+                    <Breadcrumb items={this.props.edit && [{ to: '/user/customers', content: index }]} main={this.props.edit ? edit : add} icon={faUserTie} />
                     <SpecialTitle user icon={faUserTie}>{title}</SpecialTitle>
-                    <Subtitle user>{add}</Subtitle>
+                    <Subtitle user>{this.props.edit ? edit : add}</Subtitle>
                 </div>
                 <div className="p-4 pb-0">
                     {redirect}
@@ -151,7 +164,9 @@ class Add extends Component {
 const mapStateToProps = state => ({ ...state });
 
 const mapDispatchToProps = dispatch => ({
+    show: id => dispatch(actions.getCustomer(id)),
     post: data => dispatch(actions.postCustomers(data)),
+    patch: (id, data) => dispatch(actions.patchCustomers(id, data)),
     reset: () => dispatch(actions.resetCustomers()),
 });
 
