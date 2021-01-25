@@ -23,14 +23,20 @@ import SamuelRolande from "../../../../../../public/images/33a762719ceb41b28820b
 
 class Home extends Component {
     render() {
+        const date = new Date();
+        const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getMonth()];
+        const year = date.getFullYear();
+        const day = date.getDate();
+        const weekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay()];
+
         return (
             <Col xs={12} className="Home p-0">
                 <div className="position-relative full-height-app">
                     <div className="position-absolute h-100 w-100">
                         <div id="banner" className="text-white w-100 mx-auto text-center text-sm-left">
-                            <div className="d-lg-flex justify-content-between align-items-center">
-                                <div className="d-lg-flex">
-                                    <div className="pr-4 d-none d-lg-flex">
+                            <div className="d-xl-flex justify-content-between align-items-center">
+                                <div className="d-xl-flex">
+                                    <div className="pr-4 d-none d-xl-flex">
                                         <div
                                             className="position-relative bg-orange"
                                             style={{
@@ -61,21 +67,21 @@ class Home extends Component {
                                     </div>
 
                                     <div>
-                                        <div className="display-2 d-none d-lg-block title">
+                                        <div className="display-2 d-none d-xl-block title">
                                             <span className="text-300">We</span>
                                             <br />
                                             <span className="text-700">
                                                 Develop
                                             </span>
                                         </div>
-                                        <div className="display-4 d-lg-none text-center title">
+                                        <div className="display-4 d-xl-none text-center title">
                                             <span className="text-300">We</span>
                                             <br />
                                             <span className="text-700">
                                                 Develop
                                             </span>
                                         </div>
-                                        <div className="display-3 d-none d-lg-block subtitle text-300">
+                                        <div className="display-4 d-none d-xl-block subtitle text-300">
                                             Web application and
                                             <br />
                                             Softwares at{" "}
@@ -83,7 +89,7 @@ class Home extends Component {
                                                 low cost
                                             </span>
                                         </div>
-                                        <div className="text-xx-large text-center d-lg-none subtitle text-300">
+                                        <div className="text-xx-large text-center d-xl-none subtitle text-300">
                                             Web application and
                                             <br />
                                             Softwares at{" "}
@@ -91,17 +97,17 @@ class Home extends Component {
                                                 low cost
                                             </span>
                                         </div>
-                                        <div className="mt-5 d-none d-lg-block">
-                                            <BetweenButton size="lg" color="dark" icon={faArrowAltCircleRight} iconColor="yellow"
+                                        <div className="mt-5 d-none d-xl-block">
+                                            <BetweenButton size="xl" color="dark" icon={faArrowAltCircleRight} iconColor="yellow"
                                                 className="mr-3 bg-scarlet-gradient border-0 text-montserrat-alt text-400 py-3 px-4 text-x-large" >
                                                 Get a quote
                                             </BetweenButton>
-                                            <BetweenButton size="lg" color="orange" icon={faArrowAltCircleRight}
+                                            <BetweenButton size="xl" color="orange" icon={faArrowAltCircleRight}
                                                 className="text-montserrat-alt text-400 py-3 px-4 text-x-large">
                                                 View portfolio
                                             </BetweenButton>
                                         </div>
-                                        <div className="mt-5 text-center d-lg-none">
+                                        <div className="mt-5 text-center d-xl-none">
                                             <Row className="justify-content-center">
                                                 <Col xs={8}>
                                                     <BetweenButton color="dark" icon={faArrowAltCircleRight} iconColor="yellow" block
@@ -118,25 +124,25 @@ class Home extends Component {
                                     </div>
                                 </div>
 
-                                <div className="w-40 d-none d-lg-block overflow-hidden">
+                                <div className="w-40 d-none d-xl-block overflow-hidden">
                                     <img src={SoftImage} className="img-fluid" style={{ transform: 'scale(1.2)', transformOrigin: 'center' }} />
                                 </div>
                             </div>
                         </div>
                         <HomeCarousel>
-                            <div className="bg-transparent d-none d-lg-inline circle-carousel-indicator rounded-circle border border-3 border-yellow position-absolute" />
+                            <div className="bg-transparent d-none d-xl-inline circle-carousel-indicator rounded-circle border border-3 border-yellow position-absolute" />
                         </HomeCarousel>
                     </div>
                 </div>
 
                 <PresentationalContainer user>
-                    <Container className="position-relative d-none d-lg-block" style={{ transform: "translateY(-40%) scale(1)", transformOrigin: 'center', zIndex: 11 }}>
+                    <Container className="position-relative d-none d-xl-block" style={{ transform: "translateY(-40%) scale(1)", transformOrigin: 'center', zIndex: 11 }}>
                         <Row className="justify-content-center">
-                            <Col xl={9}>
+                            <Col xl={11}>
                                 <div className="d-flex">
                                     <div className="bg-darkblue text-center text-white flex-grow-1">
                                         <div className="pb-2 pt-3 text-700 border-bottom border-thin border-white-20 position-relative">
-                                            February - 2020
+                                            {month} - {year}
                                             <FontAwesomeIcon icon={faCircle} className="position-absolute text-yellow text-xx-small" style={{
                                                 bottom: 0,
                                                 transform: "translateY(50%)",
@@ -145,8 +151,8 @@ class Home extends Component {
                                         </div>
 
                                         <div className="py-2 px-5">
-                                            <h1 className="text-700">05</h1>
-                                            <div>Monday</div>
+                                            <h1 className="text-700">{day}</h1>
+                                            <div>{weekDay}</div>
                                         </div>
                                     </div>
 
@@ -178,14 +184,14 @@ class Home extends Component {
 
                 <PresentationalContainer user>
                     <Row className="align-items-center position-relative">
-                        <div className="d-none d-lg-block position-absolute" style={{ top: '50%', left: 0, transform: 'translate(-50%, -50%) scale(.8)' }}>
+                        <div className="d-none d-xl-block position-absolute" style={{ top: '50%', left: 0, transform: 'translate(-50%, -50%) scale(.8)' }}>
                             <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-green d-flex justify-content-center align-items-center" style={{ width: 300 }}>
                                 <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-yellow shadow d-flex justify-content-center align-items-center" style={{ width: 182, height: 182 }}>
                                     <div className="rounded-circle embed-responsive embed-responsive-1by1 bg-light shadow" style={{ width: 114, height: 114 }}></div>
                                 </div>
                             </div>
                         </div>
-                        <Col lg={4} className="offset-lg-1">
+                        <Col xl={4} className="offset-xl-1">
                             <div className="h3 m-0">Services</div>
                             <h1 className="text-scarlet text-montserrat-alt text-700">
                                 Our features &
@@ -201,7 +207,7 @@ class Home extends Component {
                             </div>
                         </Col>
 
-                        <Col lg={7}>
+                        <Col xl={7}>
                             <Row>
                                 <AngledBlock number="01" iconColor="gray" stackColor="pink" bgColor="white" color="dark" title="UI/UX Design">In order to limit the failure of any redesign project, we design for you prototypes that fit your needs before development of the said project.</AngledBlock>
                                 <AngledBlock number="03" iconColor="white" inverse stackColor="darkblue" bgColor="pink" color="white" title="Consultancy">We provide quality user interface and user experience. Giving that our customer satisfaction is important to us, we always think above our client expectation, offering to all our customers, the best matching user experience design.</AngledBlock>
@@ -214,9 +220,9 @@ class Home extends Component {
 
                 <PresentationalContainer user bg="light" innerClassName="pt-5">
                     <Row className="align-items-center">
-                        <Col lg={7} className="p-5">
+                        <Col xl={7} className="p-5">
                             <Row>
-                                <Col lg={10}>
+                                <Col xl={10}>
                                     <Row className="justify-content-center align-items-center">
                                         <WorkBlock src={SoftImage} top="20%" bgColor="pink" title="Graphic Design" color="white">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</WorkBlock>
                                         <WorkBlock src={SoftImage} top="-20%" left="-10%" title="Mobile Apps">Benefit from Mobile friendly applications on your various mobile devices.</WorkBlock>
@@ -227,7 +233,7 @@ class Home extends Component {
                             </Row>
                         </Col>
 
-                        <Col lg={5} className="px-5">
+                        <Col xl={5} className="px-5">
                             <h1 className="text-scarlet text-montserrat-alt text-700">
                                 Our Works &
                             </h1>
@@ -253,7 +259,7 @@ class Home extends Component {
                     </h1>
                     <h3>Softwares.</h3>
                     <Row>
-                        <Col xl={5} lg={7} md={9} sm={11}>
+                        <Col xl={5} xl={7} md={9} sm={11}>
                             <p className="text-400 text-large mt-4">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers. We always want our customers to give nice feedback on our works. That's the main reason why you should take some time and check some of our works & services.
                             </p>
@@ -266,7 +272,7 @@ class Home extends Component {
                         <AppBlock icon={faShoppingBag} title="E-commerce Management System">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</AppBlock>
                     </Row>
                     <div className="text-center">
-                        <AbsoluteButton pill size="lg" color="pink" icon={faArrowAltCircleRight} className="text-montserrat-alt">
+                        <AbsoluteButton pill size="xl" color="pink" icon={faArrowAltCircleRight} className="text-montserrat-alt">
                             View List
                         </AbsoluteButton>
                     </div>
@@ -282,7 +288,7 @@ class Home extends Component {
                         <h3>On our softwares.</h3>
                     </div>
                     <Row className="justify-content-center text-center">
-                        <Col sm={10} md={8} lg={6}>
+                        <Col sm={10} md={8} xl={6}>
                             <p className="text-large">
                                 Briluce services gives you the best results as per your requirements. We are committed into providing the best web development services to all our customers . We always want our customers to give nice
                             </p>

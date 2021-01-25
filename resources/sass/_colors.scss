@@ -166,6 +166,27 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkblue" $
   .border-#{$name} {
     border-color: $color !important;
   }
+
+  .scrollbar-#{$name} {
+    scrollbar-color: $color;
+    scrollbar-width: 3px;
+    padding-right: .5rem;
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color;
+    }
+  }
 }
 
 $gradients: "scarlet" $scarlet $myred 259deg, "orange" $myoranger $brown 253deg, "blue" $myblue $mydarkblue 210deg;

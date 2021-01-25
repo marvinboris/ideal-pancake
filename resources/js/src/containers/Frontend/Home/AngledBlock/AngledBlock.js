@@ -6,12 +6,12 @@ import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 import './AngledBlock.css';
 
 const angledBlock = ({ children, animation = "fade-up", iconColor, stackColor, color, bgColor, className, inverse, title, number }) => (
-    <Col md={6} data-aos={animation} className={"AngledBlock d-flex justify-content-center align-items-center p-4 embed-responsive embed-responsive-1by1 position-relative " + className} style={{ overflow: 'visible' }}>
-        <div className={"embed-responsive w-100 embed-responsive-1by1 position-absolute rounded-lg shadow-lg bg-" + bgColor} style={{ top: 0, overflow: 'visible', transformOrigin: "center", transform: "scale(.7)" }}>
-            <div className={"hover embed-responsive w-100 embed-responsive-1by1 position-absolute d-flex justify-content-center align-items-center " + (inverse ? 'inverse' : '') + " rounded-lg shadow-lg bg-" + bgColor}>
-                <div className={"position-absolute " + (inverse ? 'inverse' : '') + " px-5 w-100"}>
+    <Col md={6} data-aos={animation} className={`AngledBlock d-flex justify-content-center align-items-center p-4 embed-responsive embed-responsive-1by1 position-relative ${className}`} style={{ overflow: 'visible' }}>
+        <div className={`embed-responsive w-100 embed-responsive-1by1 position-absolute rounded-lg shadow-lg bg-${bgColor}`} style={{ top: 0, overflow: 'visible', transformOrigin: "center", transform: "scale(.7)" }}>
+            <div className={`hover embed-responsive w-100 embed-responsive-1by1 position-absolute d-flex justify-content-center align-items-center ${inverse ? 'inverse' : ''} rounded-lg shadow-lg bg-${bgColor}`}>
+                <div className={`position-absolute ${inverse ? 'inverse' : ''} px-5 w-100`}>
                     <div className={"mb-4 text-" + iconColor}>
-                        <div className={"embed-responsive embed-responsive-1by1 rounded-circle border border-8 mr-2 border-" + iconColor + " bg-" + stackColor + " d-flex justify-content-center align-items-center"} style={{ width: 90 }}>
+                        <div className={`embed-responsive embed-responsive-1by1 rounded-circle border border-8 mr-2 border-${iconColor} bg-${stackColor} d-flex justify-content-center align-items-center`} style={{ width: 90 }}>
                             <FontAwesomeIcon icon={faDesktop} size="lg" />
                         </div>
                     </div>
@@ -22,8 +22,12 @@ const angledBlock = ({ children, animation = "fade-up", iconColor, stackColor, c
                         <h2 className="text-700">
                             {title}
                         </h2>
-                        <div className="text-300 text-large">
-                            {children}
+                        <div className="embed-responsive embed-responsive-21by9 position-relative">
+                            <div className={`position-absolute w-100 h-100 scrollbar-${iconColor}`} style={{ top: 0, left: 0, overflowY: 'auto' }}>
+                                <div className="text-300 text-large text-justify">
+                                    {children}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

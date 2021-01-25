@@ -40,7 +40,7 @@ const customerBlock = ({ children, animation = "fade-up", title, src, name, mark
             <div className="pb-4 mb-4 border-bottom border-black-20">{children}</div>
 
             <div className="text-center">
-                <NavLink to={link}>
+                <NavLink to={link} className="text-decoration-none">
                     <BetweenButton icon={faGlobe} iconColor="reset" color={active ? "pink" : "outline-orange"} className="text-400">
                         Check my site
                     </BetweenButton>
