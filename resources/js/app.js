@@ -35,4 +35,6 @@ $(function () {
     });
 });
 
+if (localStorage.getItem('lang') == "undefined") localStorage.setItem('lang', process.env.MIX_DEFAULT_LANG || 'en');
+
 require('./src/index');
