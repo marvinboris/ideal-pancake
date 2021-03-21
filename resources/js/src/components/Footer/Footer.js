@@ -80,7 +80,7 @@ const footer = () => (
                 </Col>
                 <Col lg={3}>
                     <FooterBlock title="Find us on Maps">
-                        <div className="rounded flex-fill overflow-hidden embed-responsive embed-responsive-16by9">
+                        <div className="d-none rounded flex-fill overflow-hidden embed-responsive embed-responsive-16by9">
                             <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=700&amp;height=150&amp;hl=en&amp;q=La%20maison%20du%20bitcoin+(Auto-%C3%A9cole%20Universit%C3%A9)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
                         </div>
                     </FooterBlock>
