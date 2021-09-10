@@ -17,7 +17,6 @@ import JohnAlverosa from '../../../../../../public/images/men-images-png-1@2x.pn
 import PaloAltonio from '../../../../../../public/images/product_111_11@2x.png';
 import DoeBorison from '../../../../../../public/images/istockphoto-531547724-612x612@2x.png';
 
-import Limo from '../../../../../../public/images/Liom-logo-New@2x.png';
 import Nasdaq from '../../../../../../public/images/2@2x.png';
 import Bbva from '../../../../../../public/images/5@2x.png';
 import BnpParibas from '../../../../../../public/images/3@2x.png';
@@ -94,7 +93,6 @@ class AboutUs extends Component {
                         <h1 className="text-pink text-montserrat-alt text-700">Our Clients</h1>
                     </div>
                     <Row className="align-items-center">
-                        <ClientBlock src={Limo} height={130} />
                         <ClientBlock src={Nasdaq} height={102} />
                         <ClientBlock src={Bbva} height={84} />
                         <ClientBlock src={BnpParibas} height={120} />

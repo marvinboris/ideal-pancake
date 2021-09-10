@@ -74,17 +74,6 @@ module.exports = "/images/5@2x.png?6ef49262e30cfc84c33edb7043bdc8d9";
 
 /***/ }),
 
-/***/ "./public/images/Liom-logo-New@2x.png":
-/*!********************************************!*\
-  !*** ./public/images/Liom-logo-New@2x.png ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/Liom-logo-New@2x.png?f5184773725efb396d6da39c4f2be393";
-
-/***/ }),
-
 /***/ "./public/images/istockphoto-531547724-612x612@2x.png":
 /*!************************************************************!*\
   !*** ./public/images/istockphoto-531547724-612x612@2x.png ***!
@@ -556,17 +545,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_images_product_111_11_2x_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_public_images_product_111_11_2x_png__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _public_images_istockphoto_531547724_612x612_2x_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../../../public/images/istockphoto-531547724-612x612@2x.png */ "./public/images/istockphoto-531547724-612x612@2x.png");
 /* harmony import */ var _public_images_istockphoto_531547724_612x612_2x_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_public_images_istockphoto_531547724_612x612_2x_png__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _public_images_Liom_logo_New_2x_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../../../public/images/Liom-logo-New@2x.png */ "./public/images/Liom-logo-New@2x.png");
-/* harmony import */ var _public_images_Liom_logo_New_2x_png__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_public_images_Liom_logo_New_2x_png__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../../../public/images/2@2x.png */ "./public/images/2@2x.png");
-/* harmony import */ var _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../../../public/images/5@2x.png */ "./public/images/5@2x.png");
-/* harmony import */ var _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../../../public/images/3@2x.png */ "./public/images/3@2x.png");
-/* harmony import */ var _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../../../../../public/images/4@2x.png */ "./public/images/4@2x.png");
-/* harmony import */ var _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../../../public/images/2@2x.png */ "./public/images/2@2x.png");
+/* harmony import */ var _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../../../public/images/5@2x.png */ "./public/images/5@2x.png");
+/* harmony import */ var _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../../../../../public/images/3@2x.png */ "./public/images/3@2x.png");
+/* harmony import */ var _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../../../../public/images/4@2x.png */ "./public/images/4@2x.png");
+/* harmony import */ var _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -594,7 +581,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -653,7 +639,7 @@ var AboutUs = /*#__PURE__*/function (_Component) {
       }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_9__["default"], null, "You meant a lot to us !"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "text-400 mb-5"
       }, "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_20__["faArrowAltCircleRight"],
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_19__["faArrowAltCircleRight"],
         color: "pink",
         className: "rounded-0"
       }, "Get a quote")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
@@ -669,11 +655,11 @@ var AboutUs = /*#__PURE__*/function (_Component) {
       }, "Our Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "text-400 mb-4"
       }, "It is a long established fact that a reader will be distracted by the readable here'. It is a long It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asopposedcontent of a page when looking at its layout. The point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, contentThe point of using Lorem Ipsum is that it has amore-or-less normal distribution of letters, as opposed to using 'Content here, content here'. It is a long Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_20__["faArrowAltCircleRight"],
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_19__["faArrowAltCircleRight"],
         color: "pink",
         className: "mr-4 rounded-0"
       }, "Read More"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Button_BetweenButton_BetweenButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_20__["faArrowAltCircleRight"],
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_19__["faArrowAltCircleRight"],
         color: "green",
         className: "rounded-0"
       }, "Download PDF")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
@@ -719,19 +705,16 @@ var AboutUs = /*#__PURE__*/function (_Component) {
       }, "Our Clients")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
         className: "align-items-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        src: _public_images_Liom_logo_New_2x_png__WEBPACK_IMPORTED_MODULE_15___default.a,
-        height: 130
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        src: _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_16___default.a,
+        src: _public_images_2_2x_png__WEBPACK_IMPORTED_MODULE_15___default.a,
         height: 102
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        src: _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_17___default.a,
+        src: _public_images_5_2x_png__WEBPACK_IMPORTED_MODULE_16___default.a,
         height: 84
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        src: _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_18___default.a,
+        src: _public_images_3_2x_png__WEBPACK_IMPORTED_MODULE_17___default.a,
         height: 120
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClientBlock_ClientBlock__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        src: _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_19___default.a,
+        src: _public_images_4_2x_png__WEBPACK_IMPORTED_MODULE_18___default.a,
         height: 120
       }))));
     }
