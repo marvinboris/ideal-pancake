@@ -242,13 +242,18 @@ Route::prefix('content')->name('content.')->group(function () {
         $jsonString = file_get_contents(base_path('cms.json'));
         $cmsFile = json_decode($jsonString, true);
 
+        $abbr = $lang;
+        if (Language::whereAbbr($lang)->count() === 0) $abbr = env('MIX_DEFAULT_LANG', 'en');
+
         $cms = [
             'global' => $cmsFile['global'],
-            'pages' => $cmsFile['pages'][$lang],
+            'pages' => $cmsFile['pages'][$abbr],
         ];
+        $languages = Language::all();
 
         return response()->json([
             'cms' => $cms,
+            'languages' => $languages,
         ]);
     })->name('cms');
 });
